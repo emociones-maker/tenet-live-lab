@@ -19,7 +19,7 @@ a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:0 auto;paddin
 .topnav{position:sticky;top:0;z-index:30;background:rgba(8,20,38,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
 .topnav .inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .brand{font-weight:900;letter-spacing:.08em;color:#fff;font-size:21px}.brand span{display:block;font-weight:500;font-size:10px;color:#a9b9d1;letter-spacing:.12em;margin-top:2px}
-.navlinks{display:flex;gap:13px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:11.5px;color:#d5dfed}.navlinks a:hover{color:#fff}
+.navlinks{display:flex;gap:11px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:11px;color:#d5dfed}.navlinks a:hover{color:#fff}
 .navcta{padding:9px 13px!important;border-radius:10px;background:#fff;color:#0b1733!important;font-weight:800}
 .hero{
   position:relative;
@@ -135,6 +135,42 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 .provenance .card{box-shadow:none}
 @media(max-width:1050px){.history-stats{grid-template-columns:repeat(2,1fr)}.dd-grid{grid-template-columns:1fr 1fr}.evolution-arrow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.history-stats,.dd-grid,.audit-list,.evolution-arrow,.ai-box,.provenance{grid-template-columns:1fr}.milestone{grid-template-columns:42px 1fr}.milestone time{grid-column:2;padding-top:0}.milestone-body{grid-column:2}.roadmap:before{left:20px}}
+
+/* Commercial + visual layer */
+.card,.panel,.metric,.kpi,.science-stage,.evidence,.dd-card,.value-card,.commercial-card,.asset-layer{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+@media (hover:hover){.card:hover,.panel:hover,.metric:hover,.kpi:hover,.science-stage:hover,.evidence:hover,.dd-card:hover,.value-card:hover,.commercial-card:hover{transform:translateY(-3px);border-color:#c9d8ed;box-shadow:0 18px 42px rgba(18,42,82,.11)}}
+.hero-trust{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.hero-trust span{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:7px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(8,20,38,.42);color:#dce7f8;backdrop-filter:blur(8px)}
+.hero-card-title{display:flex;align-items:center;gap:9px;margin-bottom:3px}.hero-card-title h2{margin:0}.pulse-ring{width:9px;height:9px;border-radius:50%;background:#2ee09a;box-shadow:0 0 0 5px rgba(46,224,154,.12)}
+.value-section{position:relative;overflow:hidden;background:linear-gradient(180deg,#f5f8fc 0%,#eef4fb 100%)}
+.value-section:before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(23,104,255,.10),rgba(23,104,255,0) 68%);right:-190px;top:-180px;pointer-events:none}
+.compare-shell{display:grid;grid-template-columns:1fr 58px 1fr;gap:0;align-items:stretch;margin-top:22px}
+.compare-col{border-radius:22px;padding:22px;border:1px solid var(--line);position:relative;overflow:hidden}
+.compare-col.conventional{background:#fff}.compare-col.tenet{background:linear-gradient(145deg,#081426,#112b50);border-color:#1e477b;color:#fff;box-shadow:0 24px 70px rgba(8,20,38,.18)}
+.compare-title{display:flex;justify-content:space-between;align-items:end;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:4px}.tenet .compare-title{border-color:rgba(255,255,255,.12)}
+.compare-title span{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:900}.tenet .compare-title span{color:#79a8ff}.compare-title b{font-size:18px}
+.compare-row{display:grid;grid-template-columns:32px 1fr;gap:11px;padding:13px 0;border-bottom:1px solid var(--line)}.compare-row:last-child{border:none}.tenet .compare-row{border-color:rgba(255,255,255,.09)}
+.compare-row i{font-style:normal;display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#edf2f8;color:#697a92;font-size:9px;font-weight:900}.tenet .compare-row i{background:rgba(89,145,255,.16);color:#9bc0ff}
+.compare-row b{display:block;font-size:12px;margin-bottom:3px}.compare-row span{display:block;font-size:10.5px;line-height:1.5;color:var(--muted)}.tenet .compare-row span{color:#aebed5}
+.compare-center{display:grid;place-items:center}.compare-center span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);font-size:10px;font-weight:900;color:#60708a;box-shadow:var(--shadow);z-index:2}
+.value-bento{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-areas:"flag g e" "flag t s";gap:12px;margin-top:18px}
+.value-card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px;box-shadow:var(--shadow)}.value-card.flagship{grid-area:flag;background:linear-gradient(145deg,#fff,#f4f8ff);display:flex;flex-direction:column;justify-content:flex-end;min-height:260px}.value-card:nth-child(2){grid-area:g}.value-card:nth-child(3){grid-area:e}.value-card:nth-child(4){grid-area:t}.value-card:nth-child(5){grid-area:s}
+.value-card small{display:block;font-size:9px;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;font-weight:900;margin-bottom:10px}.value-card h3{font-size:15px;margin:0 0 7px;letter-spacing:-.02em}.value-card.flagship h3{font-size:25px;max-width:420px}.value-card p{font-size:10.5px;line-height:1.6;color:var(--muted);margin:0}
+.proof-matrix{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.proof-col{border-radius:16px;padding:18px;border:1px solid var(--line);background:#fff}.proof-col.public{border-top:4px solid #0fb978}.proof-col.private{border-top:4px solid #1768ff}.proof-col.protected{border-top:4px solid #7c4dff}.proof-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.proof-head span{font-size:8.5px;letter-spacing:.09em;font-weight:900;color:var(--muted)}.proof-head b{font-size:12px}.proof-col p{margin:0;font-size:10.5px;line-height:1.58;color:var(--muted)}
+.asset-section{background:linear-gradient(180deg,#081426,#0a1d38);color:#fff;position:relative;overflow:hidden}.asset-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 22% 38%,rgba(23,104,255,.16),transparent 29%),radial-gradient(circle at 88% 74%,rgba(34,167,161,.10),transparent 26%);pointer-events:none}.asset-section .wrap{position:relative}.asset-section .section-head p{color:#a9bad3}
+.asset-stack{display:grid;grid-template-columns:.72fr 1.28fr;gap:26px;align-items:center}
+.asset-core{height:390px;position:relative;display:grid;place-items:center}.core-orbit{position:absolute;border:1px solid rgba(132,174,255,.25);border-radius:50%}.orbit-a{width:310px;height:310px}.orbit-b{width:220px;height:220px;border-color:rgba(34,167,161,.28)}
+.asset-core:before,.asset-core:after{content:"";position:absolute;border-radius:50%;background:#1768ff;box-shadow:0 0 30px rgba(23,104,255,.65)}.asset-core:before{width:8px;height:8px;left:14%;top:37%}.asset-core:after{width:6px;height:6px;right:19%;bottom:28%;background:#22a7a1;box-shadow:0 0 26px rgba(34,167,161,.65)}
+.core-mark{width:144px;height:144px;border-radius:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#153765,#0a1c35);border:1px solid rgba(255,255,255,.15);box-shadow:0 28px 90px rgba(0,0,0,.28)}.core-mark span{font-size:43px;font-weight:950;line-height:1}.core-mark b{font-size:12px;letter-spacing:.14em;margin-top:8px}.core-mark small{font-size:8px;color:#8198b9;margin-top:5px;text-transform:uppercase;letter-spacing:.09em}
+.asset-layers{display:grid;grid-template-columns:1fr 1fr;gap:10px}.asset-layer{display:grid;grid-template-columns:36px 1fr;gap:12px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);border-radius:15px;padding:15px}.asset-layer span{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:rgba(23,104,255,.16);color:#9dbdff;font-size:9px;font-weight:900}.asset-layer b{display:block;font-size:12px;margin-bottom:4px}.asset-layer p{margin:0;font-size:9.8px;line-height:1.52;color:#a8bad3}
+.commercial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.commercial-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:17px;padding:20px}.commercial-card.featured{background:linear-gradient(145deg,rgba(23,104,255,.24),rgba(255,255,255,.06));border-color:rgba(104,151,255,.38)}.commercial-tag{font-size:8.5px;color:#8fb4f6;letter-spacing:.13em;font-weight:900}.commercial-card h3{margin:8px 0 6px;font-size:16px}.commercial-card p{margin:0;color:#a9bad3;font-size:10.5px;line-height:1.58}.commercial-foot{margin-top:15px;padding-top:12px;border-top:1px solid rgba(255,255,255,.09);font-size:9px;color:#8097b8;text-transform:uppercase;letter-spacing:.08em}
+.asset-note{margin-top:14px;border:1px solid rgba(255,255,255,.10);border-radius:13px;padding:13px 15px;color:#9eb0ca;font-size:9.8px;line-height:1.55;background:rgba(0,0,0,.10)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product-card{min-height:390px;display:flex;flex-direction:column;position:relative}.product-card:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:#c8d7ee}.product-card.featured:before{background:linear-gradient(90deg,#1768ff,#22a7a1)}.product-card.featured{border-color:#c5d8f5;background:linear-gradient(180deg,#fff,#f5f9ff)}.product-index{font-size:40px;font-weight:950;color:#e7eef8;letter-spacing:-.06em;margin-bottom:18px}.product-card h3{font-size:20px;letter-spacing:-.025em}.product-card p{font-size:12px}.product-card ul{margin-bottom:18px}.product-foot{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:#6e7e95;font-weight:850}
+.demo-proof{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.demo-proof span{font-size:9px;padding:6px 8px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#c3d2e6}
+.section-head h2{max-width:760px}.eyebrow2:before{content:"";display:inline-block;width:18px;height:2px;background:currentColor;margin-right:8px;vertical-align:middle}
+@media(max-width:1050px){.compare-shell{grid-template-columns:1fr}.compare-center{height:54px}.value-bento{grid-template-columns:1fr 1fr;grid-template-areas:"flag flag" "g e" "t s"}.asset-stack{grid-template-columns:1fr}.asset-core{height:310px}.proof-matrix,.commercial-grid,.product-grid{grid-template-columns:1fr 1fr}.asset-layers{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.hero-trust{margin-top:14px}.compare-shell,.value-bento,.proof-matrix,.commercial-grid,.product-grid,.asset-layers{grid-template-columns:1fr}.value-bento{grid-template-areas:"flag" "g" "e" "t" "s"}.value-card.flagship{min-height:210px}.asset-core{height:260px}.orbit-a{width:240px;height:240px}.orbit-b{width:175px;height:175px}.commercial-grid,.proof-matrix{gap:9px}.product-card{min-height:auto}.product-grid{gap:12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
 footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
 @media(max-width:1050px){.hero{min-height:610px;background-position:34% center}.hero:before{background:linear-gradient(90deg,rgba(4,10,20,.24),rgba(4,10,20,.64)),linear-gradient(180deg,rgba(3,8,18,.04),rgba(3,8,18,.34))}.hero-grid,.demo-inner{grid-template-columns:1fr}.hero-grid>div:first-child,.hero-card{grid-column:1}.hero-grid>div:first-child{max-width:650px}.grid-5{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.grid-2,.chartgrid{grid-template-columns:1fr}.metriccards{grid-template-columns:repeat(3,1fr)}.rejects{grid-template-columns:repeat(2,1fr)}.arch-flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:28px}.risk-flow{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:720px){.wrap{padding:0 15px}.navlinks a:not(.navcta){display:none}.hero{min-height:auto;padding:86px 0 46px;background-position:30% center}.hero:before{background:linear-gradient(180deg,rgba(5,11,23,.38) 0%,rgba(5,11,23,.68) 46%,rgba(5,11,23,.94) 100%)}h1{font-size:43px}.hero p{font-size:16px}.kpis,.metriccards{grid-template-columns:repeat(2,1fr)}.grid-5,.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}.rejects,.risk-flow{grid-template-columns:1fr}.section{padding:62px 0}.section-head h2,.demo h2{font-size:31px}.live-top{flex-direction:column}.chartbox{height:245px}}
@@ -145,15 +181,14 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   <div class="wrap inner">
     <a class="brand" href="#top">TENET<span>AUTONOMOUS TRADING RESEARCH INFRASTRUCTURE</span></a>
     <nav class="navlinks">
-      <a href="#about">Qué es TENET</a>
-      <a href="#how">Cómo funciona</a>
+      <a href="#about">Qué es</a>
+      <a href="#value">Ventaja</a>
       <a href="#architecture">Arquitectura</a>
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
-      <a href="#risk">Risk</a>
       <a href="#history">Historia</a>
-      <a href="#infrastructure">Infraestructura</a>
       <a href="#diligence">Due Diligence</a>
+      <a href="#asset">Activo</a>
       <a href="#product">Producto</a>
       <a class="navcta" href="#demo">Solicitar demo</a>
     </nav>
@@ -167,13 +202,16 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <div class="eyebrow"><span class="dot"></span> Research-stage infrastructure · public live observability</div>
       <h1>TENET<span>Research. Risk. Execution.</span></h1>
       <p>Infraestructura algorítmica modular para observar mercados, ejecutar investigación PAPER, comparar hipótesis, filtrar oportunidades mediante reglas de riesgo y mantener una trazabilidad auditable de todo el proceso.</p>
+      <div class="hero-trust">
+        <span>Runtime persistente</span><span>Scientific Layer</span><span>Fail-closed</span><span>Audit trail</span>
+      </div>
       <div class="hero-actions">
         <a class="btn primary" href="#live">Ver el Live Lab</a>
         <a class="btn secondary" href="#demo">Solicitar demo privada</a>
       </div>
     </div>
     <div class="hero-card">
-      <h2>Estado público del sistema</h2>
+      <div class="hero-card-title"><span class="pulse-ring"></span><h2>Estado público del sistema</h2></div>
       <div class="signal"><span>Health</span><b id="heroHealth">—</b></div>
       <div class="signal"><span>Broker/data adapter actual</span><b>eToro</b></div>
       <div class="signal"><span>Public layer</span><b>READ-ONLY</b></div>
@@ -243,6 +281,46 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <div class="card"><div class="stepnum">03</div><h3>Filter</h3><p>Las oportunidades atraviesan controles de estructura, calidad de datos y riesgo.</p></div>
       <div class="card"><div class="stepnum">04</div><h3>Decide</h3><p>Solo los escenarios que superan los gates continúan hacia prevalidación.</p></div>
       <div class="card"><div class="stepnum">05</div><h3>Reconcile</h3><p>Los estados y ejecuciones quedan registrados y reconciliados para auditoría.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="value" class="section value-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Why TENET</div>
+      <h2>No es un generador de señales. Es una infraestructura de decisión.</h2>
+      <p>La diferencia comercial de TENET no está en afirmar que “predice mejor”, sino en transformar una idea de trading en un proceso persistente, medible, gobernado y revisable. La señal es solo una pequeña parte del sistema.</p>
+    </div>
+
+    <div class="compare-shell">
+      <div class="compare-col conventional">
+        <div class="compare-title"><span>Enfoque convencional</span><b>Signal / bot</b></div>
+        <div class="compare-row"><i>01</i><div><b>Decisión puntual</b><span>La salida principal suele ser comprar, vender o esperar.</span></div></div>
+        <div class="compare-row"><i>02</i><div><b>Estado limitado</b><span>El contexto puede depender de la sesión, el script o la herramienta concreta.</span></div></div>
+        <div class="compare-row"><i>03</i><div><b>Research y ejecución próximos</b><span>La misma lógica puede explorar y actuar sin una frontera fuerte de privilegios.</span></div></div>
+        <div class="compare-row"><i>04</i><div><b>Validación orientada al resultado</b><span>Es fácil confundir una racha o un backtest atractivo con evidencia robusta.</span></div></div>
+        <div class="compare-row"><i>05</i><div><b>Explicación posterior</b><span>La trazabilidad puede construirse después de la decisión.</span></div></div>
+      </div>
+
+      <div class="compare-center"><span>VS</span></div>
+
+      <div class="compare-col tenet">
+        <div class="compare-title"><span>TENET</span><b>Decision infrastructure</b></div>
+        <div class="compare-row"><i>01</i><div><b>Proceso completo</b><span>Observa, investiga, valida, filtra, ejecuta y reconcilia.</span></div></div>
+        <div class="compare-row"><i>02</i><div><b>Estado persistente</b><span>Runtime, histórico, hipótesis, outcomes y auditoría sobreviven a la conversación.</span></div></div>
+        <div class="compare-row"><i>03</i><div><b>Privilegios separados</b><span>Research, control y ejecución operan con responsabilidades distintas.</span></div></div>
+        <div class="compare-row"><i>04</i><div><b>Capa científica</b><span>OOS, robustez, calibración, sensibilidad y controles antes de elevar evidencia.</span></div></div>
+        <div class="compare-row"><i>05</i><div><b>Auditabilidad por diseño</b><span>La decisión nace con contexto, versión, motivo y resultado trazables.</span></div></div>
+      </div>
+    </div>
+
+    <div class="value-bento">
+      <div class="value-card flagship"><small>01 · Persistencia</small><h3>El sistema sigue existiendo cuando el chat termina.</h3><p>Procesos programados, estado durable y laboratorio continuo convierten una metodología en infraestructura operativa.</p></div>
+      <div class="value-card"><small>02 · Gobernanza</small><h3>Aprender no equivale a obtener permiso.</h3><p>Una hipótesis prometedora no puede relajar por sí misma las reglas que protegen producción.</p></div>
+      <div class="value-card"><small>03 · Evidencia</small><h3>Se mide la estabilidad, no solo el beneficio.</h3><p>La capa científica intenta separar señal, azar, sobreajuste y utilidad práctica.</p></div>
+      <div class="value-card"><small>04 · Trazabilidad</small><h3>Se puede revisar el “por qué”.</h3><p>Versiones, estados, bloqueos, outcomes y reconciliación forman parte del producto.</p></div>
+      <div class="value-card"><small>05 · Seguridad</small><h3>La incertidumbre puede detener el sistema.</h3><p>La arquitectura está diseñada para fallar cerrada cuando faltan datos o consistencia.</p></div>
     </div>
   </div>
 </section>
@@ -552,7 +630,55 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <div class="audit-item"><b>Public boundary</b>El dashboard expone métricas sanitizadas y permanece sin capacidad transaccional.</div>
     </div>
 
+    <div class="proof-matrix">
+      <div class="proof-col public">
+        <div class="proof-head"><span>PUBLIC</span><b>Prueba observable</b></div>
+        <p>Live Lab sanitizado, actividad del sistema, funnel, métricas PAPER, arquitectura funcional e historia del producto.</p>
+      </div>
+      <div class="proof-col private">
+        <div class="proof-head"><span>NDA / PRIVATE</span><b>Prueba verificable</b></div>
+        <p>Repositorios, documentación normativa, estructura del VPS, pruebas de despliegue, logs sanitizados, bases científicas y trazabilidad de versiones.</p>
+      </div>
+      <div class="proof-col protected">
+        <div class="proof-head"><span>PROTECTED</span><b>Núcleo restringido</b></div>
+        <p>Credenciales, claves, identificadores sensibles, secretos de infraestructura y parametrización propietaria fuera del alcance contractual acordado.</p>
+      </div>
+    </div>
+
     <div class="disclaimer" style="margin-top:18px"><b>Lo que TENET no afirma:</b> no se presenta una rentabilidad futura garantizada, una auditoría financiera independiente ni un “edge” universal demostrado. La tesis comercial es tecnológica: infraestructura persistente, proceso auditable, investigación reproducible y controles explícitos de riesgo.</div>
+  </div>
+</section>
+
+<section id="asset" class="section asset-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Technology asset</div>
+      <h2>Qué constituye realmente el activo TENET</h2>
+      <p>El valor transferible no es una única estrategia. Es la combinación de software, metodología, conocimiento codificado, datos experimentales, gobernanza y capacidad de despliegue. Estas capas pueden evaluarse, licenciarse o transferirse con distinto alcance contractual.</p>
+    </div>
+
+    <div class="asset-stack">
+      <div class="asset-core">
+        <div class="core-orbit orbit-a"></div><div class="core-orbit orbit-b"></div>
+        <div class="core-mark"><span>T</span><b>TENET</b><small>technology core</small></div>
+      </div>
+      <div class="asset-layers">
+        <div class="asset-layer"><span>01</span><div><b>Software & runtime</b><p>Código, servicios, scheduler, persistencia, health, adapters y pipeline operacional.</p></div></div>
+        <div class="asset-layer"><span>02</span><div><b>Scientific workflow</b><p>Proceso de hipótesis, PAPER, controles, calibración, robustez y clasificación de evidencia.</p></div></div>
+        <div class="asset-layer"><span>03</span><div><b>Risk & governance model</b><p>Separación de privilegios, gates, idempotencia, reconciliación y política fail-closed.</p></div></div>
+        <div class="asset-layer"><span>04</span><div><b>Experimental memory</b><p>Histórico de outcomes, variantes, decisiones y resultados que permite investigación acumulativa.</p></div></div>
+        <div class="asset-layer"><span>05</span><div><b>Documentation & lineage</b><p>Versionado, evolución metodológica, normativa, decisiones de diseño y trazabilidad del producto.</p></div></div>
+        <div class="asset-layer"><span>06</span><div><b>Deployment blueprint</b><p>Arquitectura reproducible para desplegar una instancia privada sin convertir el dashboard público en un escritor.</p></div></div>
+      </div>
+    </div>
+
+    <div class="commercial-grid">
+      <div class="commercial-card"><span class="commercial-tag">LICENSE</span><h3>Licencia de uso</h3><p>Acceso a componentes definidos manteniendo la titularidad del núcleo tecnológico.</p><div class="commercial-foot">Alcance configurable</div></div>
+      <div class="commercial-card featured"><span class="commercial-tag">DEPLOY</span><h3>Despliegue privado</h3><p>Instancia aislada con adaptación técnica al broker, infraestructura y gobernanza del cliente.</p><div class="commercial-foot">Implementación + soporte</div></div>
+      <div class="commercial-card"><span class="commercial-tag">TRANSFER</span><h3>Transferencia tecnológica</h3><p>Cesión total o parcial de componentes, documentación y know-how dentro de un perímetro contractual.</p><div class="commercial-foot">Sujeto a due diligence</div></div>
+    </div>
+
+    <div class="asset-note"><b>Perímetro jurídico:</b> esta web describe componentes tecnológicos y posibilidades comerciales; no afirma por sí sola la existencia de patente, registro específico ni una modalidad concreta de cesión. La titularidad, licencias, exclusividad y alcance de transferencia deben documentarse contractualmente.</div>
   </div>
 </section>
 
@@ -563,10 +689,22 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <h2>Un núcleo técnico, varios niveles de producto</h2>
       <p>La arquitectura permite empaquetar TENET según el nivel de acceso, research y operación que necesite el cliente. Las modalidades comerciales se estudian caso a caso.</p>
     </div>
-    <div class="grid grid-3">
-      <div class="card product-card"><span class="label">TENET Observer</span><h3>Observabilidad & dashboard</h3><p>Para quien necesita entender qué está haciendo el sistema y por qué.</p><ul><li>Live Lab</li><li>Health & telemetry</li><li>Decision funnel</li><li>Historical activity</li></ul></div>
-      <div class="card product-card"><span class="label">TENET Research</span><h3>Laboratorio & ciencia</h3><p>Para equipos que quieren experimentar, comparar y auditar hipótesis.</p><ul><li>PAPER environment</li><li>Variants & outcomes</li><li>Calibration</li><li>Research reporting</li></ul></div>
-      <div class="card product-card"><span class="label">TENET Infrastructure</span><h3>Pipeline completo</h3><p>Despliegue privado con capas separadas de control, candidate y ejecución.</p><ul><li>Risk layer</li><li>Operational watchdog</li><li>Reconciliation</li><li>Private deployment</li></ul></div>
+    <div class="product-grid">
+      <div class="card product-card">
+        <div class="product-index">01</div><span class="label">TENET Observer</span><h3>Observabilidad & dashboard</h3><p>Para entender qué está haciendo el sistema, qué bloquea y cómo evoluciona.</p>
+        <ul><li>Live Lab</li><li>Health & telemetry</li><li>Decision funnel</li><li>Historical activity</li></ul>
+        <div class="product-foot">Read-only surface</div>
+      </div>
+      <div class="card product-card featured">
+        <div class="product-index">02</div><span class="label">TENET Research</span><h3>Laboratorio & ciencia</h3><p>Para equipos que quieren experimentar, comparar y auditar hipótesis de manera persistente.</p>
+        <ul><li>PAPER environment</li><li>Scientific Layer</li><li>Variants & outcomes</li><li>Calibration & robustness</li></ul>
+        <div class="product-foot">Research environment</div>
+      </div>
+      <div class="card product-card">
+        <div class="product-index">03</div><span class="label">TENET Infrastructure</span><h3>Pipeline completo</h3><p>Despliegue privado con research, control, candidate, riesgo y ejecución segregados.</p>
+        <ul><li>Risk & governance layer</li><li>Operational watchdog</li><li>Reconciliation</li><li>Private deployment</li></ul>
+        <div class="product-foot">Private infrastructure</div>
+      </div>
     </div>
   </div>
 </section>
@@ -592,7 +730,8 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     <div>
       <div class="eyebrow2" style="color:#8bb4ff">Private demo</div>
       <h2>¿Quieres ver TENET por dentro?</h2>
-      <p>Podemos enseñar la arquitectura, el Live Lab, la lógica de riesgo, la trazabilidad y el entorno técnico en una demostración privada. También podemos abrir una conversación sobre licencia, despliegue o colaboración.</p>
+      <p>Una demo privada permite recorrer arquitectura, Scientific Layer, Live Lab, lógica de riesgo, trazabilidad y perímetro de due diligence. La conversación puede orientarse a licencia, despliegue privado, transferencia tecnológica o colaboración.</p>
+      <div class="demo-proof"><span>Arquitectura</span><span>Ciencia</span><span>Audit trail</span><span>Deployment</span></div>
     </div>
     <div class="demo-actions">
       <a class="btn primary" href="mailto:elige@emociones.eu?subject=TENET%20-%20Solicitud%20de%20demo%20privada&body=Me%20gustar%C3%ADa%20conocer%20TENET%20y%20solicitar%20una%20demo%20privada.">Solicitar demo</a>
