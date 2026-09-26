@@ -137,6 +137,37 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 @media(max-width:720px){.history-stats,.dd-grid,.audit-list,.evolution-arrow,.ai-box,.provenance{grid-template-columns:1fr}.milestone{grid-template-columns:42px 1fr}.milestone time{grid-column:2;padding-top:0}.milestone-body{grid-column:2}.roadmap:before{left:20px}}
 
 
+
+/* Controlled AI layer */
+.ai-section{background:linear-gradient(145deg,#07111f 0%,#0b1d36 58%,#102a4c 100%);color:#fff;position:relative;overflow:hidden}
+.ai-section:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;left:-260px;top:-220px;background:radial-gradient(circle,rgba(124,77,255,.18),rgba(124,77,255,0) 68%);pointer-events:none}
+.ai-section:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-190px;bottom:-250px;background:radial-gradient(circle,rgba(34,167,161,.14),rgba(34,167,161,0) 68%);pointer-events:none}
+.ai-section .wrap{position:relative;z-index:1}.ai-section .section-head p{color:#aebed5}.ai-section .eyebrow2{color:#93b7ff}
+.ai-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center}
+.ai-core{position:relative;min-height:410px;display:grid;place-items:center}
+.ai-orbit{position:absolute;border:1px solid rgba(142,176,255,.20);border-radius:50%}.ai-orbit.a{width:350px;height:350px}.ai-orbit.b{width:265px;height:265px;border-color:rgba(34,167,161,.25)}.ai-orbit.c{width:180px;height:180px;border-color:rgba(124,77,255,.32)}
+.ai-node{position:absolute;padding:7px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(8,20,38,.72);font-size:8.5px;font-weight:850;color:#b9c8df;backdrop-filter:blur(8px)}
+.ai-node.n1{top:14%;left:17%}.ai-node.n2{top:24%;right:8%}.ai-node.n3{bottom:20%;left:6%}.ai-node.n4{bottom:13%;right:15%}
+.ai-mark{width:138px;height:138px;border-radius:36px;background:linear-gradient(145deg,#173e70,#10223f);display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.15);box-shadow:0 30px 90px rgba(0,0,0,.30)}
+.ai-mark strong{font-size:36px;letter-spacing:-.05em}.ai-mark span{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:#8eabd0;margin-top:7px}
+.ai-status{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:999px;padding:7px 10px;font-size:9px;font-weight:850;color:#b9c8df;margin-bottom:14px}.ai-status:before{content:"";width:7px;height:7px;border-radius:50%;background:#f5b24b}
+.ai-copy h3{font-size:27px;line-height:1.12;letter-spacing:-.035em;margin:0 0 12px}.ai-copy>p{font-size:12px;line-height:1.65;color:#b4c2d6;margin:0 0 18px}
+.ai-capabilities{display:grid;grid-template-columns:1fr 1fr;gap:9px}.ai-cap{border:1px solid rgba(255,255,255,.10);border-radius:13px;padding:13px;background:rgba(255,255,255,.045)}.ai-cap b{display:block;font-size:10.5px;margin-bottom:4px}.ai-cap span{display:block;font-size:9.5px;line-height:1.48;color:#9fb2cd}
+.ai-boundary{margin-top:16px;border-left:3px solid #f5b24b;padding:12px 14px;background:rgba(245,178,75,.07);border-radius:0 12px 12px 0}.ai-boundary b{display:block;font-size:10.5px;margin-bottom:4px}.ai-boundary span{font-size:9.6px;line-height:1.55;color:#b9c7d9}
+.ai-evolution{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}.ai-era{border:1px solid rgba(255,255,255,.10);border-radius:15px;padding:16px;background:rgba(255,255,255,.04)}.ai-era small{font-size:8.5px;color:#7fa8ee;letter-spacing:.10em;text-transform:uppercase;font-weight:900}.ai-era h3{font-size:13px;margin:7px 0 5px}.ai-era p{font-size:9.7px;line-height:1.5;color:#a7b7cf;margin:0}
+
+/* Economic footprint */
+.economics-section{background:#fff;position:relative;overflow:hidden}.economics-section:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;right:-300px;top:-260px;background:radial-gradient(circle,rgba(23,104,255,.09),transparent 70%);pointer-events:none}.economics-section .wrap{position:relative}
+.econ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.econ-card{border:1px solid var(--line);border-radius:18px;padding:21px;background:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}.econ-card.featured{background:linear-gradient(145deg,#081426,#10345f);color:#fff;border-color:#1b477c}.econ-card:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:#d4dfed}.econ-card.featured:before{background:linear-gradient(90deg,#1768ff,#22a7a1)}
+.econ-card .label{display:block;font-size:8.5px;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#6a7b94}.econ-card.featured .label{color:#98bbf5}.econ-card strong{display:block;font-size:30px;line-height:1.05;letter-spacing:-.045em;margin:15px 0 9px}.econ-card.featured strong{font-size:34px}.econ-card p{font-size:10.5px;line-height:1.58;color:var(--muted);margin:0}.econ-card.featured p{color:#b9c8dc}
+.value-framework{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:18px}.value-panel{border:1px solid var(--line);border-radius:17px;padding:20px;background:#f9fbfe}.value-panel h3{font-size:14px;margin:0 0 8px}.value-panel>p{font-size:10.5px;line-height:1.58;color:var(--muted);margin:0 0 15px}
+.value-factor{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.value-factor:last-child{border-bottom:none}.value-factor i{font-style:normal;width:26px;height:26px;display:grid;place-items:center;border-radius:8px;background:#e8f0ff;color:#0b50c4;font-size:8.5px;font-weight:900}.value-factor b{display:block;font-size:10.5px;margin-bottom:3px}.value-factor span{font-size:9.6px;line-height:1.45;color:var(--muted)}
+.valuation-band{background:#081426;color:#fff;border-radius:17px;padding:20px}.valuation-band h3{font-size:14px;margin:0 0 7px}.valuation-band>p{font-size:10.3px;color:#aebed5;line-height:1.58;margin:0 0 16px}.val-row{padding:13px 0;border-top:1px solid rgba(255,255,255,.10)}.val-row span{display:block;font-size:8.5px;text-transform:uppercase;letter-spacing:.09em;color:#8299ba;font-weight:900}.val-row strong{display:block;font-size:20px;margin-top:5px}.val-row small{display:block;font-size:9px;line-height:1.45;color:#9fb1ca;margin-top:4px}
+.econ-note{margin-top:15px;padding:13px 15px;border-radius:13px;background:#fff7e8;border:1px solid #efd9ad;color:#6f5121;font-size:9.8px;line-height:1.55}
+@media(max-width:1050px){.ai-layout,.value-framework{grid-template-columns:1fr}.ai-core{min-height:330px}.econ-grid{grid-template-columns:1fr 1fr}.ai-evolution{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.ai-capabilities,.ai-evolution,.econ-grid{grid-template-columns:1fr}.ai-core{min-height:285px}.ai-orbit.a{width:250px;height:250px}.ai-orbit.b{width:195px;height:195px}.ai-orbit.c{width:140px;height:140px}.ai-node.n2{right:0}.ai-node.n3{left:0}.econ-card strong{font-size:27px}}
+
 .engineering-section{background:linear-gradient(180deg,#f6f9fd 0%,#edf3fa 100%);position:relative;overflow:hidden}
 .engineering-section:before{content:"";position:absolute;width:680px;height:680px;border-radius:50%;right:-310px;top:-260px;background:radial-gradient(circle,rgba(23,104,255,.10),rgba(23,104,255,0) 70%);pointer-events:none}
 .engineering-section .wrap{position:relative}
@@ -210,8 +241,9 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <a href="#architecture">Arquitectura</a>
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
-      <a href="#history">Historia</a>
+      <a href="#ai">AI</a>
       <a href="#engineering">Engineering</a>
+      <a href="#economics">Valor</a>
       <a href="#diligence">Due Diligence</a>
       <a href="#product">Producto</a>
       <a class="navcta" href="#demo">Solicitar demo</a>
@@ -504,6 +536,44 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     <div class="panel" style="margin-top:16px"><h3>Variantes destacadas</h3><table class="table"><thead><tr><th>Variante</th><th>n</th><th>Expectancy R</th><th>Profit factor</th><th>Win rate</th></tr></thead><tbody id="variantTable"></tbody></table><div class="note">Métricas experimentales, no track record financiero auditado.</div></div>
   </div>
 </section>
+<section id="ai" class="section ai-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Controlled AI Layer</div>
+      <h2>IA para investigar y explicar. No para saltarse las reglas.</h2>
+      <p>La historia de TENET comenzó utilizando IA como herramienta para estructurar análisis y disciplina. A medida que el sistema maduró, las reglas críticas se fueron codificando en software determinista. La siguiente capa de producto mantiene la IA como inteligencia lateral: puede ayudar a formular hipótesis, interpretar resultados y diagnosticar estados, pero no obtiene autoridad transaccional.</p>
+    </div>
+
+    <div class="ai-layout">
+      <div class="ai-core">
+        <div class="ai-orbit a"></div><div class="ai-orbit b"></div><div class="ai-orbit c"></div>
+        <div class="ai-node n1">Hypothesis</div><div class="ai-node n2">Explainability</div><div class="ai-node n3">Diagnostics</div><div class="ai-node n4">Research orchestration</div>
+        <div class="ai-mark"><strong>AI</strong><span>sidecar layer</span></div>
+      </div>
+      <div class="ai-copy">
+        <div class="ai-status">CONTROLLED LAYER · NO DIRECT REAL WRITE</div>
+        <h3>TENET AI se diseña como copiloto del sistema, no como sustituto de sus hard gates.</h3>
+        <p>El núcleo REAL actual no necesita que un modelo generativo autorice una orden. Esto reduce la dependencia de respuestas no deterministas. La IA puede aportar valor alrededor del núcleo: comprimir información, proponer experimentos, explicar por qué un caso fue bloqueado y facilitar la supervisión humana.</p>
+        <div class="ai-capabilities">
+          <div class="ai-cap"><b>Hypothesis generation</b><span>Proponer preguntas y variantes para que SCIENCE las pruebe en PAPER.</span></div>
+          <div class="ai-cap"><b>Research synthesis</b><span>Resumir cohortes, resultados y anomalías sin promover automáticamente una estrategia.</span></div>
+          <div class="ai-cap"><b>Explainability</b><span>Traducir estados, bloqueos y decisiones técnicas a lenguaje comprensible.</span></div>
+          <div class="ai-cap"><b>Incident diagnostics</b><span>Ayudar a localizar inconsistencias, degradación y problemas operativos para revisión.</span></div>
+          <div class="ai-cap"><b>Natural-language interface</b><span>Consultar el sistema sin convertir una conversación en una orden de mercado.</span></div>
+          <div class="ai-cap"><b>Experiment specification</b><span>Convertir una idea humana en una especificación reproducible para el LAB.</span></div>
+        </div>
+        <div class="ai-boundary"><b>Frontera deliberada</b><span>La IA no puede elevar límites de capital, cambiar leverage, habilitar short, relajar hard gates, alterar la política de fuentes ni concederse permiso REAL. Cualquier integración futura debe conservar esa separación.</span></div>
+      </div>
+    </div>
+
+    <div class="ai-evolution">
+      <div class="ai-era"><small>Phase 01 · Historical</small><h3>AI-assisted trading methodology</h3><p>Prompts y modelos generativos ayudaron a estructurar análisis, riesgo y disciplina; esta etapa produjo aprendizaje práctico y el hito histórico FTMO reportado por el proyecto.</p></div>
+      <div class="ai-era"><small>Phase 02 · Current core</small><h3>Codified deterministic system</h3><p>Las reglas críticas migraron hacia código persistente, Scientific Core, gates, workers y reconciliación. El repositorio actual no depende de un LLM para autorizar ejecución REAL.</p></div>
+      <div class="ai-era"><small>Phase 03 · Product layer</small><h3>Controlled AI sidecar</h3><p>La IA vuelve como interfaz de investigación, explicación y diagnóstico, rodeada por permisos y límites explícitos en vez de ocupar el camino transaccional.</p></div>
+    </div>
+  </div>
+</section>
+
 
 <section id="risk" class="section">
   <div class="wrap">
@@ -683,6 +753,45 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     <div class="audit-method"><b>Metodología del conteo.</b> Snapshot de la rama principal auditado el 26/09/2026. Se contabilizaron archivos Python, workflow YAML y tooling ejecutable del repositorio principal. Se excluyeron documentación, bases de datos, logs, snapshots, PDFs e imágenes. “Líneas físicas” incluye espacios y comentarios internos del código; por ello no debe interpretarse como número de algoritmos ni como productividad. La interfaz web pública de TENET se mantiene separada y añade aproximadamente 853 líneas físicas en su versión actual.</div>
   </div>
 </section>
+<section id="economics" class="section economics-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Economic footprint</div>
+      <h2>Coste de reconstrucción no es lo mismo que valor de mercado</h2>
+      <p>TENET es pre-revenue: todavía no debe valorarse aplicando directamente un múltiplo SaaS. Para estimar su valor actual conviene separar tres conceptos: cuánto costaría reconstruirlo, cuánto pagaría hoy un comprador por el activo y cuánto podría valer cuando exista ingreso recurrente y evidencia comercial.</p>
+    </div>
+
+    <div class="econ-grid">
+      <div class="econ-card"><span class="label">Lean replacement cost</span><strong>€250k–€600k</strong><p>Orden de magnitud para reconstruir una plataforma comparable con un equipo pequeño y senior durante aproximadamente 12–18 meses, reutilizando herramientas estándar y manteniendo un alcance disciplinado.</p></div>
+      <div class="econ-card featured"><span class="label">Professional fintech rebuild</span><strong>€600k–€1.2m</strong><p>Escenario con arquitectura, quant/research, backend, DevOps/SRE, QA, seguridad, documentación y endurecimiento operativo ejecutados como proyecto profesional.</p></div>
+      <div class="econ-card"><span class="label">Direct infrastructure</span><strong>≠ asset value</strong><p>El coste mensual del VPS, almacenamiento o Pages puede ser pequeño frente al coste de ingeniería. Hosting barato no implica software barato.</p></div>
+    </div>
+
+    <div class="value-framework">
+      <div class="value-panel">
+        <h3>Qué incrementa o reduce el valor de TENET hoy</h3>
+        <p>Un comprador técnico no paga por líneas de código de forma lineal. Ajusta el precio por riesgo de transferencia, dependencia del fundador, calidad técnica y capacidad de convertir el software en ingresos.</p>
+        <div class="value-factor"><i>+</i><div><b>Activo que suma valor</b><span>Código propio significativo, Scientific Core, separación de privilegios, runtime persistente, memoria experimental y trazabilidad.</span></div></div>
+        <div class="value-factor"><i>+</i><div><b>Know-how acumulado</b><span>Más de un año de evolución metodológica y decisiones de diseño que no aparecen únicamente en el código final.</span></div></div>
+        <div class="value-factor"><i>−</i><div><b>Pre-revenue</b><span>No existe todavía ARR sobre el que aplicar un múltiplo de software de forma defendible.</span></div></div>
+        <div class="value-factor"><i>−</i><div><b>Founder dependency</b><span>Parte del conocimiento, operación y visión todavía depende de las personas que han construido el sistema.</span></div></div>
+        <div class="value-factor"><i>−</i><div><b>Deuda técnica y concentración</b><span>Existen módulos grandes, generaciones conservadas y dependencia actual de un broker principal que reducen el precio frente a un producto institucional terminado.</span></div></div>
+        <div class="value-factor"><i>+</i><div><b>Upside comercial</b><span>Multi-broker, instalación reproducible, clientes y track record operacional aumentarían mucho más el valor que añadir simplemente más líneas de código.</span></div></div>
+      </div>
+
+      <div class="valuation-band">
+        <h3>Rango de valoración orientativo</h3>
+        <p>Estimación de negociación, no tasación independiente ni precio garantizado.</p>
+        <div class="val-row"><span>Standalone technology asset · hoy</span><strong>€100k–€250k</strong><small>Rango razonable para discutir código, arquitectura, documentación y know-how antes de ingresos recurrentes.</small></div>
+        <div class="val-row"><span>Strategic buyer · si due diligence es fuerte</span><strong>€250k–€500k</strong><small>Posible solo si el comprador atribuye valor estratégico, la propiedad intelectual está limpia y el sistema es transferible/reproducible.</small></div>
+        <div class="val-row"><span>Con ARR y clientes</span><strong>Revenue multiple</strong><small>En ese punto el mercado puede valorar TENET como compañía/software recurrente; el múltiplo dependerá de crecimiento, retención, márgenes y riesgo.</small></div>
+      </div>
+    </div>
+
+    <div class="econ-note"><b>Metodología:</b> rangos de reconstrucción inferidos a partir del footprint auditado, complejidad de los subsistemas y benchmarks 2026 de ingeniería senior/quant/DevOps en España. El rango de valor actual es una estimación estratégica interna, no una valoración financiera independiente. Para una venta real debería prepararse una due diligence de IP, seguridad, reproducibilidad, deuda técnica, contratos e ingresos.</div>
+  </div>
+</section>
+
 
 <section id="diligence" class="section" style="background:#eef4fb">
   <div class="wrap">
