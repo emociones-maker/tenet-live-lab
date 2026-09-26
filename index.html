@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="TENET — infraestructura algorítmica para research, control de riesgo, observabilidad y ejecución auditable. Live Lab público con actividad real del sistema.">
+<meta name="description" content="TENET — infraestructura algorítmica para research, ciencia, control de riesgo, gobernanza de evidencia y ejecución auditable. Live Lab público read-only con actividad real del sistema.">
 <link rel="canonical" href="https://emociones-maker.github.io/tenet-live-lab/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TENET">
@@ -595,6 +595,18 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <p>TENET SCIENCE puede descubrir, comparar, rechazar y recomendar investigación adicional. No puede autoelevar límites de capital, alterar permisos de ejecución, relajar hard gates ni transformar una hipótesis prometedora en una operación REAL. Aprendizaje y autoridad transaccional permanecen separados.</p>
     </div>
 
+    <div class="section-head" style="margin-top:34px;margin-bottom:16px">
+      <div class="eyebrow2">Scientific assurance · current main</div>
+      <h2 style="font-size:29px">La evidencia también se audita</h2>
+      <p>El repositorio actual ya incluye observadores y controles específicos para evitar que un resultado atractivo se interprete fuera de contexto. Todos ellos son read-only respecto a REAL.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><h3>SCI-01 · Missingness</h3><p>Audita CLOSED frente a DATA_BLOCKED, intervalos de Wilson, asociaciones corregidas y riesgo de que los outcomes evaluables formen una muestra seleccionada. No imputa datos faltantes.</p></div>
+      <div class="card"><h3>SCI-02 · Drift</h3><p>Compara ventanas cronológicas de features, scores, rutas, factores, DATA_BLOCKED y outcomes. Detecta cambios de distribución sin asumir causalidad ni adaptar automáticamente el sistema.</p></div>
+      <div class="card"><h3>EXE-01 · Execution quality</h3><p>Mide slippage y latencias únicamente sobre ejecuciones V5 reconciliadas. Si falta telemetría pre-submit, queda N/D: no se inventa ni se sustituye.</p></div>
+      <div class="card"><h3>Evidence registry</h3><p>Fuentes, claims y evidencia quedan enlazados a código, tests y fingerprints para distinguir una afirmación científica de una simple descripción del sistema.</p></div>
+    </div>
+
     <div class="chartgrid">
       <div class="panel"><h3>Top variantes condicionales</h3><div class="chartbox"><canvas id="variantChart"></canvas></div><div class="note">Lectura descriptiva del universo observado. Una posición alta en esta gráfica no equivale a promoción ni a garantía de rentabilidad.</div></div>
       <div class="panel"><h3>Calibración diagnóstica</h3><div class="chartbox"><canvas id="probChart"></canvas></div><div class="note">Compara buckets de score con outcomes PAPER observados para detectar sobreconfianza, subestimación o falta de separación.</div></div>
@@ -607,7 +619,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     <div class="section-head">
       <div class="eyebrow2">Controlled AI Layer</div>
       <h2>IA para investigar y explicar. No para saltarse las reglas.</h2>
-      <p>La historia de TENET comenzó utilizando IA como herramienta para estructurar análisis y disciplina. A medida que el sistema maduró, las reglas críticas se fueron codificando en software determinista. La siguiente capa de producto mantiene la IA como inteligencia lateral: puede ayudar a formular hipótesis, interpretar resultados y diagnosticar estados, pero no obtiene autoridad transaccional.</p>
+      <p>La historia de TENET comenzó utilizando IA como herramienta para estructurar análisis y disciplina. A medida que el sistema maduró, las reglas críticas se fueron codificando en software determinista. La capa actual mantiene la IA como inteligencia lateral y ya incorpora un registro de experimentos con presupuesto finito, identidades inmutables y trazabilidad append-only. Puede ayudar a formular hipótesis, interpretar resultados y diagnosticar estados, pero no obtiene autoridad transaccional.</p>
     </div>
 
     <div class="ai-layout">
@@ -617,7 +629,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <div class="ai-mark"><strong>AI</strong><span>sidecar layer</span></div>
       </div>
       <div class="ai-copy">
-        <div class="ai-status">CONTROLLED LAYER · NO DIRECT REAL WRITE</div>
+        <div class="ai-status">CONTROLLED RESEARCH · BOUNDED SEARCH · NO DIRECT REAL WRITE</div>
         <h3>TENET AI se diseña como copiloto del sistema, no como sustituto de sus hard gates.</h3>
         <p>El núcleo REAL actual no necesita que un modelo generativo autorice una orden. Esto reduce la dependencia de respuestas no deterministas. La IA puede aportar valor alrededor del núcleo: comprimir información, proponer experimentos, explicar por qué un caso fue bloqueado y facilitar la supervisión humana.</p>
         <div class="ai-capabilities">
@@ -626,7 +638,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
           <div class="ai-cap"><b>Explainability</b><span>Traducir estados, bloqueos y decisiones técnicas a lenguaje comprensible.</span></div>
           <div class="ai-cap"><b>Incident diagnostics</b><span>Ayudar a localizar inconsistencias, degradación y problemas operativos para revisión.</span></div>
           <div class="ai-cap"><b>Natural-language interface</b><span>Consultar el sistema sin convertir una conversación en una orden de mercado.</span></div>
-          <div class="ai-cap"><b>Experiment specification</b><span>Convertir una idea humana en una especificación reproducible para el LAB.</span></div>
+          <div class="ai-cap"><b>Bounded experiment registry</b><span>Cada campaña declara un presupuesto finito; todos los trials cuentan, incluidos negativos, fallidos o inconclusos, y el OOS confirmatorio queda fuera del contexto de búsqueda.</span></div>
         </div>
         <div class="ai-boundary"><b>Frontera deliberada</b><span>La IA no puede elevar límites de capital, cambiar leverage, habilitar short, relajar hard gates, alterar la política de fuentes ni concederse permiso REAL. Cualquier integración futura debe conservar esa separación.</span></div>
       </div>
@@ -635,7 +647,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     <div class="ai-evolution">
       <div class="ai-era"><small>Phase 01 · Historical</small><h3>AI-assisted trading methodology</h3><p>Prompts y modelos generativos ayudaron a estructurar análisis, riesgo y disciplina; esta etapa produjo aprendizaje práctico y el hito histórico FTMO reportado por el proyecto.</p></div>
       <div class="ai-era"><small>Phase 02 · Current core</small><h3>Codified deterministic system</h3><p>Las reglas críticas migraron hacia código persistente, Scientific Core, gates, workers y reconciliación. El repositorio actual no depende de un LLM para autorizar ejecución REAL.</p></div>
-      <div class="ai-era"><small>Phase 03 · Product layer</small><h3>Controlled AI sidecar</h3><p>La IA vuelve como interfaz de investigación, explicación y diagnóstico, rodeada por permisos y límites explícitos en vez de ocupar el camino transaccional.</p></div>
+      <div class="ai-era"><small>Phase 03 · Current research layer</small><h3>Controlled AI sidecar</h3><p>La IA vuelve como interfaz de investigación, explicación y diagnóstico con presupuesto de búsqueda finito, registro completo de trials y prohibición explícita de modificar autoridad REAL.</p></div>
     </div>
   </div>
 </section>
@@ -710,6 +722,10 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <div class="milestone-dot"></div><time>Septiembre 2026</time>
         <div class="milestone-body"><h3>Nace TENET como producto observable</h3><p>La arquitectura técnica mantiene sus identificadores internos, mientras TENET se convierte en la identidad de producto: Live Lab público read-only, dashboard sanitizado y una superficie preparada para demostración y due diligence.</p><span class="version">TENET — LIVE LAB</span></div>
       </div>
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>26–27 septiembre 2026</time>
+        <div class="milestone-body"><h3>De código funcional a evidencia gobernada</h3><p>Se añaden registro Source / Claim / Evidence, fingerprints por categoría para runtime y método, guard estructural de superficies REAL, tests generativos de invariantes, auditoría de missingness, registro acotado de experimentos AI, control main/develop, observación de calidad de ejecución y monitor de drift.</p><span class="version">ENG-02/03/04 · SCI-01/02 · AI-01 · EXE-01</span></div>
+      </div>
     </div>
 
     <div class="ftmo-note"><b>Hito FTMO 2025.</b> El desarrollador reporta haber superado una prueba FTMO utilizando el sistema asistido por IA. El Drive conserva de forma verificable la evolución técnica del asistente FTMO desde v7.8 hasta el linaje v10.x; la web pública no muestra documentación privada de la cuenta ni presenta este hito como garantía de resultados futuros.</div>
@@ -740,6 +756,8 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <tr><td>Transacción</td><td>TENET EXEC</td><td>Único componente con capacidad de escritura REAL, sujeto a gates, idempotencia y reconciliación.</td><td>Writer exclusivo</td></tr>
         <tr><td>Persistencia</td><td>SQLite</td><td>Estado, histórico experimental, auditoría, métricas y memoria operativa local.</td><td>Interno</td></tr>
         <tr><td>Versionado</td><td>Git / GitHub</td><td>Código, control de versiones, trazabilidad de cambios y despliegue de la capa pública.</td><td>No</td></tr>
+        <tr><td>Evidence governance</td><td>Source / Claim / Evidence + fingerprints</td><td>Relaciona fuentes, afirmaciones, tests y versión efectiva; detecta drift entre categorías de runtime, método y datos.</td><td>Read-only</td></tr>
+        <tr><td>Scientific observability</td><td>Missingness · drift · execution quality</td><td>Observadores separados para disponibilidad de outcomes, cambios de distribución y calidad de ejecución reconciliada.</td><td>Read-only</td></tr>
         <tr><td>Observabilidad pública</td><td>GitHub Pages + snapshot sanitizado</td><td>Publica métricas seleccionadas del sistema sin capacidad de operación.</td><td>Read-only</td></tr>
       </tbody>
     </table>
@@ -764,59 +782,52 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow2">Engineering footprint</div>
-      <h2>El tamaño del sistema, medido sobre el repositorio</h2>
-      <p>Estas cifras describen el alcance técnico de TENET; no se utilizan como sustituto de calidad, rentabilidad o valor económico. El conteo se ha realizado sobre el snapshot actual del repositorio principal, separando tests y capa científica.</p>
+      <h2>El sistema también se mide como software</h2>
+      <p>La web ya no usa el tamaño del código como argumento de calidad. El snapshot actual de <code>main</code> se describe con métricas verificables de repositorio, pruebas y controles de gobernanza.</p>
     </div>
-    <div class="audit-stamp">Codebase audit · 26 Sep 2026 · main repository</div>
+    <div class="audit-stamp">Codebase audit · 27 Sep 2026 · main @ e65255e8 · GitHub CI PASS</div>
 
     <div class="code-metrics">
-      <div class="code-metric primary"><span class="kicker">Code / config footprint</span><strong>67,234</strong><p>líneas físicas auditadas en código y configuración técnica del repositorio principal.</p></div>
-      <div class="code-metric"><span class="kicker">Code files</span><strong>134</strong><p>archivos de código/configuración; 123 de ellos son Python.</p></div>
-      <div class="code-metric"><span class="kicker">Non-test footprint</span><strong>60,796</strong><p>líneas fuera de la suite de tests; incluye runtime, research, ciencia, herramientas y versiones conservadas.</p></div>
-      <div class="code-metric"><span class="kicker">Scientific Core</span><strong>18,540</strong><p>líneas en 15 módulos científicos: aproximadamente el 30.5% del footprint no-test.</p></div>
+      <div class="code-metric primary"><span class="kicker">Repository files</span><strong>191</strong><p>blobs versionados en el árbol actual de <code>main</code>, incluyendo código, tests, workflows, documentación y registros de evidencia.</p></div>
+      <div class="code-metric"><span class="kicker">Python</span><strong>145</strong><p>archivos Python en el commit certificado actual.</p></div>
+      <div class="code-metric"><span class="kicker">Scientific Core</span><strong>19</strong><p>módulos Python dentro de <code>scientific_core</code>, incluyendo controles de missingness, AI, ejecución y drift.</p></div>
+      <div class="code-metric"><span class="kicker">Automated tests</span><strong>63</strong><p>archivos <code>test_*.py</code> versionados en la suite actual.</p></div>
 
-      <div class="code-metric"><span class="kicker">Test suite</span><strong>6,438</strong><p>líneas distribuidas en 49 archivos de tests automatizados.</p></div>
-      <div class="code-metric"><span class="kicker">Python</span><strong>123</strong><p>archivos Python en el snapshot auditado, además de tooling y workflow de CI.</p></div>
-      <div class="code-metric"><span class="kicker">Certified repo history</span><strong>51</strong><p>commits en el repositorio GitHub actual desde su baseline certificado del 14 Sep 2026.</p></div>
-      <div class="code-metric"><span class="kicker">Project evolution</span><strong>+1 año</strong><p>de iteración metodológica; el linaje detallado conservado antecede al repositorio GitHub actual.</p></div>
+      <div class="code-metric"><span class="kicker">Full regression</span><strong>315 PASS</strong><p>suite completa reportada en TENET-SCI-02 antes de merge; el commit resultante completó GitHub CI con éxito.</p></div>
+      <div class="code-metric"><span class="kicker">Certified repo history</span><strong>61</strong><p>commits visibles en el repositorio principal hasta el head actual.</p></div>
+      <div class="code-metric"><span class="kicker">CI workflows</span><strong>2</strong><p>CI principal y guard dedicado de sincronización main/develop.</p></div>
+      <div class="code-metric"><span class="kicker">Project evolution</span><strong>+1 año</strong><p>de iteración metodológica; el linaje del proyecto antecede al repositorio GitHub certificado actual.</p></div>
     </div>
 
     <div class="engineering-grid">
       <div class="code-panel">
-        <h3>Anatomía del código</h3>
-        <p>Las cifras siguientes muestran peso relativo y algunos de los componentes más grandes. El volumen de líneas no implica por sí mismo mayor calidad.</p>
-        <div class="codebar-row"><div class="codebar-label">Scientific Core</div><div class="codebar-track"><div class="codebar-fill" style="width:27.6%"></div></div><div class="codebar-num">18,540</div></div>
-        <div class="codebar-row"><div class="codebar-label">Automated tests</div><div class="codebar-track"><div class="codebar-fill" style="width:9.6%"></div></div><div class="codebar-num">6,438</div></div>
-        <div class="codebar-row"><div class="codebar-label">Other non-test code</div><div class="codebar-track"><div class="codebar-fill" style="width:62.8%"></div></div><div class="codebar-num">42,256</div></div>
-
-        <table class="module-table" style="margin-top:18px">
-          <thead><tr><th>Componente</th><th>Función</th><th>Líneas</th></tr></thead>
-          <tbody>
-            <tr><td>v5_real_exec.py</td><td>capa transaccional y protección REAL</td><td>6,607</td></tr>
-            <tr><td>ops/v5_ops_reporter.py</td><td>observabilidad y reporting operativo</td><td>2,831</td></tr>
-            <tr><td>Scientific · Purged CPCV</td><td>validación temporal / combinatoria</td><td>2,044</td></tr>
-            <tr><td>Scientific · CSCV/PBO v3</td><td>riesgo de sobreajuste</td><td>2,026</td></tr>
-            <tr><td>domain/portfolio_risk_engine.py</td><td>riesgo y restricciones de cartera</td><td>1,874</td></tr>
-            <tr><td>real_funnel_cycle_v2_3.py</td><td>funnel de decisión REAL</td><td>1,707</td></tr>
-          </tbody>
-        </table>
+        <h3>Controles de ingeniería incorporados</h3>
+        <p>La mejora reciente no consiste solo en añadir lógica de trading. Se ha reforzado la capacidad de demostrar qué código está activo, qué puede escribir y qué evidencia respalda una afirmación.</p>
+        <div class="engineering-facts">
+          <div class="engineering-fact"><b>Runtime / Git / Method manifest</b><span>Fingerprints separados para METHOD, DATA_SEMANTICS, BROKER_TRANSPORT, OBSERVABILITY, OPS, NORMATIVE y SOURCE_EVIDENCE.</span></div>
+          <div class="engineering-fact"><b>Source / Claim / Evidence</b><span>Registro machine-readable que enlaza fuentes, claims, implementación y tests en lugar de depender de memoria informal.</span></div>
+          <div class="engineering-fact"><b>AST write-surface guard</b><span>El repositorio comprueba estructuralmente que las superficies directas de escritura REAL permanezcan confinadas al ejecutor autorizado.</span></div>
+          <div class="engineering-fact"><b>Generative invariants</b><span>Property-based tests cubren Prob_edge, R:R, ATR, capital, leverage, límites diarios e idempotencia sobre inputs generados.</span></div>
+          <div class="engineering-fact"><b>Branch parity</b><span>Un guard read-only clasifica main/develop y falla si no están exactamente alineadas con el baseline certificado.</span></div>
+          <div class="engineering-fact"><b>Fail-closed governance</b><span>Los nuevos controles observan y bloquean inconsistencias; no ganan autoridad para cambiar hard gates ni operar.</span></div>
+        </div>
       </div>
 
       <div class="code-panel">
-        <h3>Qué demuestra — y qué no</h3>
-        <p>Una auditoría de tamaño sirve para distinguir una plataforma de un script aislado, pero no convierte automáticamente complejidad en calidad.</p>
+        <h3>Observadores científicos nuevos</h3>
+        <p>La capa científica empieza a auditar también sus propios sesgos de observación y la calidad del proceso, no solo el resultado de las operaciones PAPER.</p>
         <div class="engineering-facts">
-          <div class="engineering-fact"><b>Demuestra alcance</b><span>Hay múltiples subsistemas persistentes: research, ciencia, riesgo, health, candidate, ejecución, tooling y observabilidad.</span></div>
-          <div class="engineering-fact"><b>Demuestra inversión técnica</b><span>El sistema ya tiene una huella de ingeniería incompatible con la idea de un simple prompt o bot monolítico.</span></div>
-          <div class="engineering-fact"><b>No demuestra edge</b><span>El número de líneas no prueba una ventaja estadística ni una rentabilidad futura.</span></div>
-          <div class="engineering-fact"><b>No elimina deuda técnica</b><span>Se conservan generaciones y versiones; componentes grandes deberán seguir modularizándose.</span></div>
-          <div class="engineering-fact"><b>Historial Git ≠ vida del proyecto</b><span>Los 51 commits pertenecen al repositorio certificado actual; la evolución metodológica comenzó antes.</span></div>
-          <div class="engineering-fact"><b>Separación verificable</b><span>Tests, Scientific Core y componentes transaccionales están físicamente diferenciados en el árbol del repositorio.</span></div>
+          <div class="engineering-fact"><b>DATA_BLOCKED selection audit</b><span>Mide si la disponibilidad de outcomes depende de dimensiones ex-ante y evita tratar CLOSED como muestra automáticamente representativa.</span></div>
+          <div class="engineering-fact"><b>Bounded AI experiments</b><span>Presupuesto finito, trial IDs inmutables, historial append-only y prohibición de exponer OOS confirmatorio al proceso de búsqueda.</span></div>
+          <div class="engineering-fact"><b>Execution-quality observer</b><span>Slippage y latencia sobre ejecuciones V5-owned reconciliadas, sin inventar pre-submit quotes inexistentes.</span></div>
+          <div class="engineering-fact"><b>Drift observer</b><span>KS empírico, distancia de variación total, factores, DATA_BLOCKED y outcomes entre ventanas cronológicas; no adapta automáticamente el modelo.</span></div>
+          <div class="engineering-fact"><b>OOS prospective</b><span>Las cohortes confirmatorias permanecen prospectivas y congeladas; cambios de método no retroescriben membership histórico.</span></div>
+          <div class="engineering-fact"><b>No auto-promotion</b><span>Ningún observador científico obtiene permiso para modificar Prob_edge, candidatos, hard gates o ejecución REAL.</span></div>
         </div>
       </div>
     </div>
 
-    <div class="audit-method"><b>Metodología del conteo.</b> Snapshot de la rama principal auditado el 26/09/2026. Se contabilizaron archivos Python, workflow YAML y tooling ejecutable del repositorio principal. Se excluyeron documentación, bases de datos, logs, snapshots, PDFs e imágenes. “Líneas físicas” incluye espacios y comentarios internos del código; por ello no debe interpretarse como número de algoritmos ni como productividad. La interfaz web pública de TENET se mantiene separada y añade aproximadamente 853 líneas físicas en su versión actual.</div>
+    <div class="audit-method"><b>Metodología del conteo.</b> Árbol de GitHub <code>main</code> leído en el commit <code>e65255e877b6715628380d89c9f9bb3767d4a436</code>. Los conteos de archivos se obtienen del tree del repositorio; la suite completa de TENET-SCI-02 reportó 315 tests PASS y el workflow principal de GitHub Actions finalizó con <b>success</b> sobre ese commit. Estas cifras describen cobertura y disciplina de ingeniería, no rentabilidad ni edge.</div>
   </div>
 </section>
 <section id="economics" class="section economics-section">
@@ -868,12 +879,15 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     </div>
 
     <div class="dd-grid">
-      <div class="dd-card"><div class="dd-icon">01</div><h3>Linaje y versionado</h3><p>Historia de prompts 2025, evolución V3/V5, documentación normativa, repositorios y cambios identificables en el tiempo.</p></div>
-      <div class="dd-card"><div class="dd-icon">02</div><h3>Arquitectura y permisos</h3><p>Separación entre research, health, candidate y execution; identificación de la única capa con privilegios de escritura REAL.</p></div>
-      <div class="dd-card"><div class="dd-icon">03</div><h3>Autoridad de datos</h3><p>Trazabilidad de la fuente utilizada para mercado, cuenta, elegibilidad y ejecución, junto con reglas de stale/discrepancia.</p></div>
-      <div class="dd-card"><div class="dd-icon">04</div><h3>Riesgo y bloqueos</h3><p>Hard gates, sizing desde invalidación, control de exposición, DATA_BLOCKED, kill conditions y política de no blind retry.</p></div>
-      <div class="dd-card"><div class="dd-icon">05</div><h3>Idempotencia y reconciliación</h3><p>Cómo se evita duplicar una intención ambigua y cómo se contrasta posteriormente el estado esperado con el estado confirmado por el broker.</p></div>
-      <div class="dd-card"><div class="dd-icon">06</div><h3>Scientific Core</h3><p>PAPER, variantes, outcomes, calibración, evaluación experimental y separación entre aprendizaje y modificación de reglas críticas.</p></div>
+      <div class="dd-card"><div class="dd-icon">01</div><h3>Linaje y versionado</h3><p>Historia de prompts 2025, evolución V3/V5/TENET, commits certificados y fingerprints categorizados del runtime y método.</p></div>
+      <div class="dd-card"><div class="dd-icon">02</div><h3>Arquitectura y permisos</h3><p>Separación research/health/candidate/execution y guard AST que vigila que la escritura REAL permanezca confinada al ejecutor autorizado.</p></div>
+      <div class="dd-card"><div class="dd-icon">03</div><h3>Autoridad de datos</h3><p>Trazabilidad eToro-only para datos críticos, junto con Source / Claim / Evidence Registry y reglas de stale/discrepancia.</p></div>
+      <div class="dd-card"><div class="dd-icon">04</div><h3>Riesgo y bloqueos</h3><p>Hard gates, sizing desde invalidación, control de exposición, DATA_BLOCKED, kill conditions y property tests de invariantes.</p></div>
+      <div class="dd-card"><div class="dd-icon">05</div><h3>Idempotencia y reconciliación</h3><p>Cómo se evita duplicar una intención ambigua, incluso tras timeout/restart, y cómo se reconcilia posteriormente con evidencia del broker.</p></div>
+      <div class="dd-card"><div class="dd-icon">06</div><h3>Scientific Core</h3><p>PAPER, OOS, variantes, missingness, drift, ejecución, calibración y separación estricta entre aprendizaje y autoridad REAL.</p></div>
+      <div class="dd-card"><div class="dd-icon">07</div><h3>AI research governance</h3><p>Presupuesto de búsqueda finito, registro completo de trials y exclusión del OOS confirmatorio del contexto de búsqueda.</p></div>
+      <div class="dd-card"><div class="dd-icon">08</div><h3>Repository governance</h3><p>CI, guard main/develop y evidencia de paridad permiten distinguir código revisado, runtime efectivo y drift no certificado.</p></div>
+      <div class="dd-card"><div class="dd-icon">09</div><h3>Execution quality</h3><p>Observador read-only para slippage y latencias de ejecuciones V5-owned reconciliadas, sin mezclar posiciones externas.</p></div>
     </div>
 
     <div class="boundary">
