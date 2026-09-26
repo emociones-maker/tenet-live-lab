@@ -4,20 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="TENET — infraestructura algorítmica para research, control de riesgo, observabilidad y ejecución auditable. Live Lab público con actividad real del sistema.">
+<meta name="theme-color" content="#081426">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23081426'/%3E%3Cpath d='M12 15h40v8H37v28H27V23H12z' fill='white'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="./assets/tenet-hero-opt.jpg" fetchpriority="high">
 <title>TENET — Autonomous Trading Research Infrastructure</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
 :root{
-  --bg:#f5f8fc;--panel:#fff;--ink:#0b1733;--muted:#687792;--line:#e3eaf3;
-  --nav:#081426;--nav2:#0d2140;--blue:#1768ff;--green:#0fb978;--red:#e94b64;
+  --bg:#f5f8fc;--panel:#fff;--ink:#0b1733;--muted:#56657d;--line:#e3eaf3;
+  --nav:#081426;--nav2:#0d2140;--blue:#0d57d5;--green:#0fb978;--red:#e94b64;
   --orange:#f59f3a;--purple:#7c4dff;--cyan:#22a7a1;--shadow:0 14px 40px rgba(18,42,82,.08);
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
 a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 22px}.section{padding:82px 0;scroll-margin-top:76px}
 .topnav{position:sticky;top:0;z-index:30;background:rgba(8,20,38,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
 .topnav .inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.brand{font-weight:900;letter-spacing:.08em;color:#fff;font-size:21px}.brand span{display:block;font-weight:500;font-size:10px;color:#8fa4c7;letter-spacing:.12em;margin-top:2px}
-.navlinks{display:flex;gap:13px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:11.5px;color:#c9d5e9}.navlinks a:hover{color:#fff}
+.brand{font-weight:900;letter-spacing:.08em;color:#fff;font-size:21px}.brand span{display:block;font-weight:500;font-size:10px;color:#a9b9d1;letter-spacing:.12em;margin-top:2px}
+.navlinks{display:flex;gap:13px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:11.5px;color:#d5dfed}.navlinks a:hover{color:#fff}
 .navcta{padding:9px 13px!important;border-radius:10px;background:#fff;color:#0b1733!important;font-weight:800}
 .hero{
   position:relative;
@@ -26,7 +29,7 @@ a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:0 auto;paddin
   display:flex;
   align-items:center;
   padding:72px 0 58px;
-  background:#081426 url('./assets/tenet-hero.png') center center/cover no-repeat;
+  background:#081426 url('./assets/tenet-hero-opt.jpg') center center/cover no-repeat;
   overflow:hidden
 }
 .hero:before{
@@ -47,11 +50,11 @@ a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:0 auto;paddin
 .hero-card{backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#b9c8df;font-size:11px;font-weight:700}.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#2ee09a}
 h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.hero h1 span{display:block;color:#8db6ff;font-size:.63em;letter-spacing:-.03em;margin-top:10px}
 .hero p{font-size:18px;line-height:1.58;color:#bfcaDC;max-width:780px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:11px;font-size:13px;font-weight:850}.btn.primary{background:#fff;color:#0b1733}.btn.secondary{border:1px solid rgba(255,255,255,.18);color:#fff;background:rgba(255,255,255,.05)}
-.hero-card{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055);border-radius:22px;padding:22px;box-shadow:0 22px 80px rgba(0,0,0,.18)}.hero-card h3{margin:0 0 16px;font-size:14px}.signal{display:grid;grid-template-columns:1fr auto;gap:8px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px}.signal:last-child{border:none}.signal span{color:#9fb0ca}.signal b{color:#fff}
+.hero-card{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055);border-radius:22px;padding:22px;box-shadow:0 22px 80px rgba(0,0,0,.18)}.hero-card h2{margin:0 0 16px;font-size:14px}.signal{display:grid;grid-template-columns:1fr auto;gap:8px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px}.signal:last-child{border:none}.signal span{color:#9fb0ca}.signal b{color:#fff}
 .kpi-strip{margin-top:-32px;position:relative}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.kpi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:var(--shadow)}.kpi strong{font-size:28px;display:block;letter-spacing:-.04em}.kpi span{font-size:11px;color:var(--muted);display:block;margin-top:5px}
 .section-head{max-width:760px;margin-bottom:30px}.section-head .eyebrow2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:900}.section-head h2{font-size:38px;line-height:1.08;letter-spacing:-.04em;margin:9px 0}.section-head p{color:var(--muted);line-height:1.65;margin:0}
 .grid{display:grid;gap:16px}.grid-5{grid-template-columns:repeat(5,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:1fr 1fr}.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px;box-shadow:var(--shadow)}.card h3{margin:0 0 8px;font-size:15px}.card p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}.stepnum{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#eaf1ff;color:#1458c8;font-size:12px;font-weight:900;margin-bottom:14px}
-.arch{background:#0a1830;color:#fff}.arch .section-head p{color:#9fb0ca}.arch-flow{display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr 42px 1fr;align-items:stretch;gap:6px}.arch-node{background:#102441;border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:20px}.arch-node small{display:block;color:#7e98bf;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.arch-node b{font-size:17px}.arch-node p{font-size:11px;color:#a9bad3;line-height:1.55;margin:9px 0 0}.arrow{display:grid;place-items:center;color:#5f7ba6;font-size:22px}
+.arch{background:#0a1830;color:#fff}.arch .section-head p{color:#9fb0ca}.arch-flow{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr 28px 1fr 28px 1fr;align-items:stretch;gap:5px}.arch-node{background:#102441;border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:20px}.arch-node small{display:block;color:#7e98bf;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.arch-node b{font-size:17px}.arch-node p{font-size:11px;color:#a9bad3;line-height:1.55;margin:9px 0 0}.arrow{display:grid;place-items:center;color:#5f7ba6;font-size:22px}
 .live-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:18px}.statusrow{display:flex;gap:8px;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:850}.pill.green{background:#daf8ec;color:#08794e}.pill.blue{background:#e3edff;color:#1858c5}.pill.gray{background:#eef2f7;color:#637088}.pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
 .metriccards{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.metric{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}.metric span{font-size:10px;color:var(--muted)}.metric strong{display:block;font-size:23px;margin-top:4px}
 .chartgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-top:16px}.chartbox{height:295px}.panel{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:var(--shadow)}.panel h3{margin:0 0 12px;font-size:15px}.note{font-size:11px;color:var(--muted);line-height:1.55;margin-top:9px}
@@ -60,6 +63,25 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 .table{width:100%;border-collapse:collapse;font-size:11px}.table th{text-align:left;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);padding:8px}.table td{padding:9px 8px;border-bottom:1px solid var(--line)}.pos{color:#058e59;font-weight:850}
 .risk-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}.risk-node{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fff;font-size:11px;text-align:center;font-weight:850}.risk-node span{display:block;color:var(--muted);font-weight:500;margin-top:4px}
 .product-card{position:relative;overflow:hidden}.product-card .label{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:900;margin-bottom:10px}.product-card ul{padding-left:17px;margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
+
+.science-flow{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin:22px 0}
+.science-stage{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 12px;min-height:126px}
+.science-stage .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#e7efff;color:#0d57d5;font-size:10px;font-weight:900;margin-bottom:10px}
+.science-stage b{display:block;font-size:11px;margin-bottom:5px}.science-stage span{display:block;font-size:10px;line-height:1.45;color:var(--muted)}
+.science-stage:not(:last-child):after{content:"→";position:absolute;right:-9px;top:51px;color:#9aabc3;font-weight:900;z-index:2}
+.evidence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.evidence{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px}
+.evidence .status{display:inline-block;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px}
+.status.explore{background:#edf2f8;color:#42536d}.status.observe{background:#e7f0ff;color:#0a52c4}.status.robust{background:#e8f8f2;color:#087c51}.status.candidate{background:#f5ebff;color:#6730ba}
+.evidence h3{font-size:13px;margin:0 0 6px}.evidence p{font-size:10.5px;line-height:1.55;color:var(--muted);margin:0}
+.science-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.science-metric{border:1px solid var(--line);border-radius:13px;padding:14px;background:#f9fbfe}
+.science-metric b{display:block;font-size:11px;margin-bottom:4px}.science-metric span{font-size:10px;line-height:1.5;color:var(--muted)}
+.science-boundary{margin-top:18px;border:1px solid #bcd0ef;background:#f1f6ff;border-radius:16px;padding:18px}
+.science-boundary h3{margin:0 0 7px;font-size:14px}.science-boundary p{margin:0;color:#455775;font-size:11.5px;line-height:1.62}
+@media(max-width:1050px){.science-flow{grid-template-columns:repeat(4,1fr)}.science-stage:nth-child(4):after{display:none}.evidence-grid,.science-metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.science-flow,.evidence-grid,.science-metrics{grid-template-columns:1fr}.science-stage:after{display:none}}
+
 .demo{background:linear-gradient(135deg,#0b1830,#12396a);color:#fff}.demo-inner{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.demo h2{font-size:40px;margin:0 0 12px;letter-spacing:-.04em}.demo p{color:#b9c7db;line-height:1.65}.demo-actions{display:flex;gap:10px;flex-wrap:wrap}
 .disclaimer{background:#fff7ea;border:1px solid #f4dfb6;border-radius:14px;padding:14px 16px;color:#775622;font-size:11px;line-height:1.55}
 
@@ -70,7 +92,7 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 .simple-steps{display:grid;gap:10px}
 .simple-step{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:13px;background:#f9fbfe}
 .simple-step b{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#e7efff;color:#1458c8;font-size:12px}
-.simple-step strong{display:block;font-size:13px;margin-bottom:4px}.simple-step span{font-size:11px;line-height:1.5;color:var(--muted)}
+.simple-step strong{display:block;font-size:13px;margin-bottom:4px}.simple-step span{font-size:11px;line-height:1.5;color:#52617a}
 .glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.term{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px}.term b{display:block;font-size:12px;margin-bottom:5px}.term span{font-size:11px;color:var(--muted);line-height:1.5}
 .source-card{border-left:4px solid var(--blue)}.source-card strong{font-size:17px;display:block;margin-bottom:8px}
 .infra-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
@@ -152,7 +174,7 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
       </div>
     </div>
     <div class="hero-card">
-      <h3>Estado público del sistema</h3>
+      <h2>Estado público del sistema</h2>
       <div class="signal"><span>Health</span><b id="heroHealth">—</b></div>
       <div class="signal"><span>Broker/data adapter actual</span><b>eToro</b></div>
       <div class="signal"><span>Public layer</span><b>READ-ONLY</b></div>
@@ -268,11 +290,13 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
     <div class="arch-flow">
       <div class="arch-node"><small>01 · Input</small><b>Broker & Market Adapter</b><p>Fuente operativa de mercado y cuenta. En el despliegue actual, eToro.</p></div>
       <div class="arrow">→</div>
-      <div class="arch-node"><small>02 · Research</small><b>TENET LAB</b><p>PAPER, variantes, outcomes, contrafactuales y observación científica.</p></div>
+      <div class="arch-node"><small>02 · Research</small><b>TENET LAB</b><p>PAPER, hipótesis, variantes, outcomes y experimentos persistentes.</p></div>
       <div class="arrow">→</div>
-      <div class="arch-node"><small>03 · Control</small><b>TENET WATCH + CANDIDATE</b><p>Health, consistencia, prevalidación y clasificación de oportunidades.</p></div>
+      <div class="arch-node"><small>03 · Evidence</small><b>TENET SCIENCE</b><p>Control, OOS, robustez, calibración y clasificación de la evidencia.</p></div>
       <div class="arrow">→</div>
-      <div class="arch-node"><small>04 · Transaction</small><b>TENET EXEC</b><p>Capa transaccional separada, idempotente y reconciliada.</p></div>
+      <div class="arch-node"><small>04 · Control</small><b>TENET WATCH + CANDIDATE</b><p>Health, consistencia, prevalidación y clasificación de oportunidades.</p></div>
+      <div class="arrow">→</div>
+      <div class="arch-node"><small>05 · Transaction</small><b>TENET EXEC</b><p>Capa transaccional separada, idempotente y reconciliada.</p></div>
     </div>
   </div>
 </section>
@@ -320,23 +344,63 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
   </div>
 </section>
 
+
 <section id="science" class="section" style="background:#eef4fb">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow2">Science</div>
-      <h2>Evidencia antes que intuición</h2>
-      <p>TENET mantiene separada la investigación de la promoción a producción. Las métricas experimentales pueden observarse y compararse sin modificar por sí solas la capa transaccional.</p>
+      <div class="eyebrow2">Scientific Layer</div>
+      <h2>De una idea a evidencia reproducible</h2>
+      <p>La capa científica de TENET convierte una intuición de mercado en una hipótesis explícita, la somete a experimentación PAPER y separa lo que parece interesante de lo que resiste controles de muestra, tiempo, régimen y calibración. No utiliza “beneficio observado” como único criterio y no puede promocionarse a sí misma a ejecución REAL.</p>
     </div>
-    <div class="grid grid-3">
-      <div class="card"><h3>Experimental engine</h3><p>Compara configuraciones, muestras y outcomes en un entorno PAPER persistente.</p></div>
-      <div class="card"><h3>Calibration observer</h3><p>Contrasta scores y resultados observados para detectar desalineaciones y límites del modelo.</p></div>
-      <div class="card"><h3>Promotion discipline</h3><p>La investigación no equivale automáticamente a evidencia suficiente para producción.</p></div>
+
+    <div class="science-flow">
+      <div class="science-stage"><div class="n">01</div><b>Pregunta</b><span>Definir qué comportamiento se quiere explicar o mejorar.</span></div>
+      <div class="science-stage"><div class="n">02</div><b>Hipótesis</b><span>Condiciones, resultado medible e invalidación antes de mirar el resultado.</span></div>
+      <div class="science-stage"><div class="n">03</div><b>Diseño</b><span>Control, variantes, universo, horizonte y reglas de evaluación comparables.</span></div>
+      <div class="science-stage"><div class="n">04</div><b>PAPER</b><span>Ejecutar observaciones sin utilizar capital REAL.</span></div>
+      <div class="science-stage"><div class="n">05</div><b>OOS</b><span>Separar descubrimiento de confirmación para reducir sobreajuste y fuga temporal.</span></div>
+      <div class="science-stage"><div class="n">06</div><b>Robustez</b><span>Comprobar sensibilidad a parámetros, periodos, activos, costes y regímenes.</span></div>
+      <div class="science-stage"><div class="n">07</div><b>Calibración</b><span>Contrastar scores y probabilidades estimadas con outcomes realmente observados.</span></div>
+      <div class="science-stage"><div class="n">08</div><b>Evidencia</b><span>Clasificar el resultado; nunca convertirlo automáticamente en permiso REAL.</span></div>
     </div>
+
+    <div class="section-head" style="margin-top:34px;margin-bottom:16px">
+      <div class="eyebrow2">Qué mide</div>
+      <h2 style="font-size:29px">No buscamos una cifra bonita, buscamos estabilidad</h2>
+      <p>Una variante se interpreta desde varias dimensiones a la vez. Una métrica aislada puede ser fruto del azar, de una muestra pequeña o de una condición de mercado irrepetible.</p>
+    </div>
+    <div class="science-metrics">
+      <div class="science-metric"><b>Resultado ajustado a riesgo</b><span>Expectancy en R, distribución de resultados y relación entre pérdida asumida y resultado obtenido.</span></div>
+      <div class="science-metric"><b>Consistencia de la muestra</b><span>Tamaño, dispersión, estabilidad temporal y dependencia de pocos casos extremos.</span></div>
+      <div class="science-metric"><b>Robustez por contexto</b><span>Comportamiento en distintos regímenes, niveles de volatilidad, instrumentos y ventanas temporales.</span></div>
+      <div class="science-metric"><b>Calibración</b><span>Si una puntuación que dice “más edge” se corresponde realmente con mejores frecuencias y resultados observados.</span></div>
+      <div class="science-metric"><b>Sensibilidad</b><span>Qué ocurre si un parámetro cambia ligeramente; una ventaja frágil se degrada con pequeños cambios.</span></div>
+      <div class="science-metric"><b>Costes de ejecución</b><span>Spread, deslizamiento y restricciones operativas se consideran al interpretar la utilidad práctica.</span></div>
+      <div class="science-metric"><b>Contrafactuales</b><span>Comparar qué habría ocurrido con otra entrada, stop, salida o variante bajo el mismo contexto.</span></div>
+      <div class="science-metric"><b>Trazabilidad</b><span>Cada experimento conserva versión, timestamp, inputs, resultado y vínculo con la hipótesis que lo originó.</span></div>
+    </div>
+
+    <div class="section-head" style="margin-top:34px;margin-bottom:16px">
+      <div class="eyebrow2">Madurez de la evidencia</div>
+      <h2 style="font-size:29px">Research no significa production-ready</h2>
+    </div>
+    <div class="evidence-grid">
+      <div class="evidence"><span class="status explore">Exploratory</span><h3>Señal inicial</h3><p>Patrón interesante, muestra todavía limitada o resultado dependiente de una condición concreta.</p></div>
+      <div class="evidence"><span class="status observe">Observed</span><h3>Repetición</h3><p>El comportamiento aparece de forma recurrente y ya permite comparar variantes y controles.</p></div>
+      <div class="evidence"><span class="status robust">Robustness</span><h3>Resistencia</h3><p>La hipótesis sobrevive a segmentación temporal, sensibilidad y cambios razonables de contexto.</p></div>
+      <div class="evidence"><span class="status candidate">Candidate</span><h3>Elegible para revisión</h3><p>Puede pasar a una validación operativa separada. No obtiene por ello permiso automático para operar REAL.</p></div>
+    </div>
+
+    <div class="science-boundary">
+      <h3>Límite científico deliberado</h3>
+      <p>TENET SCIENCE puede descubrir, comparar, rechazar y recomendar investigación adicional. No puede autoelevar límites de capital, alterar permisos de ejecución, relajar hard gates ni transformar una hipótesis prometedora en una operación REAL. Aprendizaje y autoridad transaccional permanecen separados.</p>
+    </div>
+
     <div class="chartgrid">
-      <div class="panel"><h3>Top variantes condicionales</h3><div class="chartbox"><canvas id="variantChart"></canvas></div><div class="note">Resultados descriptivos dentro del universo observado; no representan garantía de rentabilidad.</div></div>
-      <div class="panel"><h3>Calibración diagnóstica</h3><div class="chartbox"><canvas id="probChart"></canvas></div><div class="note">Vista research-only de la relación entre buckets de score y outcomes PAPER observados.</div></div>
+      <div class="panel"><h3>Top variantes condicionales</h3><div class="chartbox"><canvas id="variantChart"></canvas></div><div class="note">Lectura descriptiva del universo observado. Una posición alta en esta gráfica no equivale a promoción ni a garantía de rentabilidad.</div></div>
+      <div class="panel"><h3>Calibración diagnóstica</h3><div class="chartbox"><canvas id="probChart"></canvas></div><div class="note">Compara buckets de score con outcomes PAPER observados para detectar sobreconfianza, subestimación o falta de separación.</div></div>
     </div>
-    <div class="panel" style="margin-top:16px"><h3>Variantes destacadas</h3><table class="table"><thead><tr><th>Variante</th><th>n</th><th>Expectancy R</th><th>Profit factor</th><th>Win rate</th></tr></thead><tbody id="variantTable"></tbody></table></div>
+    <div class="panel" style="margin-top:16px"><h3>Variantes destacadas</h3><table class="table"><thead><tr><th>Variante</th><th>n</th><th>Expectancy R</th><th>Profit factor</th><th>Win rate</th></tr></thead><tbody id="variantTable"></tbody></table><div class="note">Métricas experimentales, no track record financiero auditado.</div></div>
   </div>
 </section>
 
@@ -370,17 +434,21 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
     <div class="section-head">
       <div class="eyebrow2" style="color:#7faeff">Evolution</div>
       <h2>Más de un año evolucionando: del prompt a la infraestructura autónoma</h2>
-      <p>La historia documental del proyecto disponible en Drive comienza en mayo de 2025. Lo que hoy llamamos TENET no nació como un software cerrado: empezó como un asistente cuantitativo guiado por prompts y fue acumulando filtros, aprendizaje, control de riesgo, persistencia, separación de privilegios y automatización.</p>
+      <p>TENET recoge más de un año de iteración y pruebas. El material técnico de trading que hoy podemos reconstruir con detalle en el archivo digital conserva versiones desde mayo de 2025, pero el trabajo experimental del proyecto comenzó antes. Lo que hoy llamamos TENET no nació como un software cerrado: evolucionó desde experimentación asistida por IA y prompts hacia filtros, control de riesgo, persistencia, separación de privilegios y automatización.</p>
     </div>
 
     <div class="history-stats">
-      <div class="history-stat"><strong>16+ meses</strong><span>de evolución documentada mayo 2025 → septiembre 2026</span></div>
+      <div class="history-stat"><strong>+1 año</strong><span>de iteración; linaje técnico conservado con detalle desde mayo de 2025</span></div>
       <div class="history-stat"><strong>v7.8 → v10.6R</strong><span>linaje documentado de prompts FTMO en 2025</span></div>
       <div class="history-stat"><strong>Prompt → VPS</strong><span>de interacción manual a runtime persistente</span></div>
       <div class="history-stat"><strong>LAB → EXEC</strong><span>separación formal entre investigación y escritura REAL</span></div>
     </div>
 
     <div class="roadmap">
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>Etapa inicial · 2025</time>
+        <div class="milestone-body"><h3>IA aplicada como banco de pruebas operativo</h3><p>Antes del linaje de prompts que hoy se conserva con detalle, el proyecto ya utilizaba IA para estructurar análisis, disciplina y decisiones de trading. En esa etapa el proyecto reporta haber superado una prueba FTMO, un hito que impulsó la decisión de convertir el método conversacional en un sistema cada vez más formalizado.</p><span class="version">HITO HISTÓRICO · NO TRACK RECORD ACTUAL</span></div>
+      </div>
       <div class="milestone">
         <div class="milestone-dot"></div><time>Mayo 2025</time>
         <div class="milestone-body"><h3>Primer núcleo cuantitativo documentado</h3><p>La versión 7.8 ya exigía análisis multitemporal, Prob_edge, control de volatilidad, límites diarios, reglas de re-entry, stop técnico y una plantilla de decisión consistente para FTMO.</p><span class="version">PROMPT v7.8 · 22 MAY 2025</span></div>
@@ -595,11 +663,11 @@ async function boot(){
     {label:'Mean result R ×100',data:d.prob_edge_bins.map(x=>x.mean_result_r*100),backgroundColor:'#7c4dff'}
   ]},options:base});
 }
-boot().catch(err=>{
+window.addEventListener('DOMContentLoaded',()=>boot().catch(err=>{
   console.error(err);
   updatedPill.textContent='Datos temporalmente no disponibles';
   heroUpdated.textContent='N/D';
-});
+}));
 </script>
 </body>
 </html>
