@@ -62,6 +62,25 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 .product-card{position:relative;overflow:hidden}.product-card .label{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:900;margin-bottom:10px}.product-card ul{padding-left:17px;margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
 .demo{background:linear-gradient(135deg,#0b1830,#12396a);color:#fff}.demo-inner{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.demo h2{font-size:40px;margin:0 0 12px;letter-spacing:-.04em}.demo p{color:#b9c7db;line-height:1.65}.demo-actions{display:flex;gap:10px;flex-wrap:wrap}
 .disclaimer{background:#fff7ea;border:1px solid #f4dfb6;border-radius:14px;padding:14px 16px;color:#775622;font-size:11px;line-height:1.55}
+
+.explainer{background:#fff}
+.plain-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.big-explain{padding:26px}.big-explain h3{font-size:22px;letter-spacing:-.025em;margin:0 0 12px}
+.big-explain p{font-size:14px;line-height:1.72;color:var(--muted)}
+.simple-steps{display:grid;gap:10px}
+.simple-step{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:13px;background:#f9fbfe}
+.simple-step b{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#e7efff;color:#1458c8;font-size:12px}
+.simple-step strong{display:block;font-size:13px;margin-bottom:4px}.simple-step span{font-size:11px;line-height:1.5;color:var(--muted)}
+.glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.term{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px}.term b{display:block;font-size:12px;margin-bottom:5px}.term span{font-size:11px;color:var(--muted);line-height:1.5}
+.source-card{border-left:4px solid var(--blue)}.source-card strong{font-size:17px;display:block;margin-bottom:8px}
+.infra-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.infra-table th,.infra-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;font-size:12px;vertical-align:top}
+.infra-table th{background:#f5f8fc;color:#50617e;font-size:10px;text-transform:uppercase;letter-spacing:.07em}
+.infra-table td:nth-child(1){font-weight:850;color:var(--ink);width:18%}.infra-table td:nth-child(3){color:var(--muted)}
+.source-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.source-box{padding:16px;border-radius:14px;background:#0e213e;color:#fff}.source-box small{display:block;color:#8fa4c7;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}.source-box b{display:block;font-size:14px}.source-box p{font-size:10px;line-height:1.5;color:#b8c7dc;margin:6px 0 0}
+.copyright{margin-top:10px;color:#9aa6ba;font-size:10px}
+@media(max-width:1050px){.plain-grid{grid-template-columns:1fr}.glossary{grid-template-columns:repeat(2,1fr)}.source-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.glossary,.source-flow{grid-template-columns:1fr}.infra-table{display:block;overflow-x:auto;white-space:normal}}
 footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
 @media(max-width:1050px){.hero{min-height:610px;background-position:34% center}.hero:before{background:linear-gradient(90deg,rgba(4,10,20,.24),rgba(4,10,20,.64)),linear-gradient(180deg,rgba(3,8,18,.04),rgba(3,8,18,.34))}.hero-grid,.demo-inner{grid-template-columns:1fr}.hero-grid>div:first-child,.hero-card{grid-column:1}.hero-grid>div:first-child{max-width:650px}.grid-5{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.grid-2,.chartgrid{grid-template-columns:1fr}.metriccards{grid-template-columns:repeat(3,1fr)}.rejects{grid-template-columns:repeat(2,1fr)}.arch-flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:28px}.risk-flow{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:720px){.wrap{padding:0 15px}.navlinks a:not(.navcta){display:none}.hero{min-height:auto;padding:86px 0 46px;background-position:30% center}.hero:before{background:linear-gradient(180deg,rgba(5,11,23,.38) 0%,rgba(5,11,23,.68) 46%,rgba(5,11,23,.94) 100%)}h1{font-size:43px}.hero p{font-size:16px}.kpis,.metriccards{grid-template-columns:repeat(2,1fr)}.grid-5,.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}.rejects,.risk-flow{grid-template-columns:1fr}.section{padding:62px 0}.section-head h2,.demo h2{font-size:31px}.live-top{flex-direction:column}.chartbox{height:245px}}
@@ -72,11 +91,13 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
   <div class="wrap inner">
     <a class="brand" href="#top">TENET<span>AUTONOMOUS TRADING RESEARCH INFRASTRUCTURE</span></a>
     <nav class="navlinks">
+      <a href="#about">Qué es TENET</a>
       <a href="#how">Cómo funciona</a>
       <a href="#architecture">Arquitectura</a>
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
       <a href="#risk">Risk</a>
+      <a href="#infrastructure">Infraestructura</a>
       <a href="#product">Producto</a>
       <a class="navcta" href="#demo">Solicitar demo</a>
     </nav>
@@ -115,6 +136,44 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
   </div>
 </div>
 
+
+<section id="about" class="section explainer">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">TENET, explicado sin jerga</div>
+      <h2>¿Qué estamos construyendo exactamente?</h2>
+      <p>TENET es un software que combina investigación de mercado, reglas de riesgo, supervisión técnica y automatización. No intenta adivinar el futuro: procesa datos, contrasta hipótesis y solo permite avanzar cuando se cumplen condiciones previamente definidas.</p>
+    </div>
+    <div class="plain-grid">
+      <div class="card big-explain">
+        <h3>Piensa en TENET como un pequeño equipo digital especializado.</h3>
+        <p><b>El investigador</b> estudia qué habría ocurrido con diferentes configuraciones. <b>El supervisor</b> comprueba que los datos y la infraestructura estén sanos. <b>El analista</b> filtra posibles oportunidades. Y <b>el ejecutor</b> es la única pieza que puede interactuar con una cuenta REAL, siempre dentro de las reglas y límites definidos.</p>
+        <p>La idea central no es producir muchas operaciones, sino conseguir un proceso repetible, medible y auditable: saber qué datos se usaron, qué decisión se tomó, por qué se tomó y qué ocurrió después.</p>
+      </div>
+      <div class="simple-steps">
+        <div class="simple-step"><b>1</b><div><strong>Recibe datos</strong><span>Mercado, precios, cuenta, posiciones y restricciones procedentes del broker conectado.</span></div></div>
+        <div class="simple-step"><b>2</b><div><strong>Investiga</strong><span>El LAB prueba hipótesis y variantes en PAPER sin tocar dinero real.</span></div></div>
+        <div class="simple-step"><b>3</b><div><strong>Filtra</strong><span>Descarta escenarios con datos insuficientes, estructura débil o riesgo inadecuado.</span></div></div>
+        <div class="simple-step"><b>4</b><div><strong>Controla</strong><span>WATCHDOG vigila salud, consistencia, conectividad y estado operativo.</span></div></div>
+        <div class="simple-step"><b>5</b><div><strong>Ejecuta y reconcilia</strong><span>La capa transaccional, separada del resto, registra y verifica cada resultado.</span></div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px" class="section-head">
+      <div class="eyebrow2">Glosario rápido</div>
+      <h2 style="font-size:29px">Seis conceptos para entender el panel</h2>
+    </div>
+    <div class="glossary">
+      <div class="term"><b>PAPER</b><span>Simulación operativa utilizada para investigar sin exponer capital real.</span></div>
+      <div class="term"><b>Candidate</b><span>Una oportunidad potencial que todavía debe superar controles antes de poder avanzar.</span></div>
+      <div class="term"><b>Hard gate</b><span>Regla que bloquea automáticamente el proceso cuando no se cumple una condición crítica.</span></div>
+      <div class="term"><b>DATA_BLOCKED</b><span>Estado de seguridad: faltan datos fiables o actuales y el sistema decide no continuar.</span></div>
+      <div class="term"><b>Edge</b><span>Hipótesis de ventaja estadística. En TENET se mide; no se presupone.</span></div>
+      <div class="term"><b>Reconciliation</b><span>Comprobación posterior para verificar que el estado real coincide con lo que el sistema esperaba.</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="how" class="section">
   <div class="wrap">
     <div class="section-head">
@@ -129,6 +188,29 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
       <div class="card"><div class="stepnum">04</div><h3>Decide</h3><p>Solo los escenarios que superan los gates continúan hacia prevalidación.</p></div>
       <div class="card"><div class="stepnum">05</div><h3>Reconcile</h3><p>Los estados y ejecuciones quedan registrados y reconciliados para auditoría.</p></div>
     </div>
+  </div>
+</section>
+
+
+<section id="sources" class="section" style="background:#eef4fb">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Fuentes de datos y autoridad</div>
+      <h2>¿De dónde sale la información que utiliza TENET?</h2>
+      <p>En el despliegue operativo actual, eToro es la autoridad exclusiva para los datos críticos de mercado, cuenta y ejecución. TENET no sustituye un dato crítico ausente con otra fuente para justificar una decisión REAL.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card source-card"><strong>Mercado</strong><p>Bid/ask, spread, precios ejecutables, OHLCV, históricos, volumen, timestamps y datos necesarios para métricas derivadas.</p></div>
+      <div class="card source-card"><strong>Cuenta y cartera</strong><p>Equity, cash, posiciones, órdenes, P&amp;L, SL/TP y estado real del broker.</p></div>
+      <div class="card source-card"><strong>Elegibilidad y ejecución</strong><p>Settlement, leverage permitido, mínimos, tipos de orden, restricciones y confirmación/reconciliación de operaciones.</p></div>
+    </div>
+    <div class="source-flow">
+      <div class="source-box"><small>Broker</small><b>eToro API</b><p>Fuente operativa y técnica del despliegue actual.</p></div>
+      <div class="source-box"><small>Runtime</small><b>Validación local</b><p>TENET procesa, deriva y valida métricas a partir de datos autorizados.</p></div>
+      <div class="source-box"><small>Safety</small><b>No fallback crítico</b><p>Dato crítico insuficiente o stale implica bloqueo.</p></div>
+      <div class="source-box"><small>Governance</small><b>Normativa versionada</b><p>Reglas operativas documentadas y separadas del código experimental.</p></div>
+    </div>
+    <div class="disclaimer" style="margin-top:16px"><b>Importante:</b> la web pública muestra únicamente un snapshot sanitizado. No expone credenciales, identificadores de órdenes/posiciones, secretos de infraestructura ni parámetros propietarios completos.</div>
   </div>
 </section>
 
@@ -237,6 +319,42 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
   </div>
 </section>
 
+
+<section id="infrastructure" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Infrastructure</div>
+      <h2>Qué hay detrás de la interfaz</h2>
+      <p>TENET no es una hoja de cálculo ni un chatbot que genera señales. Es un conjunto de servicios persistentes ejecutados en infraestructura propia, con separación de funciones, almacenamiento local, auditoría y una capa pública estrictamente read-only.</p>
+    </div>
+    <table class="infra-table">
+      <thead><tr><th>Capa</th><th>Tecnología / componente</th><th>Función</th><th>Acceso REAL</th></tr></thead>
+      <tbody>
+        <tr><td>Runtime</td><td>VPS Linux + servicios Python</td><td>Ejecuta de forma persistente los procesos de mercado, research, control y operación.</td><td>No por sí mismo</td></tr>
+        <tr><td>Research</td><td>TENET LAB</td><td>Hipótesis, PAPER, variantes, outcomes, comparaciones y observación científica.</td><td>Read-only</td></tr>
+        <tr><td>Health</td><td>TENET WATCH</td><td>Supervisión de salud, conectividad, consistencia y bloqueos operativos.</td><td>Read-only</td></tr>
+        <tr><td>Prevalidación</td><td>TENET CANDIDATE</td><td>Detecta y prefiltra oportunidades antes de la capa transaccional.</td><td>Read-only</td></tr>
+        <tr><td>Transacción</td><td>TENET EXEC</td><td>Único componente con capacidad de escritura REAL, sujeto a gates, idempotencia y reconciliación.</td><td>Writer exclusivo</td></tr>
+        <tr><td>Persistencia</td><td>SQLite</td><td>Estado, histórico experimental, auditoría, métricas y memoria operativa local.</td><td>Interno</td></tr>
+        <tr><td>Versionado</td><td>Git / GitHub</td><td>Código, control de versiones, trazabilidad de cambios y despliegue de la capa pública.</td><td>No</td></tr>
+        <tr><td>Observabilidad pública</td><td>GitHub Pages + snapshot sanitizado</td><td>Publica métricas seleccionadas del sistema sin capacidad de operación.</td><td>Read-only</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grid grid-3" style="margin-top:18px">
+      <div class="card"><h3>Separación de privilegios</h3><p>Research, vigilancia y prevalidación no pueden escribir operaciones reales. Esa capacidad está confinada a una única capa.</p></div>
+      <div class="card"><h3>Idempotencia y reconciliación</h3><p>Una operación no se repite a ciegas ante un estado ambiguo; el sistema comprueba posteriormente el resultado real del broker.</p></div>
+      <div class="card"><h3>Bloqueo por incertidumbre</h3><p>Datos stale, incompletos, discrepantes o problemas de health producen bloqueo en lugar de una estimación improvisada.</p></div>
+    </div>
+
+    <div style="margin-top:26px" class="section-head">
+      <div class="eyebrow2">Gobernanza técnica</div>
+      <h2 style="font-size:29px">Reglas separadas de la investigación</h2>
+      <p>El LAB puede aprender, medir y comparar variantes, pero no puede concederse nuevos permisos ni modificar por sí solo las reglas críticas que gobiernan la operativa REAL. La configuración normativa está versionada y cualquier cambio material requiere una decisión humana explícita.</p>
+    </div>
+  </div>
+</section>
+
 <section id="product" class="section" style="background:#eef4fb">
   <div class="wrap">
     <div class="section-head">
@@ -290,7 +408,10 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
 </main>
 
 <footer>
-  <div class="wrap">TENET · Research, risk & execution infrastructure · Public layer read-only · Broker deployment shown: eToro</div>
+  <div class="wrap">
+    <div>TENET · Research, risk &amp; execution infrastructure · Public layer read-only · Broker deployment shown: eToro</div>
+    <div class="copyright">© 2026 Eliezer M.C. · TENET · Todos los derechos reservados.</div>
+  </div>
 </footer>
 
 <script>
