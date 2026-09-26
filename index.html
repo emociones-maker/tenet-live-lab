@@ -144,7 +144,7 @@ const row=(a,b)=>`<div class="metric-row"><span>${a}</span><b>${b}</b></div>`;
 const eventClass=t=>t==='HEALTH'?'good':t==='LAB'?'info':t==='BLOCK'?'bad':'warn';
 
 async function boot(){
-  const d=await fetch('./data/snapshot.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json());
+  const d=await fetch('https://emociones-maker.github.io/etoro-v5/data/snapshot.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json());
   document.getElementById('healthPill').textContent=d.system.health;
   document.getElementById('updatedPill').textContent='Actualizado '+new Date(d.updated_utc).toLocaleString('es-ES',{timeZone:'Atlantic/Canary',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
   events.textContent=fmt(d.counters.events);paperTrades.textContent=fmt(d.counters.paper_trades);closedOutcomes.textContent=fmt(d.counters.closed_outcomes);
