@@ -17,7 +17,7 @@ a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:0 auto;paddin
 .topnav{position:sticky;top:0;z-index:30;background:rgba(8,20,38,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
 .topnav .inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .brand{font-weight:900;letter-spacing:.08em;color:#fff;font-size:21px}.brand span{display:block;font-weight:500;font-size:10px;color:#8fa4c7;letter-spacing:.12em;margin-top:2px}
-.navlinks{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:12px;color:#c9d5e9}.navlinks a:hover{color:#fff}
+.navlinks{display:flex;gap:13px;align-items:center;flex-wrap:wrap}.navlinks a{font-size:11.5px;color:#c9d5e9}.navlinks a:hover{color:#fff}
 .navcta{padding:9px 13px!important;border-radius:10px;background:#fff;color:#0b1733!important;font-weight:800}
 .hero{
   position:relative;
@@ -81,6 +81,39 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 .copyright{margin-top:10px;color:#9aa6ba;font-size:10px}
 @media(max-width:1050px){.plain-grid{grid-template-columns:1fr}.glossary{grid-template-columns:repeat(2,1fr)}.source-flow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.glossary,.source-flow{grid-template-columns:1fr}.infra-table{display:block;overflow-x:auto;white-space:normal}}
+
+.history{background:linear-gradient(180deg,#081426 0%,#0b1b33 100%);color:#fff}
+.history .section-head p{color:#aabbd3}
+.history-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+.history-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:15px;padding:18px}
+.history-stat strong{display:block;font-size:28px;letter-spacing:-.04em}.history-stat span{display:block;color:#8fa4c7;font-size:10px;margin-top:5px}
+.roadmap{position:relative;display:grid;gap:0}
+.roadmap:before{content:"";position:absolute;left:20px;top:17px;bottom:17px;width:2px;background:linear-gradient(#1768ff,#22a7a1)}
+.milestone{position:relative;display:grid;grid-template-columns:42px 120px 1fr;gap:16px;padding:15px 0}
+.milestone-dot{position:relative;z-index:1;width:14px;height:14px;border-radius:50%;background:#5a91ff;border:3px solid #0b1b33;margin:5px 0 0 14px;box-shadow:0 0 0 3px rgba(90,145,255,.18)}
+.milestone time{font-size:11px;color:#7fa4da;font-weight:850;padding-top:4px}
+.milestone-body{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);border-radius:15px;padding:16px 18px}
+.milestone-body h3{font-size:14px;margin:0 0 6px}.milestone-body p{margin:0;color:#aabbd3;font-size:11px;line-height:1.6}
+.milestone-body .version{display:inline-block;margin-top:9px;padding:5px 8px;border-radius:999px;background:rgba(23,104,255,.18);color:#9ebeff;font-size:9px;font-weight:850;letter-spacing:.05em}
+.ftmo-note{margin-top:18px;background:rgba(245,159,58,.10);border:1px solid rgba(245,159,58,.28);border-radius:14px;padding:15px 17px;color:#e6c696;font-size:11px;line-height:1.6}
+.evolution-arrow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.evolution-arrow div{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;text-align:center;font-size:11px;font-weight:850}
+.evolution-arrow span{display:block;color:var(--muted);font-weight:500;font-size:9px;margin-top:4px}
+.dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dd-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:var(--shadow)}
+.dd-card .dd-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#e8f0ff;color:#1768ff;font-weight:900;font-size:12px;margin-bottom:12px}
+.dd-card h3{margin:0 0 7px;font-size:14px}.dd-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.58}
+.audit-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.audit-item{padding:14px 15px;border-radius:13px;background:#f7faff;border:1px solid var(--line);font-size:11px;line-height:1.55}
+.audit-item b{display:block;margin-bottom:4px}
+.boundary{background:#07172d;color:#fff;border-radius:18px;padding:24px;margin-top:18px}
+.boundary h3{margin:0 0 10px;font-size:18px}.boundary p{color:#afbed3;font-size:11px;line-height:1.65;margin:0}
+.ai-box{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ai-box .card{box-shadow:none}
+.provenance{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.provenance .card{box-shadow:none}
+@media(max-width:1050px){.history-stats{grid-template-columns:repeat(2,1fr)}.dd-grid{grid-template-columns:1fr 1fr}.evolution-arrow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.history-stats,.dd-grid,.audit-list,.evolution-arrow,.ai-box,.provenance{grid-template-columns:1fr}.milestone{grid-template-columns:42px 1fr}.milestone time{grid-column:2;padding-top:0}.milestone-body{grid-column:2}.roadmap:before{left:20px}}
 footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
 @media(max-width:1050px){.hero{min-height:610px;background-position:34% center}.hero:before{background:linear-gradient(90deg,rgba(4,10,20,.24),rgba(4,10,20,.64)),linear-gradient(180deg,rgba(3,8,18,.04),rgba(3,8,18,.34))}.hero-grid,.demo-inner{grid-template-columns:1fr}.hero-grid>div:first-child,.hero-card{grid-column:1}.hero-grid>div:first-child{max-width:650px}.grid-5{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.grid-2,.chartgrid{grid-template-columns:1fr}.metriccards{grid-template-columns:repeat(3,1fr)}.rejects{grid-template-columns:repeat(2,1fr)}.arch-flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:28px}.risk-flow{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:720px){.wrap{padding:0 15px}.navlinks a:not(.navcta){display:none}.hero{min-height:auto;padding:86px 0 46px;background-position:30% center}.hero:before{background:linear-gradient(180deg,rgba(5,11,23,.38) 0%,rgba(5,11,23,.68) 46%,rgba(5,11,23,.94) 100%)}h1{font-size:43px}.hero p{font-size:16px}.kpis,.metriccards{grid-template-columns:repeat(2,1fr)}.grid-5,.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}.rejects,.risk-flow{grid-template-columns:1fr}.section{padding:62px 0}.section-head h2,.demo h2{font-size:31px}.live-top{flex-direction:column}.chartbox{height:245px}}
@@ -97,7 +130,9 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
       <a href="#risk">Risk</a>
+      <a href="#history">Historia</a>
       <a href="#infrastructure">Infraestructura</a>
+      <a href="#diligence">Due Diligence</a>
       <a href="#product">Producto</a>
       <a class="navcta" href="#demo">Solicitar demo</a>
     </nav>
@@ -199,16 +234,25 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
       <h2>¿De dónde sale la información que utiliza TENET?</h2>
       <p>En el despliegue operativo actual, eToro es la autoridad exclusiva para los datos críticos de mercado, cuenta y ejecución. TENET no sustituye un dato crítico ausente con otra fuente para justificar una decisión REAL.</p>
     </div>
-    <div class="grid grid-3">
+    <div class="grid grid-4">
       <div class="card source-card"><strong>Mercado</strong><p>Bid/ask, spread, precios ejecutables, OHLCV, históricos, volumen, timestamps y datos necesarios para métricas derivadas.</p></div>
       <div class="card source-card"><strong>Cuenta y cartera</strong><p>Equity, cash, posiciones, órdenes, P&amp;L, SL/TP y estado real del broker.</p></div>
       <div class="card source-card"><strong>Elegibilidad y ejecución</strong><p>Settlement, leverage permitido, mínimos, tipos de orden, restricciones y confirmación/reconciliación de operaciones.</p></div>
+      <div class="card source-card"><strong>Corpus de investigación</strong><p>Bibliografía interna sobre microestructura, volatilidad, ATR, trading algorítmico, análisis técnico y portfolio. Sirve para research; no sustituye al broker como verdad operativa.</p></div>
     </div>
     <div class="source-flow">
       <div class="source-box"><small>Broker</small><b>eToro API</b><p>Fuente operativa y técnica del despliegue actual.</p></div>
       <div class="source-box"><small>Runtime</small><b>Validación local</b><p>TENET procesa, deriva y valida métricas a partir de datos autorizados.</p></div>
       <div class="source-box"><small>Safety</small><b>No fallback crítico</b><p>Dato crítico insuficiente o stale implica bloqueo.</p></div>
       <div class="source-box"><small>Governance</small><b>Normativa versionada</b><p>Reglas operativas documentadas y separadas del código experimental.</p></div>
+    </div>
+    <div class="ai-box">
+      <div class="card"><h3>Qué hace la IA</h3><p>Ayuda a estructurar investigación, comparar hipótesis, interpretar contexto y orquestar procesos. En la arquitectura actual, la IA no es la fuente de verdad del precio ni del estado de la cuenta.</p></div>
+      <div class="card"><h3>Qué no hace la IA</h3><p>No inventa un dato crítico ausente para permitir una operación REAL. Si la fuente autorizada no aporta información suficiente o actual, el sistema bloquea la decisión.</p></div>
+    </div>
+    <div class="provenance">
+      <div class="card"><h3>Fase histórica 2025</h3><p>El asistente FTMO utilizó una combinación más amplia de contexto técnico, macro, sentimiento, intermercado y order-flow. Esa etapa fue experimental y prompt-driven.</p></div>
+      <div class="card"><h3>Política vigente 2026</h3><p>Para decisiones REAL críticas, el diseño evolucionó deliberadamente a una autoridad operativa única: eToro. No existe fallback externo para justificar una entrada.</p></div>
     </div>
     <div class="disclaimer" style="margin-top:16px"><b>Importante:</b> la web pública muestra únicamente un snapshot sanitizado. No expone credenciales, identificadores de órdenes/posiciones, secretos de infraestructura ni parámetros propietarios completos.</div>
   </div>
@@ -320,6 +364,60 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
 </section>
 
 
+
+<section id="history" class="section history">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2" style="color:#7faeff">Evolution</div>
+      <h2>Más de un año evolucionando: del prompt a la infraestructura autónoma</h2>
+      <p>La historia documental del proyecto disponible en Drive comienza en mayo de 2025. Lo que hoy llamamos TENET no nació como un software cerrado: empezó como un asistente cuantitativo guiado por prompts y fue acumulando filtros, aprendizaje, control de riesgo, persistencia, separación de privilegios y automatización.</p>
+    </div>
+
+    <div class="history-stats">
+      <div class="history-stat"><strong>16+ meses</strong><span>de evolución documentada mayo 2025 → septiembre 2026</span></div>
+      <div class="history-stat"><strong>v7.8 → v10.6R</strong><span>linaje documentado de prompts FTMO en 2025</span></div>
+      <div class="history-stat"><strong>Prompt → VPS</strong><span>de interacción manual a runtime persistente</span></div>
+      <div class="history-stat"><strong>LAB → EXEC</strong><span>separación formal entre investigación y escritura REAL</span></div>
+    </div>
+
+    <div class="roadmap">
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>Mayo 2025</time>
+        <div class="milestone-body"><h3>Primer núcleo cuantitativo documentado</h3><p>La versión 7.8 ya exigía análisis multitemporal, Prob_edge, control de volatilidad, límites diarios, reglas de re-entry, stop técnico y una plantilla de decisión consistente para FTMO.</p><span class="version">PROMPT v7.8 · 22 MAY 2025</span></div>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>23–26 mayo 2025</time>
+        <div class="milestone-body"><h3>De reglas estáticas a filtros adaptativos</h3><p>v8.0 y la familia v8.1.x incorporaron bloqueo macro, regímenes de mercado, contexto cripto, correlaciones, control de drawdown, modo exploratorio acotado, logging y reglas cada vez más estrictas para evitar entradas forzadas.</p><span class="version">v8.0 · v8.1 · v8.1.1 · v8.1.2 · v8.1.3</span></div>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>Mayo–junio 2025</time>
+        <div class="milestone-body"><h3>Sistema “antifallo” a nivel de prompt</h3><p>El linaje v10.3/v10.6R añadió validación macro anticipada, intermercado, detección de spoofing, scoring dinámico, bloqueo por rango, controles post-SL y autojournaling. Era todavía un sistema dirigido por conversación, pero ya aparecían conceptos que después pasarían al software.</p><span class="version">v10.3 · v10.6R</span></div>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>2026</time>
+        <div class="milestone-body"><h3>De asistente a sistema persistente</h3><p>El proyecto migra desde prompts y herramientas dispersas hacia servidor VPS, estado durable, laboratorio continuo, procesos programados, registro de outcomes y componentes especializados.</p><span class="version">ETORO V3 → V5</span></div>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>Septiembre 2026</time>
+        <div class="milestone-body"><h3>Arquitectura V5 y autonomía gobernada</h3><p>Se formaliza la separación LAB / WATCHDOG / REAL-CANDIDATE / V5-REAL-EXEC, SQLite como estado durable, eToro como autoridad crítica y una única capa autorizada para escritura REAL, con hard gates, idempotencia y reconciliación.</p><span class="version">PROTOCOLO v3.0 · ARCH-04 v2.0</span></div>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot"></div><time>Septiembre 2026</time>
+        <div class="milestone-body"><h3>Nace TENET como producto observable</h3><p>La arquitectura técnica mantiene sus identificadores internos, mientras TENET se convierte en la identidad de producto: Live Lab público read-only, dashboard sanitizado y una superficie preparada para demostración y due diligence.</p><span class="version">TENET — LIVE LAB</span></div>
+      </div>
+    </div>
+
+    <div class="ftmo-note"><b>Hito FTMO 2025.</b> El desarrollador reporta haber superado una prueba FTMO utilizando el sistema asistido por IA. El Drive conserva de forma verificable la evolución técnica del asistente FTMO desde v7.8 hasta el linaje v10.x; la web pública no muestra documentación privada de la cuenta ni presenta este hito como garantía de resultados futuros.</div>
+
+    <div class="evolution-arrow">
+      <div>Prompt engineering<span>reglas y plantillas</span></div>
+      <div>Decision framework<span>filtros, riesgo y logging</span></div>
+      <div>Persistent system<span>VPS, SQLite y agentes</span></div>
+      <div>TENET<span>research + risk + execution</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="infrastructure" class="section">
   <div class="wrap">
     <div class="section-head">
@@ -355,7 +453,43 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
   </div>
 </section>
 
-<section id="product" class="section" style="background:#eef4fb">
+
+<section id="diligence" class="section" style="background:#eef4fb">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Technical Due Diligence</div>
+      <h2>Qué puede revisar un comprador técnico</h2>
+      <p>La propuesta comercial de TENET no depende de una “caja negra”. La arquitectura está pensada para poder someterse a revisión técnica controlada, separando lo que puede mostrarse públicamente de aquello que requiere acceso privado y confidencial.</p>
+    </div>
+
+    <div class="dd-grid">
+      <div class="dd-card"><div class="dd-icon">01</div><h3>Linaje y versionado</h3><p>Historia de prompts 2025, evolución V3/V5, documentación normativa, repositorios y cambios identificables en el tiempo.</p></div>
+      <div class="dd-card"><div class="dd-icon">02</div><h3>Arquitectura y permisos</h3><p>Separación entre research, health, candidate y execution; identificación de la única capa con privilegios de escritura REAL.</p></div>
+      <div class="dd-card"><div class="dd-icon">03</div><h3>Autoridad de datos</h3><p>Trazabilidad de la fuente utilizada para mercado, cuenta, elegibilidad y ejecución, junto con reglas de stale/discrepancia.</p></div>
+      <div class="dd-card"><div class="dd-icon">04</div><h3>Riesgo y bloqueos</h3><p>Hard gates, sizing desde invalidación, control de exposición, DATA_BLOCKED, kill conditions y política de no blind retry.</p></div>
+      <div class="dd-card"><div class="dd-icon">05</div><h3>Idempotencia y reconciliación</h3><p>Cómo se evita duplicar una intención ambigua y cómo se contrasta posteriormente el estado esperado con el estado confirmado por el broker.</p></div>
+      <div class="dd-card"><div class="dd-icon">06</div><h3>Scientific Core</h3><p>PAPER, variantes, outcomes, calibración, evaluación experimental y separación entre aprendizaje y modificación de reglas críticas.</p></div>
+    </div>
+
+    <div class="boundary">
+      <h3>Public proof vs. private proof</h3>
+      <p>El Live Lab es una prueba pública de actividad y observabilidad, no un volcado del sistema. Una due diligence privada puede profundizar en arquitectura, documentación normativa, historial de versiones, configuración de despliegue, pruebas, logs sanitizados, datos de LAB y controles de seguridad, sin compartir credenciales ni secretos operativos fuera de un entorno controlado.</p>
+    </div>
+
+    <div class="audit-list">
+      <div class="audit-item"><b>Documentación normativa</b>PROTOCOLO_OPERATIVO_ETORO_V5_v3.0 y ARCH-04 v2.0 gobiernan el runtime REAL actual.</div>
+      <div class="audit-item"><b>Persistencia</b>VPS Linux + SQLite para estado durable, investigación y trazabilidad.</div>
+      <div class="audit-item"><b>Salud del sistema</b>WATCHDOG puede bloquear nuevas entradas ante degradación, conectividad o integridad insuficiente.</div>
+      <div class="audit-item"><b>Audit trail</b>Las intenciones y ejecuciones se diseñan para conservar identificadores, timestamps, parámetros de riesgo, estado y reconciliación.</div>
+      <div class="audit-item"><b>Research boundary</b>El LAB puede experimentar, pero no puede concederse permisos ni modificar silenciosamente los hard gates de producción.</div>
+      <div class="audit-item"><b>Public boundary</b>El dashboard expone métricas sanitizadas y permanece sin capacidad transaccional.</div>
+    </div>
+
+    <div class="disclaimer" style="margin-top:18px"><b>Lo que TENET no afirma:</b> no se presenta una rentabilidad futura garantizada, una auditoría financiera independiente ni un “edge” universal demostrado. La tesis comercial es tecnológica: infraestructura persistente, proceso auditable, investigación reproducible y controles explícitos de riesgo.</div>
+  </div>
+</section>
+
+<section id="product" class="section" style="background:#fff">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow2">Product</div>
@@ -410,7 +544,8 @@ footer{padding:34px 0;color:#7b879d;font-size:11px;text-align:center}
 <footer>
   <div class="wrap">
     <div>TENET · Research, risk &amp; execution infrastructure · Public layer read-only · Broker deployment shown: eToro</div>
-    <div class="copyright">© 2026 Eliezer M.C. · TENET · Todos los derechos reservados.</div>
+    <div class="copyright">© 2025–2026 Eliezer M.C. · TENET · Software, arquitectura, documentación y diseño del producto. Todos los derechos reservados.</div>
+    <div class="copyright">eToro y FTMO son referencias a plataformas de terceros. No se implica afiliación, patrocinio ni garantía de resultados.</div>
   </div>
 </footer>
 
