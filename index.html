@@ -8,7 +8,6 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23081426'/%3E%3Cpath d='M12 15h40v8H37v28H27V23H12z' fill='white'/%3E%3C/svg%3E">
 <link rel="preload" as="image" href="./assets/tenet-hero-opt.jpg" fetchpriority="high">
 <title>TENET — Autonomous Trading Research Infrastructure</title>
-<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
 :root{
   --bg:#f5f8fc;--panel:#fff;--ink:#0b1733;--muted:#56657d;--line:#e3eaf3;
@@ -645,6 +644,27 @@ async function boot(){
 
   variantTable.innerHTML=d.top_variants.slice(0,8).map(v=>'<tr><td><b>'+v.variant_id+'</b></td><td>'+fmt(v.observed_selected)+'</td><td class="pos">'+num(v.expectancy_r)+' R</td><td>'+num(v.profit_factor)+'</td><td>'+pct(v.win_rate)+'</td></tr>').join('');
 
+  scheduleCharts(d);
+}
+
+let chartLoadPromise=null;
+let chartsStarted=false;
+
+function loadChartJs(){
+  if(window.Chart) return Promise.resolve();
+  if(chartLoadPromise) return chartLoadPromise;
+  chartLoadPromise=new Promise((resolve,reject)=>{
+    const sc=document.createElement('script');
+    sc.src='https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js';
+    sc.async=true;
+    sc.onload=()=>resolve();
+    sc.onerror=reject;
+    document.head.appendChild(sc);
+  });
+  return chartLoadPromise;
+}
+
+function renderCharts(d){
   const grid='#e2e9f2',tick='#687792';
   const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:tick,boxWidth:10,font:{size:10}}}},scales:{x:{grid:{color:grid},ticks:{color:tick}},y:{grid:{color:grid},ticks:{color:tick}}}};
   new Chart(dailyChart,{type:'bar',data:{labels:d.daily_history.map(x=>x.date.slice(5)),datasets:[
@@ -662,6 +682,27 @@ async function boot(){
     {label:'Positive R %',data:d.prob_edge_bins.map(x=>x.positive_result_rate*100),backgroundColor:'#0fb978'},
     {label:'Mean result R ×100',data:d.prob_edge_bins.map(x=>x.mean_result_r*100),backgroundColor:'#7c4dff'}
   ]},options:base});
+
+}
+
+function scheduleCharts(d){
+  const start=()=>{
+    if(chartsStarted) return;
+    chartsStarted=true;
+    loadChartJs().then(()=>renderCharts(d)).catch(err=>console.error('Chart load failed',err));
+  };
+  const live=document.getElementById('live');
+  if('IntersectionObserver' in window && live){
+    const io=new IntersectionObserver(entries=>{
+      if(entries.some(e=>e.isIntersecting)){
+        io.disconnect();
+        start();
+      }
+    },{rootMargin:'900px 0px'});
+    io.observe(live);
+  }else{
+    setTimeout(start,1200);
+  }
 }
 window.addEventListener('DOMContentLoaded',()=>boot().catch(err=>{
   console.error(err);
