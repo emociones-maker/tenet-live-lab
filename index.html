@@ -136,6 +136,30 @@ h1{font-size:58px;line-height:.98;margin:18px 0 18px;letter-spacing:-.055em}.her
 @media(max-width:1050px){.history-stats{grid-template-columns:repeat(2,1fr)}.dd-grid{grid-template-columns:1fr 1fr}.evolution-arrow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.history-stats,.dd-grid,.audit-list,.evolution-arrow,.ai-box,.provenance{grid-template-columns:1fr}.milestone{grid-template-columns:42px 1fr}.milestone time{grid-column:2;padding-top:0}.milestone-body{grid-column:2}.roadmap:before{left:20px}}
 
+
+.engineering-section{background:linear-gradient(180deg,#f6f9fd 0%,#edf3fa 100%);position:relative;overflow:hidden}
+.engineering-section:before{content:"";position:absolute;width:680px;height:680px;border-radius:50%;right:-310px;top:-260px;background:radial-gradient(circle,rgba(23,104,255,.10),rgba(23,104,255,0) 70%);pointer-events:none}
+.engineering-section .wrap{position:relative}
+.audit-stamp{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid #cbd9ec;background:#fff;border-radius:999px;color:#52617a;font-size:9px;font-weight:850;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px}
+.audit-stamp:before{content:"";width:7px;height:7px;border-radius:50%;background:#0fb978;box-shadow:0 0 0 4px rgba(15,185,120,.10)}
+.code-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 16px}
+.code-metric{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px;box-shadow:var(--shadow);min-height:145px;display:flex;flex-direction:column}
+.code-metric.primary{background:linear-gradient(145deg,#081426,#103462);color:#fff;border-color:#173d70}
+.code-metric .kicker{font-size:8.5px;text-transform:uppercase;letter-spacing:.11em;color:#71819a;font-weight:900}.code-metric.primary .kicker{color:#94b8f7}
+.code-metric strong{display:block;font-size:31px;line-height:1;letter-spacing:-.045em;margin:14px 0 8px}.code-metric.primary strong{font-size:36px}
+.code-metric p{font-size:10px;line-height:1.48;color:var(--muted);margin:auto 0 0}.code-metric.primary p{color:#b8c9e1}
+.engineering-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;margin-top:16px}
+.code-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.code-panel h3{font-size:14px;margin:0 0 5px}.code-panel>p{font-size:10.5px;color:var(--muted);line-height:1.55;margin:0 0 17px}
+.codebar-row{display:grid;grid-template-columns:155px 1fr 64px;gap:10px;align-items:center;margin:12px 0}
+.codebar-label{font-size:10px;font-weight:800;color:#33445f}.codebar-track{height:8px;border-radius:999px;background:#eaf0f7;overflow:hidden}.codebar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#1768ff,#22a7a1)}.codebar-num{text-align:right;font-size:9.5px;color:#687792;font-variant-numeric:tabular-nums}
+.engineering-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.engineering-fact{border:1px solid var(--line);border-radius:13px;padding:14px;background:#f9fbfe}.engineering-fact b{display:block;font-size:11px;margin-bottom:5px}.engineering-fact span{display:block;font-size:9.8px;line-height:1.5;color:var(--muted)}
+.audit-method{margin-top:16px;padding:15px 17px;border-radius:14px;border:1px solid #cfdced;background:#fff;font-size:10px;line-height:1.62;color:#586980}
+.audit-method b{color:#233955}
+.module-table{width:100%;border-collapse:collapse}.module-table th,.module-table td{padding:10px 8px;border-bottom:1px solid var(--line);font-size:9.7px;text-align:left}.module-table th{font-size:8.5px;text-transform:uppercase;letter-spacing:.08em;color:#6f7f96}.module-table td:first-child{font-weight:800;color:#273b58}.module-table td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:1050px){.code-metrics{grid-template-columns:repeat(2,1fr)}.engineering-grid{grid-template-columns:1fr}}
+@media(max-width:720px){.code-metrics,.engineering-facts{grid-template-columns:1fr}.codebar-row{grid-template-columns:120px 1fr 54px}.code-metric{min-height:125px}}
+
 /* Commercial + visual layer */
 .card,.panel,.metric,.kpi,.science-stage,.evidence,.dd-card,.value-card,.commercial-card,.asset-layer{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
 @media (hover:hover){.card:hover,.panel:hover,.metric:hover,.kpi:hover,.science-stage:hover,.evidence:hover,.dd-card:hover,.value-card:hover,.commercial-card:hover{transform:translateY(-3px);border-color:#c9d8ed;box-shadow:0 18px 42px rgba(18,42,82,.11)}}
@@ -187,8 +211,8 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
       <a href="#history">Historia</a>
+      <a href="#engineering">Engineering</a>
       <a href="#diligence">Due Diligence</a>
-      <a href="#asset">Activo</a>
       <a href="#product">Producto</a>
       <a class="navcta" href="#demo">Solicitar demo</a>
     </nav>
@@ -598,6 +622,67 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   </div>
 </section>
 
+
+
+<section id="engineering" class="section engineering-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow2">Engineering footprint</div>
+      <h2>El tamaño del sistema, medido sobre el repositorio</h2>
+      <p>Estas cifras describen el alcance técnico de TENET; no se utilizan como sustituto de calidad, rentabilidad o valor económico. El conteo se ha realizado sobre el snapshot actual del repositorio principal, separando tests y capa científica.</p>
+    </div>
+    <div class="audit-stamp">Codebase audit · 26 Sep 2026 · main repository</div>
+
+    <div class="code-metrics">
+      <div class="code-metric primary"><span class="kicker">Code / config footprint</span><strong>67,234</strong><p>líneas físicas auditadas en código y configuración técnica del repositorio principal.</p></div>
+      <div class="code-metric"><span class="kicker">Code files</span><strong>134</strong><p>archivos de código/configuración; 123 de ellos son Python.</p></div>
+      <div class="code-metric"><span class="kicker">Non-test footprint</span><strong>60,796</strong><p>líneas fuera de la suite de tests; incluye runtime, research, ciencia, herramientas y versiones conservadas.</p></div>
+      <div class="code-metric"><span class="kicker">Scientific Core</span><strong>18,540</strong><p>líneas en 15 módulos científicos: aproximadamente el 30.5% del footprint no-test.</p></div>
+
+      <div class="code-metric"><span class="kicker">Test suite</span><strong>6,438</strong><p>líneas distribuidas en 49 archivos de tests automatizados.</p></div>
+      <div class="code-metric"><span class="kicker">Python</span><strong>123</strong><p>archivos Python en el snapshot auditado, además de tooling y workflow de CI.</p></div>
+      <div class="code-metric"><span class="kicker">Certified repo history</span><strong>51</strong><p>commits en el repositorio GitHub actual desde su baseline certificado del 14 Sep 2026.</p></div>
+      <div class="code-metric"><span class="kicker">Project evolution</span><strong>+1 año</strong><p>de iteración metodológica; el linaje detallado conservado antecede al repositorio GitHub actual.</p></div>
+    </div>
+
+    <div class="engineering-grid">
+      <div class="code-panel">
+        <h3>Anatomía del código</h3>
+        <p>Las cifras siguientes muestran peso relativo y algunos de los componentes más grandes. El volumen de líneas no implica por sí mismo mayor calidad.</p>
+        <div class="codebar-row"><div class="codebar-label">Scientific Core</div><div class="codebar-track"><div class="codebar-fill" style="width:27.6%"></div></div><div class="codebar-num">18,540</div></div>
+        <div class="codebar-row"><div class="codebar-label">Automated tests</div><div class="codebar-track"><div class="codebar-fill" style="width:9.6%"></div></div><div class="codebar-num">6,438</div></div>
+        <div class="codebar-row"><div class="codebar-label">Other non-test code</div><div class="codebar-track"><div class="codebar-fill" style="width:62.8%"></div></div><div class="codebar-num">42,256</div></div>
+
+        <table class="module-table" style="margin-top:18px">
+          <thead><tr><th>Componente</th><th>Función</th><th>Líneas</th></tr></thead>
+          <tbody>
+            <tr><td>v5_real_exec.py</td><td>capa transaccional y protección REAL</td><td>6,607</td></tr>
+            <tr><td>ops/v5_ops_reporter.py</td><td>observabilidad y reporting operativo</td><td>2,831</td></tr>
+            <tr><td>Scientific · Purged CPCV</td><td>validación temporal / combinatoria</td><td>2,044</td></tr>
+            <tr><td>Scientific · CSCV/PBO v3</td><td>riesgo de sobreajuste</td><td>2,026</td></tr>
+            <tr><td>domain/portfolio_risk_engine.py</td><td>riesgo y restricciones de cartera</td><td>1,874</td></tr>
+            <tr><td>real_funnel_cycle_v2_3.py</td><td>funnel de decisión REAL</td><td>1,707</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="code-panel">
+        <h3>Qué demuestra — y qué no</h3>
+        <p>Una auditoría de tamaño sirve para distinguir una plataforma de un script aislado, pero no convierte automáticamente complejidad en calidad.</p>
+        <div class="engineering-facts">
+          <div class="engineering-fact"><b>Demuestra alcance</b><span>Hay múltiples subsistemas persistentes: research, ciencia, riesgo, health, candidate, ejecución, tooling y observabilidad.</span></div>
+          <div class="engineering-fact"><b>Demuestra inversión técnica</b><span>El sistema ya tiene una huella de ingeniería incompatible con la idea de un simple prompt o bot monolítico.</span></div>
+          <div class="engineering-fact"><b>No demuestra edge</b><span>El número de líneas no prueba una ventaja estadística ni una rentabilidad futura.</span></div>
+          <div class="engineering-fact"><b>No elimina deuda técnica</b><span>Se conservan generaciones y versiones; componentes grandes deberán seguir modularizándose.</span></div>
+          <div class="engineering-fact"><b>Historial Git ≠ vida del proyecto</b><span>Los 51 commits pertenecen al repositorio certificado actual; la evolución metodológica comenzó antes.</span></div>
+          <div class="engineering-fact"><b>Separación verificable</b><span>Tests, Scientific Core y componentes transaccionales están físicamente diferenciados en el árbol del repositorio.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-method"><b>Metodología del conteo.</b> Snapshot de la rama principal auditado el 26/09/2026. Se contabilizaron archivos Python, workflow YAML y tooling ejecutable del repositorio principal. Se excluyeron documentación, bases de datos, logs, snapshots, PDFs e imágenes. “Líneas físicas” incluye espacios y comentarios internos del código; por ello no debe interpretarse como número de algoritmos ni como productividad. La interfaz web pública de TENET se mantiene separada y añade aproximadamente 853 líneas físicas en su versión actual.</div>
+  </div>
+</section>
 
 <section id="diligence" class="section" style="background:#eef4fb">
   <div class="wrap">
