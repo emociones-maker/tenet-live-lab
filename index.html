@@ -500,6 +500,187 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   .kpi:last-child{border-bottom:0}
 }
 
+
+
+/* TENET hero fidelity pass v2 — 27 Sep 2026
+   Structural refinement of the cinematic reference: quieter navigation,
+   stronger right-hand composition, lower status panel and integrated KPI rail. */
+.topnav .inner{
+  max-width:1360px;
+  min-height:70px;
+  padding:9px 16px;
+  background:linear-gradient(180deg,rgba(5,18,36,.78),rgba(5,16,32,.68));
+  border-color:rgba(169,204,255,.18);
+  border-radius:16px;
+  box-shadow:0 16px 50px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.035);
+}
+.brand{font-size:24px;letter-spacing:.06em}
+.brand-sub{font-size:8.4px;letter-spacing:.12em;color:#b8c9df}
+.navlinks{gap:22px}
+.navlinks a{
+  font-size:10.5px;
+  letter-spacing:.015em;
+  color:#dce7f7;
+}
+.navcta{
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 16px!important;
+  border-radius:10px;
+}
+
+.hero{
+  min-height:min(920px,94vh);
+  padding:142px 0 160px;
+  background-position:center center;
+}
+.hero:before{
+  background:
+    linear-gradient(90deg,rgba(2,8,17,.00) 0%,rgba(2,8,17,.025) 30%,rgba(2,8,17,.14) 44%,rgba(2,8,17,.62) 66%,rgba(2,8,17,.94) 100%),
+    linear-gradient(180deg,rgba(1,7,15,.04) 0%,rgba(1,7,15,.01) 48%,rgba(1,7,15,.20) 76%,rgba(1,7,15,.62) 100%);
+}
+.hero:after{
+  background:
+    radial-gradient(circle at 58% 33%,rgba(43,151,255,.13),transparent 24%),
+    linear-gradient(180deg,transparent 74%,rgba(3,10,21,.28) 100%);
+}
+.hero .wrap{max-width:1360px}
+.hero-grid{
+  grid-template-columns:minmax(0,1.16fr) minmax(500px,.84fr);
+  grid-template-rows:auto auto;
+  column-gap:58px;
+  row-gap:18px;
+  align-content:center;
+  align-items:start;
+}
+.hero-copy{
+  grid-column:2;
+  grid-row:1;
+  justify-self:end;
+  width:min(100%,630px);
+  transform:translateY(-8px);
+}
+.hero-status{
+  grid-column:2;
+  grid-row:2;
+  justify-self:end;
+  width:min(100%,540px);
+  margin-top:0;
+}
+.hero .eyebrow{
+  font-size:10px;
+  letter-spacing:.075em;
+  border-radius:999px;
+  padding:8px 12px;
+  background:rgba(7,23,44,.60);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
+}
+.hero h1{
+  font-size:clamp(66px,5.8vw,86px);
+  line-height:.90;
+  margin:20px 0 18px;
+  letter-spacing:-.07em;
+}
+.hero h1 span{
+  font-size:.49em;
+  letter-spacing:-.025em;
+  margin-top:14px;
+  color:#a9ccff;
+}
+.hero p{
+  max-width:590px;
+  margin:0;
+  font-size:17px;
+  line-height:1.6;
+  color:#d4deec;
+}
+.hero-trust{margin-top:18px}
+.hero-trust span{
+  padding:7px 10px;
+  border-radius:9px;
+  background:rgba(6,20,39,.68);
+  border-color:rgba(180,210,255,.16);
+}
+.hero-actions{margin-top:22px}
+.hero-actions .btn{min-height:48px}
+.hero-card{
+  padding:17px 20px;
+  border-radius:17px;
+  background:linear-gradient(180deg,rgba(8,27,52,.80),rgba(5,20,40,.72));
+  border-color:rgba(172,207,255,.22);
+  box-shadow:0 26px 75px rgba(0,0,0,.33),inset 0 1px 0 rgba(255,255,255,.035);
+}
+.hero-card-title h2{
+  font-size:12.5px;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+}
+.signal{padding:8px 0;font-size:11px}
+
+.kpi-strip{
+  margin-top:-104px;
+  padding-bottom:12px;
+}
+.kpi-strip .wrap{max-width:1360px}
+.kpis{
+  min-height:94px;
+  padding:10px 16px;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(5,18,37,.94),rgba(5,18,37,.88));
+  border-color:rgba(168,204,255,.18);
+}
+.kpi{
+  min-height:72px;
+  padding:10px 26px;
+}
+.kpi strong{font-size:30px}
+.kpi span{
+  margin-top:4px;
+  color:#b9c9de;
+  letter-spacing:.012em;
+}
+
+@media(max-width:1200px){
+  .navlinks{gap:12px}
+  .hero-grid{grid-template-columns:.9fr 1.1fr;column-gap:34px}
+  .hero-copy{width:min(100%,610px)}
+}
+@media(max-width:1050px){
+  .navlinks a:not(.navcta){display:none}
+  .hero{
+    min-height:820px;
+    padding:132px 0 150px;
+    background-position:31% center;
+  }
+  .hero-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+  }
+  .hero-copy,.hero-status{
+    grid-column:1;
+    justify-self:end;
+    width:min(100%,680px);
+    margin-left:auto;
+  }
+  .hero-copy{grid-row:1;transform:none}
+  .hero-status{grid-row:2;width:min(100%,600px)}
+}
+@media(max-width:720px){
+  .topnav .inner{margin:0 9px}
+  .brand-sub{max-width:190px}
+  .hero{
+    padding:114px 0 132px;
+    background-position:28% center;
+  }
+  .hero h1{font-size:clamp(48px,15vw,62px)}
+  .hero h1 span{font-size:.48em}
+  .hero .eyebrow{font-size:8.8px}
+  .hero p{font-size:15px}
+  .hero-status{width:100%}
+  .kpi-strip{margin-top:-72px}
+}
+
 </style>
 </head>
 <body>
@@ -507,7 +688,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   <div class="wrap inner">
     <a class="brand" href="#top" aria-label="TENET, creado por Eliezer M.C.">
       TENET
-      <span class="brand-sub">AUTONOMOUS TRADING RESEARCH INFRASTRUCTURE</span>
+      <span class="brand-sub">RESEARCH · RISK · EXECUTION INFRASTRUCTURE</span>
       <span class="brand-credit">
         <span>© Eliezer M.C.</span>
         <span class="canary-flag" role="img" aria-label="Bandera de Canarias" title="Canarias">
@@ -517,14 +698,10 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     </a>
     <nav class="navlinks">
       <a href="#about">Qué es</a>
-      <a href="#value">Ventaja</a>
       <a href="#architecture">Arquitectura</a>
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
-      <a href="#ai">AI</a>
       <a href="#engineering">Engineering</a>
-      <a href="#economics">Valor</a>
-      <a href="#diligence">Due Diligence</a>
       <a href="#product">Producto</a>
       <a class="navcta" href="#demo">Solicitar demo</a>
     </nav>
@@ -534,10 +711,10 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
 <main id="top">
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow"><span class="dot"></span> Research-stage infrastructure · public live observability</div>
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> LIVE RESEARCH INFRASTRUCTURE · PUBLIC READ-ONLY</div>
       <h1>TENET<span>Research. Risk. Execution.</span></h1>
-      <p>Infraestructura algorítmica modular para observar mercados, ejecutar investigación PAPER, comparar hipótesis, gobernar evidencia, filtrar oportunidades mediante reglas de riesgo y mantener trazabilidad auditable de extremo a extremo.</p>
+      <p>Infraestructura algorítmica persistente para investigar mercados, gobernar evidencia, controlar riesgo y ejecutar con trazabilidad auditable.</p>
       <div class="hero-trust">
         <span>Runtime persistente</span><span>Scientific Layer</span><span>Fail-closed</span><span>Audit trail</span>
       </div>
@@ -546,7 +723,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <a class="btn secondary" href="#demo">Solicitar demo privada</a>
       </div>
     </div>
-    <div class="hero-card">
+    <div class="hero-card hero-status">
       <div class="hero-card-title"><span class="pulse-ring"></span><h2>Estado público del sistema</h2></div>
       <div class="signal"><span>Health</span><b id="heroHealth">—</b></div>
       <div class="signal"><span>Broker/data adapter actual</span><b>eToro</b></div>
