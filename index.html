@@ -1079,7 +1079,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <p>Este bloque resume evidencia científica auditada a 27 de septiembre de 2026. No sustituye los contadores live del panel ni constituye una afirmación de rentabilidad.</p>
     </div>
     <div class="grid grid-4">
-      <div class="card"><h3>OOS-005 · ACTIVE</h3><p>Cohorte prospectiva nueva tras cambios revisados de método. En el readback de despliegue: 26 members, 3 common-pass, 0 CLOSED OOS, sin membership retrospectivo y sin promoción automática.</p></div>
+      <div class="card"><h3>OOS-005 · ACTIVE</h3><p>Cohorte prospectiva nueva tras cambios revisados de método. En el readback más reciente: 39 members, 6 common-pass, 0 CLOSED OOS, sin membership retrospectivo y sin promoción automática.</p></div>
       <div class="card"><h3>Prob_edge · COLLECT_PROSPECTIVE</h3><p>El score sigue siendo heurístico. La calibración prospectiva continúa acumulando cierres y no trata score/100 como probabilidad demostrada.</p></div>
       <div class="card"><h3>SCI-14 · Friction stress</h3><p>Sobre 650 cierres exploratorios: mean raw −0,122 R. Un stress incremental de 0,5× el spread eToro registrado lleva la media a −0,153 R. Es sensibilidad, no TCA REAL.</p></div>
       <div class="card"><h3>SCI-15 · Stability</h3><p>El signo negativo no desaparece al retirar un día individual ni al separar los dos grandes patrones y clases de activo. Un cuartil temporal sí fue positivo: existe heterogeneidad y el análisis OOD/regime sigue abierto.</p></div>
@@ -1127,7 +1127,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <div class="ai-mark"><strong>AI</strong><span>sidecar layer</span></div>
       </div>
       <div class="ai-copy">
-        <div class="ai-status">PILOT C · CONTROLLED RESEARCH · OOS SEALED · BROKER WRITE NONE</div>
+        <div class="ai-status">PILOT C · 5/8 TRIALS · OOS SEALED · BROKER WRITE NONE</div>
         <h3>TENET AI ya ejecuta investigación acotada; no autoriza trading.</h3>
         <p>El núcleo REAL no necesita un LLM para autorizar una orden. La IA trabaja lateralmente sobre evidencia permitida: propone una hipótesis falsable, el sistema valida su perímetro, registra el trial, ejecuta una evaluación determinista y conserva el resultado aunque sea negativo o inconcluso.</p>
         <div class="ai-capabilities">
@@ -1152,8 +1152,8 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <div class="ai-cap"><b>T00002 · INCONCLUSIVE</b><span>La estratificación predeclarada no tenía common support suficiente. No se forzó una conclusión.</span></div>
       <div class="ai-cap"><b>T00003 · NEGATIVE</b><span>La composición por asset class no explicó el drift observado. La hipótesis fue descartada.</span></div>
       <div class="ai-cap"><b>T00004 · SUPPORTED DIAGNOSTIC</b><span>Se confirmó que una fricción leve empeora un resultado ya negativo. No es una prueba de rentabilidad.</span></div>
-      <div class="ai-cap"><b>Budget accounting</b><span>Rechazos, negativos e inconclusos cuentan igual contra el presupuesto de búsqueda.</span></div>
-      <div class="ai-cap"><b>Authority boundary</b><span>OOS confirmatorio fuera de contexto; no Prob_edge, no candidate mutation, no REAL execution.</span></div>
+      <div class="ai-cap"><b>T00005 · SUPPORTED DIAGNOSTIC</b><span>SCI-15 confirmó que el resultado negativo no desaparece al retirar un día ni al separar grandes segmentos; un cuartil positivo mantiene abierta la heterogeneidad temporal.</span></div>
+      <div class="ai-cap"><b>Campaign · 5/8 trials</b><span>Quedan 3 trials del presupuesto declarado. Rechazos, negativos e inconclusos cuentan; OOS, Prob_edge y REAL permanecen fuera de autoridad.</span></div>
     </div>
 
     <div class="ai-evolution">
@@ -1305,17 +1305,17 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <h2>El sistema también se mide como software</h2>
       <p>La web ya no usa el tamaño del código como argumento de calidad. El snapshot actual de <code>main</code> se describe con métricas verificables de repositorio, pruebas y controles de gobernanza.</p>
     </div>
-    <div class="audit-stamp">Codebase audit · 27 Sep 2026 · main @ a32b6b7d · GitHub CI PASS</div>
+    <div class="audit-stamp">Codebase audit · 27 Sep 2026 · main @ 7fffa0c · GitHub CI PASS</div>
 
     <div class="code-metrics">
-      <div class="code-metric primary"><span class="kicker">Repository files</span><strong>203</strong><p>blobs versionados en el árbol actual de <code>main</code>, incluyendo código, tests, workflows, documentación y registros de evidencia.</p></div>
-      <div class="code-metric"><span class="kicker">Python</span><strong>150</strong><p>archivos Python en el commit certificado actual.</p></div>
-      <div class="code-metric"><span class="kicker">Scientific Core</span><strong>21</strong><p>módulos Python dentro de <code>scientific_core</code>, incluyendo missingness, AI, ejecución, drift, calibración, horizonte y trazabilidad.</p></div>
-      <div class="code-metric"><span class="kicker">Automated tests</span><strong>66</strong><p>archivos <code>test_*.py</code> versionados en la suite actual.</p></div>
+      <div class="code-metric primary"><span class="kicker">Repository files</span><strong>274</strong><p>blobs versionados en el árbol actual de <code>main</code>, incluyendo código, tests, workflows, documentación y registros de evidencia.</p></div>
+      <div class="code-metric"><span class="kicker">Python</span><strong>193</strong><p>archivos Python versionados en el commit auditado.</p></div>
+      <div class="code-metric"><span class="kicker">Scientific Core</span><strong>41</strong><p>módulos Python dentro de <code>scientific_core</code>, incluyendo OOS, search governance, AI, execution quality, costes, estabilidad y trazabilidad.</p></div>
+      <div class="code-metric"><span class="kicker">Automated tests</span><strong>88</strong><p>archivos <code>test_*.py</code> versionados en la suite actual.</p></div>
 
-      <div class="code-metric"><span class="kicker">Full regression</span><strong>339 PASS</strong><p>suite completa reportada en TENET-OPS-01 antes de merge; el commit resultante completó GitHub CI con éxito.</p></div>
-      <div class="code-metric"><span class="kicker">Certified repo history</span><strong>66</strong><p>commits visibles en el repositorio principal hasta el head actual.</p></div>
-      <div class="code-metric"><span class="kicker">CI workflows</span><strong>2</strong><p>CI principal y guard dedicado de sincronización main/develop.</p></div>
+      <div class="code-metric"><span class="kicker">Critical CI</span><strong>PASS</strong><p>GitHub CI ejecutó los guards de seguridad y regresión crítica, incluidos SCI-14 y SCI-15, antes del merge a <code>main</code>.</p></div>
+      <div class="code-metric"><span class="kicker">AI Pilot C</span><strong>5 / 8</strong><p>trials consumidos del presupuesto declarado; rechazados, negativos e inconclusos también cuentan.</p></div>
+      <div class="code-metric"><span class="kicker">Prospective OOS</span><strong>OOS-005</strong><p>cohorte activa y congelada; cambios de investigación externos a su manifiesto no reescriben membership histórico.</p></div>
       <div class="code-metric"><span class="kicker">Project evolution</span><strong>+1 año</strong><p>de iteración metodológica; el linaje del proyecto antecede al repositorio GitHub certificado actual.</p></div>
     </div>
 
@@ -1345,13 +1345,16 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
           <div class="engineering-fact"><b>Horizon / path observer</b><span>r15/r30/r45/r60/r120 más MFE/MAE con comparaciones predeclaradas y sin selección automática del “mejor” horizonte.</span></div>
           <div class="engineering-fact"><b>TRACE-01 certificate</b><span>Hashes y enlaces deterministas desde estrategia/evento/PAPER hasta intent, broker evidence, costes observables y outcome.</span></div>
           <div class="engineering-fact"><b>OOS prospective</b><span>Las cohortes confirmatorias permanecen prospectivas y congeladas; cambios de método no retroescriben membership histórico.</span></div>
+          <div class="engineering-fact"><b>SCI-14 friction stress</b><span>Stress incremental basado en spread eToro ex-ante, expresado en R, sin confundir sensibilidad PAPER con TCA REAL observado.</span></div>
+          <div class="engineering-fact"><b>SCI-15 stability</b><span>Segmentación, leave-one-out, bloques temporales y concentración para detectar dependencia de un único periodo o subconjunto.</span></div>
+          <div class="engineering-fact"><b>AI Pilot C</b><span>Campaña real de investigación gobernada: 5 de 8 trials consumidos y todos los resultados persistidos en ledger append-only.</span></div>
           <div class="engineering-fact"><b>Privileged observability</b><span>Un control root-owned ilegible para el usuario runtime se clasifica como UNVERIFIED_PRIVILEGED, no como falso hash drift; los permisos no se debilitan.</span></div>
           <div class="engineering-fact"><b>No auto-promotion</b><span>Ningún observador científico obtiene permiso para modificar Prob_edge, candidatos, hard gates o ejecución REAL.</span></div>
         </div>
       </div>
     </div>
 
-    <div class="audit-method"><b>Metodología del conteo.</b> Árbol de GitHub <code>main</code> leído en el commit <code>a32b6b7de5ea143e72e9ec3bc2bb8d17dbba8133</code>. Los conteos de archivos se obtienen del tree del repositorio; TENET-OPS-01 reportó 339 tests PASS en la suite completa y GitHub Actions finalizó con <b>success</b> tanto en CI como en el Branch Sync Guard sobre el head actual. Estas cifras describen cobertura y disciplina de ingeniería, no rentabilidad ni edge.</div>
+    <div class="audit-method"><b>Metodología del conteo.</b> Árbol de GitHub <code>main</code> leído en el commit <code>7fffa0ccd5b48276a0635186b25e833b4d625ef7</code>. Los conteos se obtienen directamente del tree del repositorio. El PR #92 completó el workflow obligatorio <b>ETORO V5 CI</b> con success, incluyendo guards de arquitectura, REAL, supply chain, OOS, IA y los observadores SCI-14/SCI-15. Estas cifras describen disciplina de ingeniería y auditabilidad, no rentabilidad ni edge.</div>
   </div>
 </section>
 <section id="economics" class="section economics-section">
