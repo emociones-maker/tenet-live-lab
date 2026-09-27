@@ -605,9 +605,10 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <div class="card"><h3>SCI-02 · Drift</h3><p>Compara ventanas cronológicas de features, scores, rutas, factores, DATA_BLOCKED y outcomes. Detecta cambios de distribución sin asumir causalidad ni adaptar automáticamente el sistema.</p></div>
       <div class="card"><h3>SCI-03 · Prob_edge uncertainty</h3><p>Congela una cohorte prospectiva V2.5 y reporta frecuencias empíricas e intervalos de Wilson por bandas de score. Prob_edge sigue siendo un score heurístico: score/100 no se trata como probabilidad.</p></div>
       <div class="card"><h3>SCI-04 · Horizon & path</h3><p>Describe r15/r30/r45/r60/r120, MFE y MAE con comparaciones fijadas de antemano. No elige automáticamente un holding period ni convierte el mejor horizonte retrospectivo en regla.</p></div>
-      <div class="card"><h3>EXE-01 · Execution quality</h3><p>Mide slippage y latencias únicamente sobre ejecuciones V5 reconciliadas. Si falta telemetría pre-submit, queda N/D: no se inventa ni se sustituye.</p></div>
+      <div class="card"><h3>EXE-02 · Pre-submit telemetry</h3><p>El ejecutor persiste el bid/ask/spread/timestamp eToro exacto usado en la validación final antes de sellar un intent. Telemetría stale o inconsistente bloquea antes de crear el intent; los históricos sin esos campos permanecen N/D.</p></div>
       <div class="card"><h3>TRACE-01 · End-to-end</h3><p>Certifica de forma determinista la cadena strategy/version → evento → PAPER → candidato → intent → orden → posición → ejecución → costes observables → outcome, sin crear objetos del broker.</p></div>
       <div class="card"><h3>Evidence registry</h3><p>Fuentes, claims y evidencia quedan enlazados a código, tests y fingerprints para distinguir una afirmación científica de una simple descripción del sistema.</p></div>
+      <div class="card"><h3>OPS-01 · Privileged observability</h3><p>La observabilidad ya distingue evidencia root-owned no legible de un drift real: mantiene permisos protegidos, evita falsos positivos y reporta PARTIAL_PRIVILEGED_VERIFICATION cuando corresponde.</p></div>
     </div>
 
     <div class="chartgrid">
@@ -761,6 +762,8 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <tr><td>Versionado</td><td>Git / GitHub</td><td>Código, control de versiones, trazabilidad de cambios y despliegue de la capa pública.</td><td>No</td></tr>
         <tr><td>Evidence governance</td><td>Source / Claim / Evidence + fingerprints</td><td>Relaciona fuentes, afirmaciones, tests y versión efectiva; detecta drift entre categorías de runtime, método y datos.</td><td>Read-only</td></tr>
         <tr><td>Scientific observability</td><td>Missingness · drift · calibration · horizon · execution quality</td><td>Observadores separados para disponibilidad de outcomes, cambios de distribución, incertidumbre de Prob_edge, trayectoria temporal y calidad de ejecución reconciliada.</td><td>Read-only</td></tr>
+        <tr><td>Execution telemetry</td><td>TENET EXE-02</td><td>Persiste la cotización eToro exacta usada en la última validación pre-submit para medir después slippage real sin reconstrucciones ni inferencias.</td><td>Writer solo sobre ledger local</td></tr>
+        <tr><td>Privileged observability</td><td>TENET OPS-01</td><td>Distingue evidencia privilegiada no legible de drift real sin rebajar permisos de los controles root-owned.</td><td>Read-only</td></tr>
         <tr><td>Traceability</td><td>TENET TRACE-01</td><td>Hashes deterministas y verificaciones estructurales enlazan estrategia, evento, PAPER, candidato, intent, orden, posición, ejecución, costes observables y outcome sin escribir en el broker.</td><td>Read-only</td></tr>
         <tr><td>Observabilidad pública</td><td>GitHub Pages + snapshot sanitizado</td><td>Publica métricas seleccionadas del sistema sin capacidad de operación.</td><td>Read-only</td></tr>
       </tbody>
@@ -789,16 +792,16 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <h2>El sistema también se mide como software</h2>
       <p>La web ya no usa el tamaño del código como argumento de calidad. El snapshot actual de <code>main</code> se describe con métricas verificables de repositorio, pruebas y controles de gobernanza.</p>
     </div>
-    <div class="audit-stamp">Codebase audit · 27 Sep 2026 · main @ 2a95de5e · GitHub CI PASS</div>
+    <div class="audit-stamp">Codebase audit · 27 Sep 2026 · main @ a32b6b7d · GitHub CI PASS</div>
 
     <div class="code-metrics">
-      <div class="code-metric primary"><span class="kicker">Repository files</span><strong>200</strong><p>blobs versionados en el árbol actual de <code>main</code>, incluyendo código, tests, workflows, documentación y registros de evidencia.</p></div>
-      <div class="code-metric"><span class="kicker">Python</span><strong>149</strong><p>archivos Python en el commit certificado actual.</p></div>
+      <div class="code-metric primary"><span class="kicker">Repository files</span><strong>203</strong><p>blobs versionados en el árbol actual de <code>main</code>, incluyendo código, tests, workflows, documentación y registros de evidencia.</p></div>
+      <div class="code-metric"><span class="kicker">Python</span><strong>150</strong><p>archivos Python en el commit certificado actual.</p></div>
       <div class="code-metric"><span class="kicker">Scientific Core</span><strong>21</strong><p>módulos Python dentro de <code>scientific_core</code>, incluyendo missingness, AI, ejecución, drift, calibración, horizonte y trazabilidad.</p></div>
-      <div class="code-metric"><span class="kicker">Automated tests</span><strong>65</strong><p>archivos <code>test_*.py</code> versionados en la suite actual.</p></div>
+      <div class="code-metric"><span class="kicker">Automated tests</span><strong>66</strong><p>archivos <code>test_*.py</code> versionados en la suite actual.</p></div>
 
-      <div class="code-metric"><span class="kicker">Full regression</span><strong>329 PASS</strong><p>suite completa reportada en TENET-TRACE-01 antes de merge; el commit resultante completó GitHub CI con éxito.</p></div>
-      <div class="code-metric"><span class="kicker">Certified repo history</span><strong>64</strong><p>commits visibles en el repositorio principal hasta el head actual.</p></div>
+      <div class="code-metric"><span class="kicker">Full regression</span><strong>339 PASS</strong><p>suite completa reportada en TENET-OPS-01 antes de merge; el commit resultante completó GitHub CI con éxito.</p></div>
+      <div class="code-metric"><span class="kicker">Certified repo history</span><strong>66</strong><p>commits visibles en el repositorio principal hasta el head actual.</p></div>
       <div class="code-metric"><span class="kicker">CI workflows</span><strong>2</strong><p>CI principal y guard dedicado de sincronización main/develop.</p></div>
       <div class="code-metric"><span class="kicker">Project evolution</span><strong>+1 año</strong><p>de iteración metodológica; el linaje del proyecto antecede al repositorio GitHub certificado actual.</p></div>
     </div>
@@ -823,18 +826,19 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
         <div class="engineering-facts">
           <div class="engineering-fact"><b>DATA_BLOCKED selection audit</b><span>Mide si la disponibilidad de outcomes depende de dimensiones ex-ante y evita tratar CLOSED como muestra automáticamente representativa.</span></div>
           <div class="engineering-fact"><b>Bounded AI experiments</b><span>Presupuesto finito, trial IDs inmutables, historial append-only y prohibición de exponer OOS confirmatorio al proceso de búsqueda.</span></div>
-          <div class="engineering-fact"><b>Execution-quality observer</b><span>Slippage y latencia sobre ejecuciones V5-owned reconciliadas, sin inventar pre-submit quotes inexistentes.</span></div>
+          <div class="engineering-fact"><b>Execution-quality + EXE-02</b><span>Slippage y latencia sobre ejecuciones V5-owned reconciliadas; las nuevas ejecuciones podrán usar la cotización pre-submit eToro realmente persistida en el intent.</span></div>
           <div class="engineering-fact"><b>Drift observer</b><span>KS empírico, distancia de variación total, factores, DATA_BLOCKED y outcomes entre ventanas cronológicas; no adapta automáticamente el modelo.</span></div>
           <div class="engineering-fact"><b>Prospective Prob_edge uncertainty</b><span>Cohorte V2.5 congelada, bandas fijas, Wilson 95% y prohibición explícita de interpretar score/100 como probabilidad.</span></div>
           <div class="engineering-fact"><b>Horizon / path observer</b><span>r15/r30/r45/r60/r120 más MFE/MAE con comparaciones predeclaradas y sin selección automática del “mejor” horizonte.</span></div>
           <div class="engineering-fact"><b>TRACE-01 certificate</b><span>Hashes y enlaces deterministas desde estrategia/evento/PAPER hasta intent, broker evidence, costes observables y outcome.</span></div>
           <div class="engineering-fact"><b>OOS prospective</b><span>Las cohortes confirmatorias permanecen prospectivas y congeladas; cambios de método no retroescriben membership histórico.</span></div>
+          <div class="engineering-fact"><b>Privileged observability</b><span>Un control root-owned ilegible para el usuario runtime se clasifica como UNVERIFIED_PRIVILEGED, no como falso hash drift; los permisos no se debilitan.</span></div>
           <div class="engineering-fact"><b>No auto-promotion</b><span>Ningún observador científico obtiene permiso para modificar Prob_edge, candidatos, hard gates o ejecución REAL.</span></div>
         </div>
       </div>
     </div>
 
-    <div class="audit-method"><b>Metodología del conteo.</b> Árbol de GitHub <code>main</code> leído en el commit <code>2a95de5e90ee78f7fd60db0278418d83576e921a</code>. Los conteos de archivos se obtienen del tree del repositorio; la suite completa de TENET-TRACE-01 reportó 329 tests PASS y el workflow principal de GitHub Actions finalizó con <b>success</b> sobre ese commit. Estas cifras describen cobertura y disciplina de ingeniería, no rentabilidad ni edge.</div>
+    <div class="audit-method"><b>Metodología del conteo.</b> Árbol de GitHub <code>main</code> leído en el commit <code>a32b6b7de5ea143e72e9ec3bc2bb8d17dbba8133</code>. Los conteos de archivos se obtienen del tree del repositorio; TENET-OPS-01 reportó 339 tests PASS en la suite completa y GitHub Actions finalizó con <b>success</b> tanto en CI como en el Branch Sync Guard sobre el head actual. Estas cifras describen cobertura y disciplina de ingeniería, no rentabilidad ni edge.</div>
   </div>
 </section>
 <section id="economics" class="section economics-section">
@@ -894,10 +898,12 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
       <div class="dd-card"><div class="dd-icon">06</div><h3>Scientific Core</h3><p>PAPER, OOS, variantes, missingness, drift, ejecución, calibración y separación estricta entre aprendizaje y autoridad REAL.</p></div>
       <div class="dd-card"><div class="dd-icon">07</div><h3>AI research governance</h3><p>Presupuesto de búsqueda finito, registro completo de trials y exclusión del OOS confirmatorio del contexto de búsqueda.</p></div>
       <div class="dd-card"><div class="dd-icon">08</div><h3>Repository governance</h3><p>CI, guard main/develop y evidencia de paridad permiten distinguir código revisado, runtime efectivo y drift no certificado.</p></div>
-      <div class="dd-card"><div class="dd-icon">09</div><h3>Execution quality</h3><p>Observador read-only para slippage y latencias de ejecuciones V5-owned reconciliadas, sin mezclar posiciones externas.</p></div>
+      <div class="dd-card"><div class="dd-icon">09</div><h3>Execution quality</h3><p>Observador read-only para slippage y latencias de ejecuciones V5-owned reconciliadas, ahora con telemetría pre-submit eToro persistida en nuevos intents y sin reconstruir históricos inexistentes.</p></div>
       <div class="dd-card"><div class="dd-icon">10</div><h3>Prob_edge semantics</h3><p>Protocolo prospectivo que mantiene Prob_edge como score heurístico y prohíbe tratar score/100 como probabilidad sin evidencia y gobernanza adicionales.</p></div>
       <div class="dd-card"><div class="dd-icon">11</div><h3>Horizon governance</h3><p>Comparaciones temporales predeclaradas sobre r15–r120 y MFE/MAE; el sistema no selecciona retrospectivamente el holding period que mejor sale.</p></div>
       <div class="dd-card"><div class="dd-icon">12</div><h3>End-to-end traceability</h3><p>Certificado reproducible de la cadena estrategia → PAPER → candidato → intent → orden → posición → ejecución → evidencia de costes → outcome.</p></div>
+      <div class="dd-card"><div class="dd-icon">13</div><h3>Privileged observability</h3><p>Los controles root-owned mantienen sus permisos; la observabilidad diferencia evidencia no verificable por privilegios de un mismatch real y evita falsos avisos de drift.</p></div>
+      <div class="dd-card"><div class="dd-icon">14</div><h3>Pre-submit evidence</h3><p>El ledger conserva bid, ask, spread y timestamp eToro de la validación final antes del intent, manteniendo inmutable el payload enviado al broker.</p></div>
     </div>
 
     <div class="boundary">
