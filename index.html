@@ -728,6 +728,252 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   .hero-bg-video{display:none}
   .hero.hero-video{background:#071426 url('./assets/tenet-hero-opt.jpg') center center/cover no-repeat}
 }
+
+
+/* TITAYT visual system v3 — dashboard + cosmic guidance language */
+:root{
+  --titayt-night:#06111f;
+  --titayt-night-2:#0a1d35;
+  --titayt-sky:#57a7ff;
+  --titayt-cyan:#40d7c7;
+  --titayt-violet:#9b7cff;
+  --titayt-gold:#f5ba62;
+  --titayt-glass:rgba(10,31,56,.66);
+}
+.topnav{background:rgba(4,14,27,.82)}
+.topnav .inner{
+  border:1px solid rgba(151,194,255,.14);
+  background:linear-gradient(180deg,rgba(6,20,38,.86),rgba(6,18,34,.75));
+}
+.navlinks a{position:relative}
+.navlinks a:not(.navcta):after{
+  content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;
+  background:linear-gradient(90deg,var(--titayt-sky),var(--titayt-cyan));
+  transition:right .22s ease;
+}
+.navlinks a:not(.navcta):hover:after{right:0}
+
+.hero.hero-video{
+  isolation:isolate;
+  background:#05111f url('./assets/tenet-hero-opt.jpg') center center/cover no-repeat;
+}
+.hero-bg-video{filter:saturate(.84) contrast(1.08) brightness(.68)}
+.hero.hero-video:before{
+  background:
+    linear-gradient(90deg,rgba(2,8,16,.10) 0%,rgba(2,8,16,.17) 31%,rgba(2,8,16,.36) 49%,rgba(2,8,16,.76) 74%,rgba(2,8,16,.96) 100%),
+    linear-gradient(180deg,rgba(1,6,14,.11) 0%,rgba(1,6,14,.02) 40%,rgba(1,6,14,.38) 79%,rgba(1,6,14,.86) 100%);
+}
+.hero.hero-video:after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(circle at 24% 42%,rgba(64,215,199,.10),transparent 21%),
+    radial-gradient(circle at 49% 24%,rgba(87,167,255,.10),transparent 18%),
+    linear-gradient(180deg,transparent 72%,rgba(1,9,18,.35));
+}
+.hero-copy{position:relative}
+.hero-copy:before{
+  content:"";position:absolute;left:-24px;top:14px;width:2px;height:124px;
+  background:linear-gradient(180deg,var(--titayt-sky),rgba(64,215,199,.08));
+  border-radius:999px;box-shadow:0 0 22px rgba(87,167,255,.34)
+}
+.hero .eyebrow{
+  color:#d8e8fb;background:rgba(4,20,38,.74);
+  border-color:rgba(143,192,255,.22);
+}
+.hero .eyebrow .dot{background:var(--titayt-cyan);box-shadow:0 0 18px rgba(64,215,199,.85)}
+.hero h1 span{
+  color:#b9d7ff;
+  background:linear-gradient(90deg,#dcecff 0%,#7fb9ff 48%,#66e1d2 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-origin{
+  border-color:rgba(147,195,255,.20);
+  background:rgba(5,21,40,.72);
+}
+.hero-trust span{
+  color:#dceafb;background:rgba(5,22,42,.72);
+  border-color:rgba(155,198,255,.16)
+}
+.hero-actions .btn.primary{
+  background:linear-gradient(135deg,#f8fbff,#dfeeff);
+  box-shadow:0 12px 38px rgba(85,159,255,.22)
+}
+.hero-actions .btn.secondary{background:rgba(8,27,50,.56);border-color:rgba(163,204,255,.22)}
+.hero-status{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,rgba(8,29,54,.86),rgba(5,18,35,.78))!important;
+  border-color:rgba(151,200,255,.22)!important;
+}
+.hero-status:before{
+  content:"";position:absolute;inset:-70px auto auto -70px;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(87,167,255,.16),transparent 68%);pointer-events:none
+}
+.hero-status .signal b{font-variant-numeric:tabular-nums}
+
+.hero-cosmos{
+  position:absolute;z-index:2;left:clamp(24px,5vw,88px);top:115px;bottom:116px;
+  width:min(44vw,610px);pointer-events:none;
+}
+.shooting-star{
+  position:absolute;left:4%;top:13%;width:250px;height:2px;border-radius:999px;
+  transform:rotate(-18deg);transform-origin:left center;
+  background:linear-gradient(90deg,transparent,rgba(146,201,255,.14) 38%,rgba(255,255,255,.98) 92%,#fff);
+  filter:drop-shadow(0 0 7px rgba(118,186,255,.70));
+  opacity:.78;animation:titaytShoot 7s cubic-bezier(.25,.7,.25,1) infinite;
+}
+.shooting-star:after{
+  content:"";position:absolute;right:-3px;top:-3px;width:7px;height:7px;border-radius:50%;
+  background:#fff;box-shadow:0 0 0 5px rgba(113,180,255,.10),0 0 26px 6px rgba(89,170,255,.60)
+}
+@keyframes titaytShoot{
+  0%,14%{transform:translate(-24px,16px) rotate(-18deg);opacity:0}
+  19%{opacity:.92}
+  47%{transform:translate(54px,-10px) rotate(-18deg);opacity:.70}
+  58%,100%{transform:translate(90px,-22px) rotate(-18deg);opacity:0}
+}
+.orbit-hud{
+  position:absolute;left:8%;top:27%;width:390px;height:390px;border-radius:50%;
+  border:1px solid rgba(132,183,255,.20);
+  box-shadow:inset 0 0 70px rgba(38,103,169,.06)
+}
+.orbit-hud:before,.orbit-hud:after{
+  content:"";position:absolute;border-radius:50%;inset:50%;transform:translate(-50%,-50%);
+  border:1px solid rgba(82,207,196,.17)
+}
+.orbit-hud:before{width:280px;height:280px}
+.orbit-hud:after{width:178px;height:178px;border-color:rgba(152,123,255,.18)}
+.orbit-core{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:112px;height:112px;border-radius:28px;display:grid;place-items:center;text-align:center;
+  color:#fff;border:1px solid rgba(161,205,255,.22);
+  background:linear-gradient(145deg,rgba(10,40,72,.88),rgba(7,24,44,.92));
+  box-shadow:0 24px 70px rgba(0,0,0,.34),0 0 55px rgba(66,147,245,.10)
+}
+.orbit-core strong{font-size:22px;letter-spacing:.10em}
+.orbit-core small{display:block;font-size:7.5px;letter-spacing:.16em;color:#8fbaf2;margin-top:4px}
+.cosmos-node{
+  position:absolute;padding:7px 10px;border-radius:999px;font-size:8px;font-weight:900;
+  letter-spacing:.10em;text-transform:uppercase;color:#dce9f8;
+  background:rgba(6,24,45,.78);border:1px solid rgba(150,199,255,.15);
+  backdrop-filter:blur(8px)
+}
+.cosmos-node:before{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;vertical-align:middle;
+  background:var(--titayt-sky);box-shadow:0 0 14px currentColor
+}
+.cosmos-node.n1{left:2%;top:48%}.cosmos-node.n2{right:-1%;top:30%}.cosmos-node.n3{right:0;bottom:24%}.cosmos-node.n4{left:4%;bottom:17%}
+.cosmos-node.n2:before{background:var(--titayt-cyan)}.cosmos-node.n3:before{background:var(--titayt-violet)}.cosmos-node.n4:before{background:var(--titayt-gold)}
+.cosmos-caption{
+  position:absolute;left:10%;bottom:4%;max-width:340px;color:#91a9c7;font-size:9px;
+  line-height:1.5;letter-spacing:.02em
+}
+.cosmos-caption b{display:block;color:#dceaff;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+
+.kpis{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,rgba(5,20,39,.98),rgba(7,27,50,.96))
+}
+.kpis:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--titayt-sky),var(--titayt-cyan),var(--titayt-violet),transparent)
+}
+.kpi{position:relative}
+.kpi:not(:last-child):after{
+  content:"";position:absolute;right:0;top:18px;bottom:18px;width:1px;background:rgba(165,202,255,.10)
+}
+
+.visual-snapshot{
+  position:relative;overflow:hidden;padding:94px 0 86px;color:#fff;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(87,167,255,.12),transparent 28%),
+    radial-gradient(circle at 88% 72%,rgba(64,215,199,.08),transparent 23%),
+    linear-gradient(180deg,#06121f 0%,#081b31 100%);
+}
+.visual-snapshot:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.17;
+  background-image:linear-gradient(rgba(145,181,228,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(145,181,228,.10) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.65),transparent 92%)
+}
+.visual-snapshot .wrap{position:relative}
+.snapshot-head{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:end;margin-bottom:26px}
+.snapshot-head .eyebrow2{color:#76b5ff}
+.snapshot-head h2{font-size:42px;line-height:1.04;letter-spacing:-.045em;margin:9px 0}
+.snapshot-head p{color:#9db0c8;line-height:1.66;margin:0;max-width:710px}
+.snapshot-legend{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.snapshot-legend span{
+  padding:7px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);font-size:8px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#afc0d5
+}
+.snapshot-grid{
+  display:grid;grid-template-columns:1.35fr .85fr .85fr;grid-template-rows:1fr 1fr;gap:13px
+}
+.snapshot-card{
+  position:relative;overflow:hidden;border-radius:19px;padding:20px;
+  border:1px solid rgba(157,199,255,.13);
+  background:linear-gradient(180deg,rgba(14,42,74,.66),rgba(7,24,45,.72));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 22px 65px rgba(0,0,0,.16)
+}
+.snapshot-card.main{grid-row:1/3;min-height:404px}
+.snapshot-card.audit{grid-column:2/4}
+.snapshot-card:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--accent,#66a9ff)
+}
+.snapshot-card .tag{font-size:8px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#86a7cf}
+.snapshot-card h3{font-size:17px;margin:8px 0 5px}.snapshot-card p{font-size:10px;line-height:1.55;color:#a8bad0;margin:0}
+.snapshot-card.main h3{font-size:24px}
+.snapshot-topline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.snapshot-badge{
+  display:inline-flex;align-items:center;gap:6px;padding:6px 8px;border-radius:999px;
+  background:rgba(64,215,199,.08);border:1px solid rgba(64,215,199,.15);color:#87e6dc;font-size:8px;font-weight:900
+}
+.snapshot-badge:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--titayt-cyan);box-shadow:0 0 12px rgba(64,215,199,.65)}
+.dashboard-chart{width:100%;height:170px;margin:24px 0 14px;display:block}
+.dashboard-gridline{stroke:rgba(167,198,235,.12);stroke-width:1}
+.dashboard-line{fill:none;stroke:#70b5ff;stroke-width:3;filter:drop-shadow(0 0 8px rgba(87,167,255,.28))}
+.dashboard-area{fill:url(#titaytArea)}
+.dashboard-point{fill:#dff1ff;stroke:#5aa8ff;stroke-width:2}
+.dashboard-axis{display:flex;justify-content:space-between;color:#6f88a8;font-size:8px}
+.layer-stack{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
+.layer-mini{
+  padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035)
+}
+.layer-mini b{display:block;font-size:9px;margin-bottom:4px}.layer-mini span{font-size:8px;color:#89a0bd}
+.layer-mini:nth-child(1) b{color:#7bb8ff}.layer-mini:nth-child(2) b{color:#61dbc9}.layer-mini:nth-child(3) b{color:#b79cff}.layer-mini:nth-child(4) b{color:#f3c078}
+.mini-meter{margin-top:18px;height:7px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
+.mini-meter i{display:block;height:100%;width:74%;border-radius:999px;background:linear-gradient(90deg,#4ea7ff,#41d4c3)}
+.icon-orb{
+  width:40px;height:40px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;
+  background:rgba(91,165,255,.10);border:1px solid rgba(131,187,255,.13);color:#95c3ff
+}
+.icon-orb svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7}
+.audit-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px}
+.audit-step{position:relative;padding:10px;border-radius:11px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
+.audit-step b{display:block;font-size:8.5px;color:#dbe8f8}.audit-step span{display:block;font-size:7.5px;color:#7f96b3;margin-top:3px}
+.audit-step:not(:last-child):after{content:"→";position:absolute;right:-8px;top:15px;color:#4f6f95;z-index:2}
+.human-mandate{
+  margin-top:13px;padding:11px 12px;border-radius:12px;border:1px solid rgba(245,186,98,.15);
+  background:rgba(245,186,98,.045);color:#d8c197;font-size:9px;line-height:1.48
+}
+.human-mandate b{color:#f1c87d}
+
+@media(max-width:1180px){
+  .hero-cosmos{left:18px;width:45vw;transform:scale(.88);transform-origin:left center}
+  .snapshot-grid{grid-template-columns:1.2fr 1fr}.snapshot-card.main{grid-row:auto;grid-column:1/3}.snapshot-card.audit{grid-column:1/3}
+}
+@media(max-width:1050px){
+  .hero-cosmos{display:none}
+  .snapshot-head{grid-template-columns:1fr}.snapshot-legend{justify-content:flex-start}
+}
+@media(max-width:720px){
+  .hero-copy:before{display:none}
+  .snapshot-head h2{font-size:33px}
+  .snapshot-grid{grid-template-columns:1fr}
+  .snapshot-card.main,.snapshot-card.audit{grid-column:auto}
+  .layer-stack{grid-template-columns:1fr 1fr}
+  .audit-flow{grid-template-columns:1fr}
+  .audit-step:not(:last-child):after{display:none}
+}
 </style>
 </head>
 <body>
@@ -746,6 +992,7 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
     <nav class="navlinks">
       <a href="#about">Qué es</a>
       <a href="#architecture">Arquitectura</a>
+      <a href="#system-map">Mapa</a>
       <a href="#live">Live Lab</a>
       <a href="#science">Science</a>
       <a href="#ai">AI Research</a>
@@ -761,7 +1008,19 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="./assets/tenet-hero-opt.jpg" aria-hidden="true">
     <source src="./assets/tenet-hero-video.m4v" type="video/mp4">
   </video>
+
   <div class="hero-video-vignette" aria-hidden="true"></div>
+  <div class="hero-cosmos" aria-hidden="true">
+    <div class="shooting-star"></div>
+    <div class="orbit-hud">
+      <div class="orbit-core"><div><strong>TITAYT</strong><small>SYSTEM CORE</small></div></div>
+    </div>
+    <span class="cosmos-node n1">Observe</span>
+    <span class="cosmos-node n2">Research</span>
+    <span class="cosmos-node n3">Risk</span>
+    <span class="cosmos-node n4">Execute</span>
+    <div class="cosmos-caption"><b>La estrella como guía, no como promesa.</b>TITAYT transforma incertidumbre en un recorrido controlado: observar, contrastar, proteger y solo entonces ejecutar.</div>
+  </div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="eyebrow"><span class="dot"></span> LIVE RESEARCH INFRASTRUCTURE · PUBLIC READ-ONLY</div>
@@ -802,6 +1061,80 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   </div>
 </div>
 
+
+<section id="system-map" class="visual-snapshot">
+  <div class="wrap">
+    <div class="snapshot-head">
+      <div>
+        <div class="eyebrow2">SYSTEM MAP · VISUAL LAYER</div>
+        <h2>Una infraestructura. Cuatro capas. Una sola disciplina de decisión.</h2>
+        <p>La interfaz traduce la complejidad técnica a una lectura visual: datos, investigación, riesgo y ejecución permanecen separados, pero conectados por trazabilidad. El objetivo no es “hacer trading más rápido”, sino convertir cada decisión en un proceso verificable.</p>
+      </div>
+      <div class="snapshot-legend">
+        <span>Read-only research</span>
+        <span>Fail-closed risk</span>
+        <span>Auditable execution</span>
+      </div>
+    </div>
+
+    <div class="snapshot-grid">
+      <article class="snapshot-card main" style="--accent:#57a7ff">
+        <div class="snapshot-topline">
+          <div><span class="tag">01 · Research Core</span><h3>Del mercado a la evidencia.</h3></div>
+          <span class="snapshot-badge">LIVE LAB</span>
+        </div>
+        <p>El laboratorio registra, compara y conserva outcomes antes de que una hipótesis pueda aspirar a convertirse en decisión operativa.</p>
+        <svg class="dashboard-chart" viewBox="0 0 640 180" role="img" aria-label="Representación visual del flujo de evidencia de TITAYT">
+          <defs><linearGradient id="titaytArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#57a7ff" stop-opacity=".28"/><stop offset="1" stop-color="#57a7ff" stop-opacity="0"/></linearGradient></defs>
+          <path class="dashboard-gridline" d="M0 35H640M0 80H640M0 125H640M0 170H640"/>
+          <path class="dashboard-area" d="M0 143 C70 132 90 102 145 113 C205 126 230 61 300 78 C350 91 390 45 445 58 C510 74 548 26 640 35 L640 180 L0 180 Z"/>
+          <path class="dashboard-line" d="M0 143 C70 132 90 102 145 113 C205 126 230 61 300 78 C350 91 390 45 445 58 C510 74 548 26 640 35"/>
+          <circle class="dashboard-point" cx="145" cy="113" r="4"/><circle class="dashboard-point" cx="300" cy="78" r="4"/><circle class="dashboard-point" cx="445" cy="58" r="4"/><circle class="dashboard-point" cx="640" cy="35" r="4"/>
+        </svg>
+        <div class="dashboard-axis"><span>INGEST</span><span>OBSERVE</span><span>COMPARE</span><span>VALIDATE</span><span>LEARN</span></div>
+        <div class="layer-stack">
+          <div class="layer-mini"><b>Market intake</b><span>Broker data + snapshots</span></div>
+          <div class="layer-mini"><b>Scientific LAB</b><span>PAPER + hypotheses</span></div>
+          <div class="layer-mini"><b>Outcome memory</b><span>Evidence + provenance</span></div>
+          <div class="layer-mini"><b>Governance</b><span>Frozen boundaries</span></div>
+        </div>
+      </article>
+
+      <article class="snapshot-card" style="--accent:#40d7c7">
+        <div class="icon-orb">
+          <svg viewBox="0 0 24 24"><path d="M4 16l5-5 4 3 7-8"/><path d="M17 6h3v3"/></svg>
+        </div>
+        <span class="tag">02 · Risk Engine</span>
+        <h3>La seguridad no es un aviso. Es arquitectura.</h3>
+        <p>Datos insuficientes, incoherencia o gates críticos fallidos detienen el proceso.</p>
+        <div class="mini-meter"><i></i></div>
+      </article>
+
+      <article class="snapshot-card" style="--accent:#9b7cff">
+        <div class="icon-orb" style="color:#baa4ff;background:rgba(155,124,255,.09);border-color:rgba(155,124,255,.15)">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="7"/></svg>
+        </div>
+        <span class="tag">03 · Execution Gate</span>
+        <h3>Un único punto autorizado para actuar.</h3>
+        <p>Research y supervisión observan. La escritura REAL permanece aislada y sometida a controles.</p>
+        <div class="human-mandate"><b>Mandato humano persistente:</b> autonomía dentro de límites; nunca autonomía sobre las reglas.</div>
+      </article>
+
+      <article class="snapshot-card audit" style="--accent:#f5ba62">
+        <span class="tag">04 · Audit Trail</span>
+        <h3>Cada decisión deja una cadena verificable.</h3>
+        <p>La trazabilidad conecta datos, versión de método, candidate, intención, ejecución, reconciliación y outcome.</p>
+        <div class="audit-flow">
+          <div class="audit-step"><b>DATA</b><span>snapshot</span></div>
+          <div class="audit-step"><b>METHOD</b><span>version</span></div>
+          <div class="audit-step"><b>DECISION</b><span>gates</span></div>
+          <div class="audit-step"><b>EXECUTION</b><span>readback</span></div>
+          <div class="audit-step"><b>OUTCOME</b><span>evidence</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section id="about" class="section explainer">
   <div class="wrap">
