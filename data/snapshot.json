@@ -1,6 +1,6 @@
 {
   "product": "TENET",
-  "updated_utc": "2026-09-26T15:45:01.233482+00:00",
+  "updated_utc": "2026-09-27T16:20:03.081561+00:00",
   "system": {
     "health": "HEALTHY",
     "broker": "eToro",
@@ -10,11 +10,11 @@
     "problems": 0
   },
   "counters": {
-    "events": 49286,
-    "paper_trades": 2548,
-    "variant_evaluations": 3154304,
+    "events": 50573,
+    "paper_trades": 2657,
+    "variant_evaluations": 3236672,
     "variant_count": 64,
-    "closed_outcomes": 1749
+    "closed_outcomes": 1860
   },
   "current_cycle": {
     "assets_requested": 73,
@@ -25,49 +25,49 @@
     "variant_evaluations": 832
   },
   "funnel": {
-    "status": "NO_CURRENT_PAPER",
-    "current_papers": 0,
-    "queue_count": 0,
-    "prevalidation_attempts": 0,
+    "status": "NO_PREVALIDATED_CANDIDATE",
+    "current_papers": 2,
+    "queue_count": 2,
+    "prevalidation_attempts": 2,
     "prevalidation_pass": 0,
     "pending_orders": 0
   },
   "latest_candidate": {
-    "symbol": "ETH",
-    "pattern": "TREND",
+    "symbol": "FET",
+    "pattern": "MOMENTUM",
     "variant": "V53-GRID-51",
-    "atr_ratio": 0.8835848834725838,
+    "atr_ratio": 1.0693225056794962,
     "rr_planned": 2.0,
     "status": "CANDIDATE_FOR_ARCH04"
   },
   "outcomes": {
-    "closed": 1749,
-    "data_blocked": 744,
-    "active": 55
+    "closed": 1860,
+    "data_blocked": 787,
+    "active": 8
   },
   "recent_funnel": {
     "runs": 100,
-    "attempts": 63,
+    "attempts": 41,
     "passes": 0,
     "reasons": [
       {
-        "reason": "DATA_BLOCKED_EARLY",
-        "count": 55
-      },
-      {
         "reason": "AVERAGING_DOWN_FORBIDDEN",
-        "count": 4
-      },
-      {
-        "reason": "PROB_EDGE_BELOW_60",
-        "count": 2
+        "count": 23
       },
       {
         "reason": "PRICE_CHASING_BLOCK",
-        "count": 1
+        "count": 6
+      },
+      {
+        "reason": "PROB_EDGE_BELOW_60",
+        "count": 6
       },
       {
         "reason": "RATE_REFRESH_TIMEOUT",
+        "count": 5
+      },
+      {
+        "reason": "WATCHDOG_NOT_HEALTHY",
         "count": 1
       }
     ]
@@ -77,184 +77,147 @@
     "db_integrity": "ok",
     "promotion_eligible": false,
     "used_for_real_execution": false,
-    "prob_edge_decision": "READY_FOR_MODEL_RESEARCH",
+    "prob_edge_decision": "COLLECT_PROSPECTIVE",
     "sample_ready": true
   },
   "top_variants": [
     {
       "variant_id": "V53-GRID-50",
-      "observed_selected": 418,
-      "expectancy_r": 0.03580246976269396,
-      "profit_factor": 1.1014233754342524,
-      "win_rate": 0.46172248803827753
+      "observed_selected": 457,
+      "expectancy_r": -0.014955862203314104,
+      "profit_factor": 0.9607897683750698,
+      "win_rate": 0.43982494529540483
     },
     {
       "variant_id": "V53-GRID-58",
-      "observed_selected": 418,
-      "expectancy_r": 0.03580246976269396,
-      "profit_factor": 1.1014233754342524,
-      "win_rate": 0.46172248803827753
+      "observed_selected": 457,
+      "expectancy_r": -0.014955862203314104,
+      "profit_factor": 0.9607897683750698,
+      "win_rate": 0.43982494529540483
     },
     {
-      "variant_id": "V53-GRID-42",
-      "observed_selected": 387,
-      "expectancy_r": 0.029783338003065665,
-      "profit_factor": 1.081957949302785,
-      "win_rate": 0.4599483204134367
+      "variant_id": "V53-GRID-51",
+      "observed_selected": 1860,
+      "expectancy_r": -0.019698103997013425,
+      "profit_factor": 0.9497251578058284,
+      "win_rate": 0.4435483870967742
+    },
+    {
+      "variant_id": "V53-GRID-53",
+      "observed_selected": 1860,
+      "expectancy_r": -0.019698103997013425,
+      "profit_factor": 0.9497251578058284,
+      "win_rate": 0.4435483870967742
+    },
+    {
+      "variant_id": "V53-GRID-55",
+      "observed_selected": 1860,
+      "expectancy_r": -0.019698103997013425,
+      "profit_factor": 0.9497251578058284,
+      "win_rate": 0.4435483870967742
+    },
+    {
+      "variant_id": "V53-GRID-59",
+      "observed_selected": 1860,
+      "expectancy_r": -0.019698103997013425,
+      "profit_factor": 0.9497251578058284,
+      "win_rate": 0.4435483870967742
+    },
+    {
+      "variant_id": "V53-GRID-61",
+      "observed_selected": 1860,
+      "expectancy_r": -0.019698103997013425,
+      "profit_factor": 0.9497251578058284,
+      "win_rate": 0.4435483870967742
+    },
+    {
+      "variant_id": "V53-GRID-63",
+      "observed_selected": 1860,
+      "expectancy_r": -0.019698103997013425,
+      "profit_factor": 0.9497251578058284,
+      "win_rate": 0.4435483870967742
     },
     {
       "variant_id": "V53-GRID-52",
-      "observed_selected": 910,
-      "expectancy_r": 0.007917603351355156,
-      "profit_factor": 1.021824514874322,
-      "win_rate": 0.44945054945054946
+      "observed_selected": 972,
+      "expectancy_r": -0.02010092812134815,
+      "profit_factor": 0.9469646975310414,
+      "win_rate": 0.43724279835390945
     },
     {
       "variant_id": "V53-GRID-54",
-      "observed_selected": 910,
-      "expectancy_r": 0.007917603351355156,
-      "profit_factor": 1.021824514874322,
-      "win_rate": 0.44945054945054946
-    },
-    {
-      "variant_id": "V53-GRID-56",
-      "observed_selected": 910,
-      "expectancy_r": 0.007917603351355156,
-      "profit_factor": 1.021824514874322,
-      "win_rate": 0.44945054945054946
-    },
-    {
-      "variant_id": "V53-GRID-60",
-      "observed_selected": 910,
-      "expectancy_r": 0.007917603351355156,
-      "profit_factor": 1.021824514874322,
-      "win_rate": 0.44945054945054946
-    },
-    {
-      "variant_id": "V53-GRID-62",
-      "observed_selected": 910,
-      "expectancy_r": 0.007917603351355156,
-      "profit_factor": 1.021824514874322,
-      "win_rate": 0.44945054945054946
-    },
-    {
-      "variant_id": "V53-GRID-64",
-      "observed_selected": 910,
-      "expectancy_r": 0.007917603351355156,
-      "profit_factor": 1.021824514874322,
-      "win_rate": 0.44945054945054946
-    },
-    {
-      "variant_id": "V53-GRID-18",
-      "observed_selected": 194,
-      "expectancy_r": 0.0074136277193922505,
-      "profit_factor": 1.0199000832241716,
-      "win_rate": 0.4690721649484536
+      "observed_selected": 972,
+      "expectancy_r": -0.02010092812134815,
+      "profit_factor": 0.9469646975310414,
+      "win_rate": 0.43724279835390945
     }
   ],
-  "prob_edge_bins": [
-    {
-      "bin": "00-09",
-      "n": 122,
-      "positive_result_rate": 0.47540983606557374,
-      "mean_result_r": 0.021100123614992743
-    },
-    {
-      "bin": "10-19",
-      "n": 24,
-      "positive_result_rate": 0.25,
-      "mean_result_r": -0.3669395382865515
-    },
-    {
-      "bin": "20-29",
-      "n": 18,
-      "positive_result_rate": 0.5555555555555556,
-      "mean_result_r": 0.21843643937075466
-    },
-    {
-      "bin": "30-39",
-      "n": 19,
-      "positive_result_rate": 0.3157894736842105,
-      "mean_result_r": -0.29621136122689107
-    },
-    {
-      "bin": "40-49",
-      "n": 8,
-      "positive_result_rate": 0.25,
-      "mean_result_r": -0.38958524219758456
-    },
-    {
-      "bin": "50-59",
-      "n": 5,
-      "positive_result_rate": 0.4,
-      "mean_result_r": -0.16490777808296858
-    }
-  ],
+  "prob_edge_bins": [],
   "intraday": [
     {
-      "time": "08:50",
-      "events": 48925,
-      "paper_trades": 2517
+      "time": "13:35",
+      "events": 50430,
+      "paper_trades": 2647
     },
     {
-      "time": "09:05",
-      "events": 48938,
-      "paper_trades": 2519
+      "time": "13:50",
+      "events": 50443,
+      "paper_trades": 2647
     },
     {
-      "time": "09:20",
-      "events": 48952,
-      "paper_trades": 2519
+      "time": "14:05",
+      "events": 50456,
+      "paper_trades": 2647
     },
     {
-      "time": "09:35",
-      "events": 48965,
-      "paper_trades": 2519
+      "time": "14:20",
+      "events": 50469,
+      "paper_trades": 2648
     },
     {
-      "time": "09:50",
-      "events": 48978,
-      "paper_trades": 2519
+      "time": "14:35",
+      "events": 50482,
+      "paper_trades": 2648
     },
     {
-      "time": "10:05",
-      "events": 48991,
-      "paper_trades": 2519
+      "time": "14:50",
+      "events": 50495,
+      "paper_trades": 2649
     },
     {
-      "time": "10:20",
-      "events": 49005,
-      "paper_trades": 2519
+      "time": "15:05",
+      "events": 50508,
+      "paper_trades": 2649
     },
     {
-      "time": "10:35",
-      "events": 49018,
-      "paper_trades": 2522
+      "time": "15:20",
+      "events": 50521,
+      "paper_trades": 2649
     },
     {
-      "time": "10:50",
-      "events": 49031,
-      "paper_trades": 2525
+      "time": "15:33",
+      "events": 50534,
+      "paper_trades": 2650
     },
     {
-      "time": "11:05",
-      "events": 49044,
-      "paper_trades": 2528
+      "time": "15:35",
+      "events": 50534,
+      "paper_trades": 2650
     },
     {
-      "time": "11:20",
-      "events": 49057,
-      "paper_trades": 2529
+      "time": "15:50",
+      "events": 50547,
+      "paper_trades": 2652
     },
     {
-      "time": "11:35",
-      "events": 49070,
-      "paper_trades": 2530
+      "time": "16:05",
+      "events": 50560,
+      "paper_trades": 2655
     },
     {
-      "time": "15:44",
-      "events": 49286,
-      "paper_trades": 2548
+      "time": "16:18",
+      "events": 50573,
+      "paper_trades": 2657
     }
   ],
   "daily_history": [
@@ -351,81 +314,88 @@
     },
     {
       "date": "2026-09-26",
-      "events": 49286,
-      "paper_trades": 2548,
-      "events_delta": 827,
-      "paper_trades_delta": 94
+      "events": 49070,
+      "paper_trades": 2530,
+      "events_delta": 611,
+      "paper_trades_delta": 76
+    },
+    {
+      "date": "2026-09-27",
+      "events": 50573,
+      "paper_trades": 2657,
+      "events_delta": 1503,
+      "paper_trades_delta": 127
     }
   ],
   "activity": [
     {
-      "time": "15:40",
+      "time": "16:15",
       "type": "HEALTH",
       "title": "WATCHDOG HEALTHY",
       "detail": "LAB y REAL-EXEC verificados; problemas: 0.",
       "color": "#0fb978"
     },
     {
-      "time": "15:44",
+      "time": "16:18",
       "type": "LAB",
       "title": "Ciclo LAB COMPLETE",
       "detail": "73 activos solicitados; 13 fresh; 832 evaluaciones de variantes.",
       "color": "#1768ff"
     },
     {
-      "time": "15:08",
+      "time": "16:15",
       "type": "BLOCK",
-      "title": "ETH bloqueado",
+      "title": "FET bloqueado",
+      "detail": "PROB_EDGE_BELOW_60:15.0",
+      "color": "#f0445e"
+    },
+    {
+      "time": "16:15",
+      "type": "BLOCK",
+      "title": "AVAX bloqueado",
       "detail": "AVERAGING_DOWN_FORBIDDEN",
       "color": "#f0445e"
     },
     {
-      "time": "15:03",
+      "time": "16:04",
       "type": "BLOCK",
-      "title": "ETH bloqueado",
-      "detail": "RATE_REFRESH_TIMEOUT:STALE_QUOTE:43.0s",
-      "color": "#f0445e"
-    },
-    {
-      "time": "15:03",
-      "type": "BLOCK",
-      "title": "XRP bloqueado",
+      "title": "AVAX bloqueado",
       "detail": "AVERAGING_DOWN_FORBIDDEN",
       "color": "#f0445e"
     },
     {
-      "time": "15:03",
+      "time": "16:04",
       "type": "BLOCK",
-      "title": "SOL bloqueado",
-      "detail": "PROB_EDGE_BELOW_60:5.0",
-      "color": "#f0445e"
-    },
-    {
-      "time": "14:51",
-      "type": "BLOCK",
-      "title": "ETH bloqueado",
+      "title": "FIL bloqueado",
       "detail": "PRICE_CHASING_BLOCK",
       "color": "#f0445e"
     },
     {
-      "time": "14:51",
+      "time": "16:04",
       "type": "BLOCK",
-      "title": "XRP bloqueado",
+      "title": "POL bloqueado",
+      "detail": "PRICE_CHASING_BLOCK",
+      "color": "#f0445e"
+    },
+    {
+      "time": "15:49",
+      "type": "BLOCK",
+      "title": "POL bloqueado",
       "detail": "AVERAGING_DOWN_FORBIDDEN",
       "color": "#f0445e"
     },
     {
-      "time": "14:51",
+      "time": "15:49",
       "type": "BLOCK",
-      "title": "ADA bloqueado",
-      "detail": "AVERAGING_DOWN_FORBIDDEN",
-      "color": "#f0445e"
-    },
-    {
-      "time": "14:51",
-      "type": "BLOCK",
-      "title": "SOL bloqueado",
+      "title": "FIL bloqueado",
       "detail": "PROB_EDGE_BELOW_60:35.0",
+      "color": "#f0445e"
+    },
+    {
+      "time": "15:32",
+      "type": "BLOCK",
+      "title": "POL bloqueado",
+      "detail": "AVERAGING_DOWN_FORBIDDEN",
       "color": "#f0445e"
     }
   ],
