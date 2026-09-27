@@ -1,0 +1,33 @@
+[Reading 29 lines from start (total: 29 lines, 0 remaining)]
+
+name: Sync main to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-gh-pages
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Publish main on gh-pages
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git push origin HEAD:gh-pages --force
+
+[executed on device: MacBook-Air-de-ELIECER.local (9d59468f-f40d-4943-b4b2-ce6dc971252d)]

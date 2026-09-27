@@ -1,3 +1,5 @@
+[Reading 1620 lines from start (total: 1620 lines, 0 remaining)]
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -681,6 +683,53 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
   .kpi-strip{margin-top:-72px}
 }
 
+
+
+/* TENET video hero v1 — Eliezer M.C. · Canarias */
+.hero.hero-video{
+  background:#071426 url('./assets/tenet-hero-opt.jpg') center center/cover no-repeat;
+}
+.hero-bg-video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;
+  z-index:0;pointer-events:none;filter:saturate(.88) contrast(1.04) brightness(.78);
+}
+.hero.hero-video:before{
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(2,8,17,.18) 0%,rgba(2,8,17,.24) 30%,rgba(2,8,17,.42) 50%,rgba(2,8,17,.72) 72%,rgba(2,8,17,.93) 100%),
+    linear-gradient(180deg,rgba(1,7,15,.18) 0%,rgba(1,7,15,.04) 42%,rgba(1,7,15,.30) 78%,rgba(1,7,15,.72) 100%);
+}
+.hero.hero-video:after{z-index:1}
+.hero-video-vignette{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(circle at 76% 34%,rgba(34,167,161,.10),transparent 22%),linear-gradient(90deg,rgba(1,7,15,.08),transparent 42%);
+}
+.hero.hero-video .wrap{position:relative;z-index:2}
+.hero-origin{
+  display:flex;align-items:center;gap:11px;width:max-content;max-width:100%;margin:15px 0 3px;
+  padding:8px 11px;border:1px solid rgba(205,224,251,.20);border-radius:10px;
+  background:rgba(5,18,37,.66);box-shadow:inset 0 1px 0 rgba(255,255,255,.045);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hero-origin-name{font-size:13px;font-weight:950;letter-spacing:.105em;color:#fff}
+.hero-origin-place{font-size:9.5px;font-weight:900;letter-spacing:.16em;color:#a9c7f6}
+.hero-origin-flag{width:36px;height:22px;border-radius:4px;box-shadow:0 0 0 1px rgba(255,255,255,.28),0 7px 22px rgba(0,0,0,.22)}
+.brand-credit{font-size:10.5px!important;color:#f4f8ff!important}
+.brand-credit .canary-flag{width:32px;height:19px}
+.hero-status{background:linear-gradient(180deg,rgba(5,21,42,.82),rgba(5,16,33,.72))!important}
+@media(max-width:1050px){
+  .hero-bg-video{object-position:31% center;filter:saturate(.82) contrast(1.03) brightness(.66)}
+  .hero.hero-video:before{background:linear-gradient(180deg,rgba(3,9,18,.24) 0%,rgba(3,9,18,.52) 48%,rgba(3,9,18,.92) 100%)}
+}
+@media(max-width:720px){
+  .hero-origin{gap:8px;padding:7px 9px;margin-top:13px}
+  .hero-origin-name{font-size:11px}.hero-origin-place{font-size:8px}.hero-origin-flag{width:31px;height:19px}
+  .hero-bg-video{object-position:28% center}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg-video{display:none}
+  .hero.hero-video{background:#071426 url('./assets/tenet-hero-opt.jpg') center center/cover no-repeat}
+}
 </style>
 </head>
 <body>
@@ -709,10 +758,21 @@ footer{padding:34px 0;color:#58677d;font-size:11px;text-align:center}
 </header>
 
 <main id="top">
-<section class="hero">
+<section class="hero hero-video">
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="./assets/tenet-hero-opt.jpg" aria-hidden="true">
+    <source src="./assets/tenet-hero-video.m4v" type="video/mp4">
+  </video>
+  <div class="hero-video-vignette" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="eyebrow"><span class="dot"></span> LIVE RESEARCH INFRASTRUCTURE · PUBLIC READ-ONLY</div>
+      <div class="hero-origin" aria-label="TENET, creado por Eliezer M.C. en Canarias">
+        <span class="hero-origin-name">ELIEZER M.C.</span>
+        <span class="canary-flag hero-origin-flag" role="img" aria-label="Bandera de Canarias" title="Canarias">
+          <i class="cw"></i><i class="cb"></i><i class="cy"></i>
+        </span>
+        <span class="hero-origin-place">CANARIAS</span>
+      </div>
       <h1>TENET<span>Research. Risk. Execution.</span></h1>
       <p>Infraestructura algorítmica persistente para investigar mercados, gobernar evidencia, controlar riesgo y ejecutar con trazabilidad auditable.</p>
       <div class="hero-trust">
@@ -1560,3 +1620,5 @@ window.addEventListener('DOMContentLoaded',()=>boot().catch(err=>{
 </script>
 </body>
 </html>
+
+[executed on device: MacBook-Air-de-ELIECER.local (9d59468f-f40d-4943-b4b2-ce6dc971252d)]
